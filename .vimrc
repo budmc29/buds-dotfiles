@@ -1,5 +1,5 @@
 execute pathogen#infect()
-colorscheme hybrid 
+colorscheme base16-default 
 set background=dark
 set guioptions = ae
 set number
@@ -22,9 +22,9 @@ set nofoldenable
 set foldlevel=1
 
 map <F2> <ESC>:NERDTree ~/work<RETURN>
-
+map <C-e> <ESC>:MRU <RETURN>
 syntax on
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=darkgrey
 set guifont=Source\ Code\ Pro
-set linespace=3
+set linespace=6
