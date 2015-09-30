@@ -1,2 +1,2 @@
 # ubuntu-vim
-Ubuntu vim backup with my plugins and .vimrc.
+Ubuntu dotfiles backup with my plugins, .vimrc and .zshrc.
