@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-colorscheme base16-default 
+colorscheme base16-tomorrow
 set background=dark
 " don't show the gui
 set guioptions = ae
