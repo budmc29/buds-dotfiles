@@ -35,5 +35,5 @@ set guifont=Source\ Code\ Pro
 set linespace=6
 " for nerdtree comment
 filetype plugin on
- 
- 
+" remove compatibility with vi 
+set nocompatible
