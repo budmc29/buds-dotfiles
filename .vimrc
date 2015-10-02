@@ -5,6 +5,7 @@ set background=dark
 " don't show the gui
 set guioptions = ae
 set number
+set relativenumber
 set autoindent
 set copyindent
 set smarttab
