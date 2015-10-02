@@ -6,7 +6,7 @@ export ZSH=/home/mugurel/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
-
+bindkey -v
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, vi-mode)
 
 # User configuration
 
@@ -102,3 +102,4 @@ alias hgu="hg update"
 alias hgp="hg push"
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
 alias rspec="spring rspec"
+alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
