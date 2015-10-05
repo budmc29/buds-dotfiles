@@ -64,8 +64,7 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
+# else #   export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -85,21 +84,37 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Ruby aliases
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"	
 plugins=(zsh-syntax-highlighting)
 alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
-alias deploy="cap staging deploy"
-alias deployb="cap staging deploy -s branch="
-alias rollback="cap staging deploy:rollback"
-alias restart="cap staging unicorn:restart"
+alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+alias rspec="spring rspec"
+
+# mercurial aliases
 alias hgc="hg commit -m \""
 alias hgs="hg status"
 alias hgb="hg branch"
 alias hgbr="hg branches"
 alias hgu="hg update"
 alias hgp="hg push"
-alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
-alias rspec="spring rspec"
+
+#git aliases
+alias gs="git status"
+alias gp="git push"
+alias gc="git commit -m \""
+alias ga="git add -A"
+# Ssh and deployment
 alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias deploy="cap staging deploy"
+alias deployb="cap staging deploy -s branch="
+alias rollback="cap staging deploy:rollback"
+alias restart="cap staging unicorn:restart"
+
+#Misc aliases
+alias zsh="gvim ~/.zshrc"
+alias vimrc="gvim ~/.vimrc"
+alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
