@@ -1,22 +1,12 @@
-set nocompatible
-filetype plugin on
-syntax on
-" execute pathogen#infect()
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'sjl/badwolf'
 Plugin 'bulenkov/Darcula'
-Plugin 'bulenkov/Darcula'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Plugin 'yegappan/mru'
@@ -27,12 +17,20 @@ Plugin 'mattn/emmet-vim'
 Plugin 'croaker/mustang-vim'
 Plugin 'vim-scripts/snipMate'
 Plugin 'vimwiki/vimwiki'
-
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mhinz/vim-signify'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme base16-tomorrow
 set background=dark
+
 " don't show the gui
 set guioptions = ae
 set number
@@ -65,6 +63,5 @@ highlight ColorColumn ctermbg=0 guibg=darkgrey
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
-" for nerdtree comment
-filetype plugin on
 " remove compatibility with vi 
+set nocompatible

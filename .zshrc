@@ -92,7 +92,9 @@ plugins=(zsh-syntax-highlighting)
 alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
 alias rspec="spring rspec"
+
 
 # mercurial aliases
 alias hgc="hg commit -m \""
@@ -101,6 +103,8 @@ alias hgb="hg branch"
 alias hgbr="hg branches"
 alias hgu="hg update"
 alias hgp="hg push"
+alias hgsh="hg shelve"
+alias hgus="hg unshelve"
 
 #git aliases
 alias gs="git status"
@@ -109,6 +113,7 @@ alias gc="git commit -m \""
 alias ga="git add -A"
 # Ssh and deployment
 alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias rootaccount="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias deploy="cap staging deploy"
 alias deployb="cap staging deploy -s branch="
 alias rollback="cap staging deploy:rollback"
@@ -116,5 +121,8 @@ alias restart="cap staging unicorn:restart"
 
 #Misc aliases
 alias zsh="gvim ~/.zshrc"
+alias sources="source ~/.vimrc && source ~/.zshrc"
+#vim aliases
+
 alias vimrc="gvim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
