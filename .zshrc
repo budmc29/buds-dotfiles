@@ -83,8 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripti
 # Ruby aliases
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"	
@@ -122,7 +121,14 @@ alias restart="cap staging unicorn:restart"
 #Misc aliases
 alias zsh="gvim ~/.zshrc"
 alias sources="source ~/.vimrc && source ~/.zshrc"
-#vim aliases
+alias dotbackup="cp ~/.vimrc ubuntu-dotfiles/ && cp ~/.zshrc ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
 
+#vim aliases
 alias vimrc="gvim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+
+# ubuntu processes
+alias ps="ps -ef | grep"
+alias szsh="source ~/.zshrc"
+alias svim="source ~/.vimrc"
+alias sgvim="sudo gvim"
