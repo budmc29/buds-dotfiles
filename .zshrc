@@ -121,7 +121,7 @@ alias restart="cap staging unicorn:restart"
 #Misc aliases
 alias zsh="gvim ~/.zshrc"
 alias sources="source ~/.vimrc && source ~/.zshrc"
-alias dotbackup="cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
+alias dotbackup="cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cp ~/.vim/bundle/snipMate/snippets/ruby.snippets ~/ubuntu-dotfiles/ruby.snippets && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
 
 #vim aliases
 alias vimrc="gvim ~/.vimrc"
@@ -131,3 +131,4 @@ alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundl
 alias ps="ps -ef | grep"
 alias szsh="source ~/.zshrc"
 alias sgvim="sudo gvim"
+alias gsnippets="gvim ~/.vim/bundle/snipMate/snippets/ruby.snippets"

@@ -5,7 +5,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'sjl/badwolf'
-Plugin 'bulenkov/Darcula'
+Plugin 'blueshirts/Darcula'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
@@ -25,10 +25,15 @@ Plugin 'mhinz/vim-signify'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'wesgibbs/vim-irblack'
+Plugin 'dyng/ctrlsf.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" good for html, bad for rails
 colorscheme base16-tomorrow
+" good for rails, bad for html
+" colorscheme badwolf
 set background=dark
 
 " don't show the gui
