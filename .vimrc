@@ -27,6 +27,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'mbbill/undotree'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -49,19 +52,22 @@ set shiftwidth=2
 filetype on
 filetype plugin on
 filetype indent on
-
 set ignorecase
 set smartcase
-
 set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
 
+" keys remapping
 map <F2> <ESC>:NERDTree ~/work<RETURN>
+map <F3> <ESC>:UndotreeToggle<RETURN>
 " for most recent used plugin
 map <C-e> <ESC>:MRU <RETURN>
+" inoremap <C-e> <C-o>A
 syntax on
+
+
 " set a horizontal 80w hard limit
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=darkgrey
@@ -70,3 +76,6 @@ set guifont=Source\ Code\ Pro
 set linespace=6
 " remove compatibility with vi 
 set nocompatible
+" xolo vim session settings
+let g:session_autosave_periodic = 5
+let g:session_autosave yes
