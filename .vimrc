@@ -30,6 +30,7 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'mbbill/undotree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'gregsexton/MatchTag'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
