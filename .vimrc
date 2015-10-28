@@ -29,13 +29,15 @@ Plugin 'wesgibbs/vim-irblack'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'mbbill/undotree'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'gregsexton/MatchTag'
+Plugin 'vim-scripts/matchit.zip'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" good for html, bad for rails
-colorscheme base16-tomorrow
+" good for html
+colorscheme base16-twilight
+" colorscheme base16-tomorrow
+
 " good for rails, bad for html
 " colorscheme badwolf
 set background=dark
