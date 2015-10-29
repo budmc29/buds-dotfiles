@@ -31,7 +31,7 @@ Plugin 'mbbill/undotree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'zhaocai/GoldenView.Vim'
+" Plugin 'zhaocai/GoldenView.Vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,8 +42,8 @@ colorscheme base16-twilight
 
 " good for rails, bad for html
 " colorscheme badwolf
-set background=dark
 
+set background=dark
 " don't show the gui
 set guioptions = ae
 set number
@@ -63,24 +63,30 @@ set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
+" set a horizontal 80w hard limit
+set colorcolumn=80
+" font and line-height
+set guifont=Source\ Code\ Pro
+set linespace=6
+" remove compatibility with vi 
+set nocompatible
+syntax on
+highlight ColorColumn ctermbg=0 guibg=darkgrey
+" xolo vim session settings
+let g:session_autosave_periodic = 5
+let g:session_autosave yes
 
 " keys remapping
 map <F2> <ESC>:NERDTree ~/work<RETURN>
 map <F3> <ESC>:UndotreeToggle<RETURN>
 " for most recent used plugin
 map <C-e> <ESC>:MRU <RETURN>
+
+" window management
+map <leader>v <C-w>_
+map <leader>h <C-w><bar>
+map <leader>r <C-w>=
+map <leader>b <C-w>_ <C-w>|
+
 " inoremap <C-e> <C-o>A
-syntax on
 
-
-" set a horizontal 80w hard limit
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=darkgrey
-" font and line-height
-set guifont=Source\ Code\ Pro
-set linespace=6
-" remove compatibility with vi 
-set nocompatible
-" xolo vim session settings
-let g:session_autosave_periodic = 5
-let g:session_autosave yes
