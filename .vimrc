@@ -86,7 +86,7 @@ map <C-e> <ESC>:MRU <RETURN>
 map <leader>v <C-w>_
 map <leader>h <C-w><bar>
 map <leader>r <C-w>=
-map <leader>b <C-w>_ <C-w>|
+map <leader>b <C-w>_ <C-w><bar>
 
 " inoremap <C-e> <C-o>A
 
