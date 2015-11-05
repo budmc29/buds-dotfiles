@@ -93,7 +93,8 @@ alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-accou
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
 alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
 alias rspec="spring rspec"
-
+alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
+alias bootstrapg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
 
 # mercurial aliases
 alias hgc="hg commit -m \""
