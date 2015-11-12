@@ -88,11 +88,13 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripti
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"	
 plugins=(zsh-syntax-highlighting)
+alias rspec="spring rspec"
+
 alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
 alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
-alias rspec="spring rspec"
+
 alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
 alias bootstrapg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
 
@@ -115,6 +117,9 @@ alias ga="git add -A"
 # Ssh and deployment
 alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias rootaccount="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias marketplacessh="ssh -i ~/.ssh/marketplace_aws.pem gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
+alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
+
 alias deploy="cap staging deploy"
 alias deployb="cap staging deploy -s branch="
 alias rollback="cap staging deploy:rollback"

@@ -32,6 +32,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'drmingdrmer/xptemplate'
 " Plugin 'zhaocai/GoldenView.Vim'
 
 call vundle#end()            " required
