@@ -90,11 +90,10 @@ alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-sy
 plugins=(zsh-syntax-highlighting)
 alias rspec="spring rspec"
 
-alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
-alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
 alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
 
+alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
 alias bootstrapg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
 
@@ -115,9 +114,12 @@ alias gp="git push"
 alias gc="git commit -m \""
 alias ga="git add -A"
 # Ssh and deployment
-alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias rootaccount="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias marketplacessh="ssh -i ~/.ssh/marketplace_aws.pem gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
+alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+
+alias account1ssh="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias account1sshroot="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
+
+alias marketplacessh="ssh -i ~/.ssh/marketplace gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
 alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
 
 alias deploy="cap staging deploy"
