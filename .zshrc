@@ -92,6 +92,7 @@ alias rspec="spring rspec"
 
 alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
 alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
+alias player="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-player"
 
 alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
@@ -115,9 +116,12 @@ alias gc="git commit -m \""
 alias ga="git add -A"
 # Ssh and deployment
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+alias bootstrapssh="ssh bootstrap@www.yoyogames.com"
 
 alias account1ssh="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias account1sshroot="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias playerssh="ssh -v  -i ~/.ssh/marketplace player@ec2-54-87-55-78.compute-1.amazonaws.com"
+alias playersshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
 
 alias marketplacessh="ssh -i ~/.ssh/marketplace gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
 alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"

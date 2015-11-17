@@ -56,15 +56,14 @@ set smarttab
 set expandtab
 set tabstop=2
 set shiftwidth=2
-filetype on
-filetype plugin on
-filetype indent on
 set ignorecase
 set smartcase
 set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
+set incsearch
+set hlsearch
 " set a horizontal 80w hard limit
 set colorcolumn=80
 " font and line-height
@@ -72,8 +71,13 @@ set guifont=Source\ Code\ Pro
 set linespace=6
 " remove compatibility with vi 
 set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=darkgrey
+
 " xolo vim session settings
 let g:session_autosave_periodic = 5
 let g:session_autosave yes
@@ -89,6 +93,4 @@ map <leader>v <C-w>_
 map <leader>h <C-w><bar>
 map <leader>r <C-w>=
 map <leader>b <C-w>_ <C-w><bar>
-
 " inoremap <C-e> <C-o>A
-
