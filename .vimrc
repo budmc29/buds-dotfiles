@@ -62,8 +62,12 @@ set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
+" start search as soon as you type
 set incsearch
+" highlight search results
 set hlsearch
+"better indenting with vim
+set cindent
 " set a horizontal 80w hard limit
 set colorcolumn=80
 " font and line-height
