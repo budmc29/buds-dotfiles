@@ -31,10 +31,8 @@ Plugin 'mbbill/undotree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'tomtom/tcomment_vim'
-"just in case vim commentary doesnt work in filetypes
-
-Plugin 'vim-scripts/matchit.zip'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'drmingdrmer/xptemplate'
 " Plugin 'zhaocai/GoldenView.Vim'
 
 call vundle#end()            " required
@@ -58,23 +56,29 @@ set smarttab
 set expandtab
 set tabstop=2
 set shiftwidth=2
-filetype on
-filetype plugin on
-filetype indent on
 set ignorecase
 set smartcase
 set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
+" start search as soon as you type
+set incsearch
+" highlight search results
+set hlsearch
+"better indenting with vim
+set cindent
 " set a horizontal 80w hard limit
 set colorcolumn=80
 " font and line-height
-set guifont=Source\ Code\ Pro\ 9
-
+set guifont=Source\ Code\ Pro
 set linespace=6
 " remove compatibility with vi 
 set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=#282828
 
@@ -93,6 +97,4 @@ map <leader>v <C-w>_
 map <leader>h <C-w><bar>
 map <leader>r <C-w>=
 map <leader>b <C-w>_ <C-w><bar>
-
 " inoremap <C-e> <C-o>A
-
