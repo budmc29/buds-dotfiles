@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/mugurel/.oh-my-zsh
+export ZSH=/home/mugur/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ bindkey -v
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, vi-mode, mercurial)
+plugins=(git, vi-mode)
 
 # User configuration
 
@@ -84,24 +84,16 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripti
-
-# ALIASES
-#
-#
-#
 # Ruby aliases
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"	
 plugins=(zsh-syntax-highlighting)
+alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
+alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
+alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
 alias rspec="spring rspec"
 
-alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
-alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
-alias player="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-player"
-
-alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
-alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
-alias bootstrapg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
 
 # mercurial aliases
 alias hgc="hg commit -m \""
@@ -117,20 +109,14 @@ alias hgus="hg unshelve"
 #git aliases
 alias gs="git status"
 alias gp="git push"
-alias gc="git commit -m \""
+alias gc="git commit -am \""
 alias ga="git add -A"
+alias gb="git branch"
+alias gco="git checkout"
+
 # Ssh and deployment
-alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
-alias bootstrapssh="ssh bootstrap@www.yoyogames.com"
-
-alias account1ssh="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias account1sshroot="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias playerssh="ssh -v  -i ~/.ssh/marketplace player@ec2-54-87-55-78.compute-1.amazonaws.com"
-alias playersshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
-
-alias marketplacessh="ssh -i ~/.ssh/marketplace gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
-alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
-
+alias yyaccount="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
+alias rootaccount="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias deploy="cap staging deploy"
 alias deployb="cap staging deploy -s branch="
 alias rollback="cap staging deploy:rollback"
@@ -153,3 +139,7 @@ alias rbsnippets="gvim ~/.vim/bundle/snipMate/snippets/ruby.snippets"
 alias jssnippets="gvim ~/.vim/bundle/snipMate/snippets/javascript.snippets"
 alias htmlsnippets="gvim ~/.vim/bundle/snipMate/snippets/html.snippets"
 alias csssnippets="gvim ~/.vim/bundle/snipMate/snippets/css.snippets"
+alias sapti="sudo apt-get install"
+
+# amazon webserver connect
+alias aws="ssh -i \"server-connect.ppk\" ubuntu@54.79.126.208"
