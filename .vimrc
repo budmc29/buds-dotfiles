@@ -80,7 +80,7 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
-highlight ColorColumn ctermbg=0 guibg=darkgrey
+highlight ColorColumn ctermbg=0 guibg=#282828
 
 " xolo vim session settings
 let g:session_autosave_periodic = 5
