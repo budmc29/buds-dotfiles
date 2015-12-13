@@ -10,6 +10,12 @@ curl https://gist.githubusercontent.com/lucasdavila/3875946/raw/1c100cae16a06bef
 ```
 
 - Install zsh and oh-my-zsh
+```
+sudo apt-get update && sudo apt-get install zsh 
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 - Change first line in .zshrc so it will work on other machine
 - To make autocomplete plugin work do this: cd ~/.vim/bundle/YouCompleteMe
 ./install.py
