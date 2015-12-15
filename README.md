@@ -16,8 +16,12 @@ sudo apt-get update && sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-- Change first line in .zshrc so it will work on other machine
-- To make autocomplete plugin work do this: cd ~/.vim/bundle/YouCompleteMe
-./install.py
+- To make autocomplete plugin work: 
+
+```
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev.
+cd ~/.vim/bundle/YouCompleteMe && ./install.py
+```
 
 TODO: find a way to avoid changing the pc name when installing to a fresh machine
