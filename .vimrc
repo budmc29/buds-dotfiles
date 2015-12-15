@@ -97,4 +97,8 @@ map <leader>v <C-w>_
 map <leader>h <C-w><bar>
 map <leader>r <C-w>=
 map <leader>b <C-w>_ <C-w><bar>
+map ;w <ESC>:w<RETURN> 
+map ;W <ESC>:w<RETURN> 
+map <Alt-s> <ESC>:w<RETURN> 
+
 " inoremap <C-e> <C-o>A

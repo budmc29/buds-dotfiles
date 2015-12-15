@@ -100,8 +100,11 @@ alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-
 alias player="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-player"
 
 alias bootstrap="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
+alias bs="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
 alias bootstraps="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
+alias bss="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
 alias bootstrapg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
+alias bsg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
 
 # mercurial aliases
 alias hgc="hg commit -m \""
@@ -110,6 +113,7 @@ alias hgb="hg branch"
 alias hgbr="hg branches"
 alias hgu="hg update"
 alias hgp="hg push"
+alias hgpu="hg pull"
 alias hgpb="hg push --new-branch"
 alias hgsh="hg shelve"
 alias hgus="hg unshelve"
@@ -140,6 +144,7 @@ alias restart="cap staging unicorn:restart"
 alias zsh="gvim ~/.zshrc"
 alias sources="source ~/.vimrc && source ~/.zshrc"
 alias dotbackup="cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
+alias updatebackup="cp ~/ubuntu-dotfiles/ ~/.vimrc && cp ~/ubuntu-dotfiles/ ~/.zshrc && source ~/.zshrc"
 
 #vim aliases
 alias vimrc="gvim ~/.vimrc"
