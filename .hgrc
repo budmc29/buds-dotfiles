@@ -1,0 +1,26 @@
+# example user config (see "hg help config" for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = mugur chirica(bud) <mugurel.chirica@yoyogames.com>
+ssh = ssh -C
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+#
+# pager =
+# progress =
+# color =
+purge=
+shelve=
+strip=
+color=
+extdiff=
+[paths]
+default = ssh://hg@bitbucket.org/mugur-chirica/yoyo_bootstrap
+
+
+[tortoisehg]
+ui.language = en_GB
+[extdiff]
+cmd.extdiff = meld

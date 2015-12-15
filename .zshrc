@@ -143,8 +143,8 @@ alias restart="cap staging unicorn:restart"
 #Misc aliases
 alias zsh="gvim ~/.zshrc"
 alias sources="source ~/.vimrc && source ~/.zshrc"
-alias dotbackup="cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
-alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
+alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/.hgrc && cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
+alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
 
 #vim aliases
 alias vimrc="gvim ~/.vimrc"
