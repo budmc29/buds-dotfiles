@@ -117,6 +117,7 @@ alias hgpu="hg pull"
 alias hgpb="hg push --new-branch"
 alias hgsh="hg shelve"
 alias hgus="hg unshelve"
+alias hgd="hg diff"
 
 #git aliases
 alias gs="git status"
