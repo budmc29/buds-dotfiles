@@ -158,3 +158,7 @@ alias rbsnippets="gvim ~/.vim/bundle/snipMate/snippets/ruby.snippets"
 alias jssnippets="gvim ~/.vim/bundle/snipMate/snippets/javascript.snippets"
 alias htmlsnippets="gvim ~/.vim/bundle/snipMate/snippets/html.snippets"
 alias csssnippets="gvim ~/.vim/bundle/snipMate/snippets/css.snippets"
+
+# vpn
+alias x11="x11vnc -auth guess -forever -usepw"
+

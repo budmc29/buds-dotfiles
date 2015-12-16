@@ -4,8 +4,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'sjl/badwolf'
-Plugin 'blueshirts/Darcula'
+" Plugin 'sjl/badwolf'
+" Plugin 'blueshirts/Darcula'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
@@ -34,7 +34,8 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'drmingdrmer/xptemplate'
 " Plugin 'zhaocai/GoldenView.Vim'
-
+Plugin 'takac/vim-hardtime'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -81,16 +82,25 @@ filetype plugin on
 filetype indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=#282828
-
+" Hardtime plugin
+let g:hardtime_default_on = 1
 " xolo vim session settings
 let g:session_autosave_periodic = 5
 let g:session_autosave yes
-
+"neocomplete settings
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " keys remapping
+
 map <F2> <ESC>:NERDTree ~/work<RETURN>
 map <F3> <ESC>:UndotreeToggle<RETURN>
 " for most recent used plugin
-map <C-e> <ESC>:MRU <RETURN>
+map <C-t> <ESC>:MRU <RETURN>
 
 " window management
 map <leader>v <C-w>_
