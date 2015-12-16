@@ -81,6 +81,7 @@ set nocompatible
 set undofile
 " set a directory to store the undo history
 set undodir=~/.vimundo
+set undolevels=1000
 
 filetype on
 filetype plugin on
