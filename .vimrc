@@ -36,6 +36,7 @@ Plugin 'drmingdrmer/xptemplate'
 " Plugin 'zhaocai/GoldenView.Vim'
 Plugin 'takac/vim-hardtime'
 Plugin 'easymotion/vim-easymotion'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -76,12 +77,17 @@ set guifont=Source\ Code\ Pro
 set linespace=6
 " remove compatibility with vi 
 set nocompatible
+" vim persisten undo
+set undofile
+" set a directory to store the undo history
+set undodir=~/.vimundo
 
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
 highlight ColorColumn ctermbg=0 guibg=#282828
+
 " Hardtime plugin
 let g:hardtime_default_on = 1
 " xolo vim session settings
@@ -89,13 +95,13 @@ let g:session_autosave_periodic = 5
 let g:session_autosave yes
 "neocomplete settings
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" keys remapping
+" let g:neocomplete#enable_at_startup = 1
+" " Use smartcase.
+" let g:neocomplete#enable_smart_case = 1
+" " Set minimum syntax keyword length.
+" let g:neocomplete#sources#syntax#min_keyword_length = 3
+" let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" " keys remapping
 
 map <F2> <ESC>:NERDTree ~/work<RETURN>
 map <F3> <ESC>:UndotreeToggle<RETURN>
