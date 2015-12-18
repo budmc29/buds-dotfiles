@@ -73,10 +73,9 @@ set hlsearch
 set cindent
 " set a horizontal 80w hard limit
 " set colorcolumn=80
-highlight ColorColumn ctermbg=magenta 
+highlight ColorColumn ctermbg=7 guibg=tomato
 " highlight ColorColumn ctermbg=0 guibg=#FF6364
 call matchadd('ColorColumn', '\%81v', 100)
-" highlight ColorColumn ctermbg=0 guibg=#282828
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
@@ -108,10 +107,10 @@ let g:session_autosave yes
 " let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " " keys remapping
 
-map <F2> <ESC>:NERDTree ~/work<RETURN>
-map <F3> <ESC>:UndotreeToggle<RETURN>
+map <F2> <ESC>;NERDTree ~/work<RETURN>
+map <F3> <ESC>;UndotreeToggle<RETURN>
 " for most recent used plugin
-map <C-t> <ESC>:MRU <RETURN>
+map <C-t> <ESC>;MRU <RETURN>
 
 " window management
 map <leader>v <C-w>_
@@ -122,7 +121,7 @@ map <leader>b <C-w>_ <C-w><bar>
 nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
-map <Alt-s> <ESC>:w<RETURN> 
-map <leader>s <ESC>:! grep -rnw './' -e "
+map <Alt-s> <ESC>;w<RETURN> 
+map <leader>s <ESC>;! grep -rnw './' -e "
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
