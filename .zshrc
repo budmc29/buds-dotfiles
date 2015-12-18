@@ -133,16 +133,18 @@ alias account1ssh="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute
 alias account1sshroot="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias playerssh="ssh -v  -i ~/.ssh/marketplace player@ec2-54-87-55-78.compute-1.amazonaws.com"
 alias playersshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
+alias playerstaging="ssh gasplayer@straylight.yoyogames.com"
 
 alias account1root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-167-43-148.compute-1.amazonaws.com"
 alias account2root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-227-63-160.compute-1.amazonaws.com"
 alias account3root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-82-116-237.compute-1.amazonaws.com"
 alias account4root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-146-217-224.compute-1.amazonaws.com"
 alias account5root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-145-62-148.compute-1.amazonaws.com"
-
+alias accountstaging="ssh accounts_staging@straylight.yoyogames.com"
 
 alias marketplacessh="ssh -i ~/.ssh/marketplace gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
 alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
+alias marketplacestaging="ssh gasmarket@straylight.yoyogames.com"
 
 alias deploy="cap staging deploy"
 alias deployb="cap staging deploy -s branch="

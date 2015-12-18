@@ -42,8 +42,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " good for html
-" colorscheme base16-twilight
-colorscheme base16-tomorrow
+colorscheme base16-twilight
+" colorscheme base16-tomorrow
 
 " good for rails, bad for html
 " colorscheme badwolf
@@ -73,8 +73,8 @@ set hlsearch
 set cindent
 " set a horizontal 80w hard limit
 " set colorcolumn=80
+highlight ColorColumn ctermbg=magenta 
 " highlight ColorColumn ctermbg=0 guibg=#FF6364
-highlight ColorColumn ctermbg=0 guibg=#FF6364
 call matchadd('ColorColumn', '\%81v', 100)
 " highlight ColorColumn ctermbg=0 guibg=#282828
 " font and line-height
@@ -118,8 +118,11 @@ map <leader>v <C-w>_
 map <leader>h <C-w><bar>
 map <leader>r <C-w>=
 map <leader>b <C-w>_ <C-w><bar>
-map <Alt-s> <ESC>:w<RETURN> 
-map <leader>s <ESC>:! grep -rnw './' -e "
+
 nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
+map <Alt-s> <ESC>:w<RETURN> 
+map <leader>s <ESC>:! grep -rnw './' -e "
+" map ;w <ESC>;w<RETURN>
+" map ;q <ESC>;wq<RETURN>
