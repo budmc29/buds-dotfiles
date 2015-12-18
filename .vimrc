@@ -71,8 +71,7 @@ set hlsearch
 "better indenting with vim
 set cindent
 " set a horizontal 80w hard limit
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=0 guibg=#282828
+set colorcolumn=80
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
@@ -88,9 +87,7 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
-" improved colomn count
 highlight ColorColumn ctermbg=0 guibg=#282828
-call matchadd('ColorColumn', '\%81v', 100)
 
 " Hardtime plugin
 let g:hardtime_default_on = 1
@@ -120,5 +117,5 @@ map <leader>b <C-w>_ <C-w><bar>
 map ;w <ESC>:w<RETURN> 
 map ;W <ESC>:w<RETURN> 
 map <Alt-s> <ESC>:w<RETURN> 
-
+map <leader>s <ESC>:! grep -rnw './' -e "
 " inoremap <C-e> <C-o>A
