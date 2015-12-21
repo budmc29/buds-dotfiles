@@ -123,6 +123,6 @@ nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
 map <Alt-s> <ESC>;w<RETURN> 
-map <leader>s <ESC>;! grep -rnw './' -e "
+map <leader>s <ESC>;! grep -rnw './work/' -e "
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
