@@ -123,6 +123,10 @@ nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
 map <Alt-s> <ESC>;w<RETURN> 
-map <leader>s <ESC>;! grep -rnw './work/' -e "
+map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
+map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
+map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
+map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
+map <leader>ss <ESC>;! grep -rnw './work/' -e "
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
