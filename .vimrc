@@ -88,6 +88,9 @@ set undofile
 set undodir=~/.vimundo
 set undolevels=1000
 
+" change swap file directory
+set dir=$HOME/.vim/swap//
+
 filetype on
 filetype plugin on
 filetype indent on
