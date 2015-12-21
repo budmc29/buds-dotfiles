@@ -38,6 +38,7 @@ Plugin 'takac/vim-hardtime'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'gioele/vim-autoswap'
+Plugin 'sickill/vim-pasta'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
