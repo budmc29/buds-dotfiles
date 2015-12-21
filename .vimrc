@@ -96,7 +96,8 @@ syntax on
 let g:hardtime_default_on = 1
 " xolo vim session settings
 let g:session_autosave_periodic = 5
-let g:session_autosave = 'yes'
+" let g:session_autosave = 'yes'
+
 "neocomplete settings
 " Use neocomplete.
 " let g:neocomplete#enable_at_startup = 1
@@ -109,8 +110,7 @@ let g:session_autosave = 'yes'
 
 " activate tab-airline 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tab_type = 0
-
+let g:airline#extensions#tabline#fnamemod = ':t'
 " good for html
 colorscheme base16-twilight
 " colorscheme base16-tomorrow
