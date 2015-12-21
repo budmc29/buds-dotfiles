@@ -107,6 +107,10 @@ let g:session_autosave = 'yes'
 " let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " " keys remapping
 
+" activate tab-airline 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_type = 0
+
 " good for html
 colorscheme base16-twilight
 " colorscheme base16-tomorrow
