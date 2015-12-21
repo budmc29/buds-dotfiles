@@ -41,17 +41,15 @@ Plugin 'gioele/vim-autoswap'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" good for html
-colorscheme base16-twilight
-" colorscheme base16-tomorrow
-
-" good for rails, bad for html
-" colorscheme badwolf
+" remove compatibility with vi 
+set nocompatible
 
 set background=dark
 " don't show the gui
-set guioptions = ae
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+
 set number
 set relativenumber
 set autoindent
@@ -80,8 +78,6 @@ call matchadd('ColorColumn', '\%81v', 100)
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
-" remove compatibility with vi 
-set nocompatible
 " vim persisten undo
 set undofile
 " set a directory to store the undo history
@@ -100,7 +96,7 @@ syntax on
 let g:hardtime_default_on = 1
 " xolo vim session settings
 let g:session_autosave_periodic = 5
-let g:session_autosave yes
+let g:session_autosave = 'yes'
 "neocomplete settings
 " Use neocomplete.
 " let g:neocomplete#enable_at_startup = 1
@@ -110,6 +106,14 @@ let g:session_autosave yes
 " let g:neocomplete#sources#syntax#min_keyword_length = 3
 " let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " " keys remapping
+
+" good for html
+colorscheme base16-twilight
+" colorscheme base16-tomorrow
+
+" good for rails, bad for html
+" colorscheme badwolf
+
 
 map <F2> <ESC>;NERDTree ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle<RETURN>
