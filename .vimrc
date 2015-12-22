@@ -37,7 +37,7 @@ Plugin 'drmingdrmer/xptemplate'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
-Plugin 'vim-scripts/CSApprox'
+" Plugin 'vim-scripts/CSApprox'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -48,42 +48,38 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'gregsexton/Muon'
 Plugin 'carlson-erik/wolfpack'
 Plugin 'cdmedia/itg_flat_vim'
-Plugin 'andrwb/vim-lapis256'
-Plugin 'idbrii/vim-sandydune'
-Plugin 'wellsjo/wellsokai.vim'
-Plugin 'duythinht/inori'
-Plugin 'vim-scripts/abbott.vim'
-Plugin 'atelierbram/vim-colors_atelier-schemes'
-Plugin 'glortho/feral-vim'
-Plugin 'queyenth/oxeded.vim'
-Plugin 'fabi1cazenave/kalahari.vim'
-Plugin 'Wutzara/vim-materialtheme'
-Plugin 'erezsh/erezvim'
-Plugin 'jlesquembre/peaksea'
-Plugin 'scheakur/vim-scheakur'
 Plugin 'kreeger/benlight'
-Plugin 'thewatts/wattslandia'
-Plugin 'orthecreedence/void.vim'
-Plugin 'jlund3/colorschemer'
-Plugin 'blackgate/tropikos-vim-theme'
-Plugin 'MPiccinato/wombat256'
-Plugin 'thomd/vim-wasabi-colorscheme'
-Plugin 'zsoltf/vim-maui'
-Plugin 'xero/sourcerer.vim'
-Plugin 'gilgigilgil/anderson.vim'
-Plugin 'DrSpatula/vim-buddy'
-Plugin 'vim-scripts/moria'
-Plugin 'Donearm/Ubaryd'
-Plugin 'mkarmona/colorsbox'
+
+" Plugin 'andrwb/vim-lapis256'
+" Plugin 'wellsjo/wellsokai.vim'
+" Plugin 'atelierbram/vim-colors_atelier-schemes'
+" Plugin 'glortho/feral-vim'
+" Plugin 'queyenth/oxeded.vim'
+" Plugin 'fabi1cazenave/kalahari.vim'
+" Plugin 'Wutzara/vim-materialtheme'
+" Plugin 'jlesquembre/peaksea'
+" Plugin 'scheakur/vim-scheakur'
+" Plugin 'orthecreedence/void.vim'
+" Plugin 'jlund3/colorschemer'
+" Plugin 'blackgate/tropikos-vim-theme'
+" Plugin 'MPiccinato/wombat256'
+" Plugin 'thomd/vim-wasabi-colorscheme'
+" Plugin 'zsoltf/vim-maui'
+" Plugin 'xero/sourcerer.vim'
+" Plugin 'gilgigilgil/anderson.vim'
+" Plugin 'DrSpatula/vim-buddy'
+" Plugin 'vim-scripts/moria'
+" Plugin 'Donearm/Ubaryd'
+" Plugin 'mkarmona/colorsbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-set background=dark
-colorscheme badwolf
+" let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+" colorscheme badwolf
 " colorscheme base16-tomorrow
-
+set background=dark
+colorscheme benlight
 " good for rails, bad for html
 " colorscheme badwolf
 
@@ -107,8 +103,8 @@ set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
-" start search as soon as you type
-set incsearch
+
+set incsearch " start search as soon as you type
 " highlight search results
 set hlsearch
 "better indenting with vim
