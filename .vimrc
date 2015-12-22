@@ -4,8 +4,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
-" Plugin 'sjl/badwolf'
-" Plugin 'blueshirts/Darcula'
+Plugin 'sjl/badwolf'
+Plugin 'blueshirts/Darcula'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
@@ -33,17 +33,19 @@ Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'drmingdrmer/xptemplate'
-" Plugin 'zhaocai/GoldenView.Vim'
 Plugin 'takac/vim-hardtime'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
+Plugin 'vim-scripts/CSApprox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" remove compatibility with vi 
-set nocompatible
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 
 set background=dark
 " don't show the gui
@@ -73,8 +75,8 @@ set hlsearch
 set cindent
 " set a horizontal 80w hard limit
 " set colorcolumn=80
-highlight ColorColumn ctermbg=7 guibg=tomato
-" highlight ColorColumn ctermbg=0 guibg=#FF6364
+" highlight ColorColumn ctermbg=7 guibg=tomato
+highlight ColorColumn ctermbg=0 guibg=#FF6364
 call matchadd('ColorColumn', '\%81v', 100)
 " font and line-height
 set guifont=Source\ Code\ Pro
@@ -110,8 +112,8 @@ let g:session_autosave_periodic = 5
 " " keys remapping
 
 " activate tab-airline 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
 " good for html
 colorscheme base16-twilight
 " colorscheme base16-tomorrow
