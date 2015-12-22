@@ -33,21 +33,61 @@ Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'drmingdrmer/xptemplate'
-Plugin 'takac/vim-hardtime'
+" Plugin 'takac/vim-hardtime'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
 Plugin 'vim-scripts/CSApprox'
 
+" colorschemes
+Plugin 'sickill/vim-monokai'
+Plugin 'zeis/vim-kolor'
+Plugin 'morhetz/gruvbox'
+Plugin 'romainl/Apprentice'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'gregsexton/Muon'
+Plugin 'carlson-erik/wolfpack'
+Plugin 'cdmedia/itg_flat_vim'
+Plugin 'andrwb/vim-lapis256'
+Plugin 'idbrii/vim-sandydune'
+Plugin 'wellsjo/wellsokai.vim'
+Plugin 'duythinht/inori'
+Plugin 'vim-scripts/abbott.vim'
+Plugin 'atelierbram/vim-colors_atelier-schemes'
+Plugin 'glortho/feral-vim'
+Plugin 'queyenth/oxeded.vim'
+Plugin 'fabi1cazenave/kalahari.vim'
+Plugin 'Wutzara/vim-materialtheme'
+Plugin 'erezsh/erezvim'
+Plugin 'jlesquembre/peaksea'
+Plugin 'scheakur/vim-scheakur'
+Plugin 'kreeger/benlight'
+Plugin 'thewatts/wattslandia'
+Plugin 'orthecreedence/void.vim'
+Plugin 'jlund3/colorschemer'
+Plugin 'blackgate/tropikos-vim-theme'
+Plugin 'MPiccinato/wombat256'
+Plugin 'thomd/vim-wasabi-colorscheme'
+Plugin 'zsoltf/vim-maui'
+Plugin 'xero/sourcerer.vim'
+Plugin 'gilgigilgil/anderson.vim'
+Plugin 'DrSpatula/vim-buddy'
+Plugin 'vim-scripts/moria'
+Plugin 'Donearm/Ubaryd'
+Plugin 'mkarmona/colorsbox'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set background=dark
+colorscheme badwolf
+" colorscheme base16-tomorrow
+
+" good for rails, bad for html
+" colorscheme badwolf
+
+
 " don't show the gui
 set guioptions-=m
 set guioptions-=T
@@ -114,13 +154,6 @@ let g:session_autosave_periodic = 5
 " activate tab-airline 
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#fnamemod = ':t'
-" good for html
-colorscheme base16-twilight
-" colorscheme base16-tomorrow
-
-" good for rails, bad for html
-" colorscheme badwolf
-
 
 map <F2> <ESC>;NERDTree ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle<RETURN>
@@ -142,5 +175,6 @@ map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
 map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
 map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
 map <leader>ss <ESC>;! grep -rnw './work/' -e "
+map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
