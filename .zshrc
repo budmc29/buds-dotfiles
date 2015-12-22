@@ -7,6 +7,7 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 bindkey -v
+export TERM=xterm-256color
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
