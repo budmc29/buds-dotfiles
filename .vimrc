@@ -49,7 +49,7 @@ Plugin 'gregsexton/Muon'
 Plugin 'carlson-erik/wolfpack'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'kreeger/benlight'
-
+Plugin 'budmc29/colour-schemes'
 " Plugin 'andrwb/vim-lapis256'
 " Plugin 'wellsjo/wellsokai.vim'
 " Plugin 'atelierbram/vim-colors_atelier-schemes'
