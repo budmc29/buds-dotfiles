@@ -79,7 +79,8 @@ filetype plugin indent on    " required
 " colorscheme badwolf
 " colorscheme base16-tomorrow
 set background=dark
-colorscheme benlight
+" colorscheme benlight
+colorscheme darcula
 " good for rails, bad for html
 " colorscheme badwolf
 
@@ -88,6 +89,8 @@ colorscheme benlight
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+
+set t_ut= "fix tmux transparent background problem
 
 set number
 set relativenumber
