@@ -1,27 +1,19 @@
 # ubuntu-vim
-Ubuntu dotfiles backup with my plugins, .vimrc and .zshrc.
-
-Reminder: 
-Copy files to ~/ and then run ```$ vundle```
-- Install Source Code Pro fonts
+Environment setup for new linux instalation.
 
 ```
-curl https://gist.githubusercontent.com/lucasdavila/3875946/raw/1c100cae16a06bef154af0f290d665405b554b3b/install_source_code_pro.sh | sh 
+sudo apt-get install git && cd && https://github.com/budmc29/ubuntu-dotfiles.git
 ```
 
-- Install zsh and oh-my-zsh
+## To setup everything
 ```
-sudo apt-get update && sudo apt-get install zsh 
-
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cd ~/ubuntu-dotfiles && sudo ./fresh-ubuntu-programs.sh
 ```
 
-- To make autocomplete plugin work: 
+### To make autocomplete plugin work: 
 
 ```
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev.
 cd ~/.vim/bundle/YouCompleteMe && ./install.py
 ```
-
-TODO: find a way to avoid changing the pc name when installing to a fresh machine
