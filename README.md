@@ -7,7 +7,7 @@ sudo apt-get install git && cd && https://github.com/budmc29/ubuntu-dotfiles.git
 
 ## To setup everything
 ```
-cd ~/ubuntu-dotfiles && chmod +x fresh-ubuntu-programs.sh && .sh && sudo ./fresh-ubuntu-programs.sh
+cd ~/ubuntu-dotfiles && sudo bash ./fresh-ubuntu-programs.sh
 ```
 ## Remaining steps:
 
