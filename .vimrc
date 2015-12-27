@@ -37,7 +37,7 @@ Plugin 'drmingdrmer/xptemplate'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
-" Plugin 'vim-scripts/CSApprox'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -75,13 +75,10 @@ Plugin 'budmc29/colour-schemes'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-" colorscheme badwolf
 " colorscheme base16-tomorrow
 set background=dark
 " colorscheme benlight
 colorscheme darcula
-" good for rails, bad for html
 " colorscheme badwolf
 
 
@@ -115,11 +112,12 @@ set cindent
 " set a horizontal 80w hard limit
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=7 guibg=tomato
-highlight ColorColumn ctermbg=0 guibg=#FF6364
+highlight ColorColumn ctermbg=7 guibg=grey
 call matchadd('ColorColumn', '\%81v', 100)
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
+
 " vim persisten undo
 set undofile
 " set a directory to store the undo history
@@ -177,3 +175,5 @@ map <leader>ss <ESC>;! grep -rnw './work/' -e "
 map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
+
+" switch splits in vim and tmux

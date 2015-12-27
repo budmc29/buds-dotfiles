@@ -161,6 +161,9 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
+# tmux aliases
+alias tmuxrc="vim ~/.tmux.conf"
+
 # ubuntu processes
 alias ps="ps -ef | grep"
 alias szsh="source ~/.zshrc"
