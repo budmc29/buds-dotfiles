@@ -123,11 +123,11 @@ set linespace=6
 " vim persisten undo
 set undofile
 " set a directory to store the undo history
-set undodir=~/.vimundo
+set undodir=~/.vim/undo
 set undolevels=1000
 
 " change swap file directory
-set dir=$HOME/.vim/swap//
+set dir=$HOME/.vim/swap/
 
 filetype on
 filetype plugin on

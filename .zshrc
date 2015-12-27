@@ -153,23 +153,23 @@ alias rollback="cap staging deploy:rollback"
 alias restart="cap staging unicorn:restart"
 
 #Misc aliases
-alias zsh="gvim ~/.zshrc"
+alias zsh="vim ~/.zshrc"
 alias sources="source ~/.vimrc && source ~/.zshrc"
-alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/.hgrc && cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
-alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
+alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/.hgrc && cp ~/.tmux.conf ~/ubuntu-dotfiles/.tmux.conf && cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit -m \"backup\" && git push"
+alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf &&  cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
 
 #vim aliases
-alias vimrc="gvim ~/.vimrc"
+alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # ubuntu processes
 alias ps="ps -ef | grep"
 alias szsh="source ~/.zshrc"
-alias sgvim="sudo gvim"
-alias rbsnippets="gvim ~/.vim/bundle/snipMate/snippets/ruby.snippets"
-alias jssnippets="gvim ~/.vim/bundle/snipMate/snippets/javascript.snippets"
-alias htmlsnippets="gvim ~/.vim/bundle/snipMate/snippets/html.snippets"
-alias csssnippets="gvim ~/.vim/bundle/snipMate/snippets/css.snippets"
+alias svim="sudo vim"
+# alias rbsnippets="vim ~/.vim/bundle/snipMate/snippets/ruby.snippets"
+# alias jssnippets="vim ~/.vim/bundle/snipMate/snippets/javascript.snippets"
+# alias htmlsnippets="vim ~/.vim/bundle/snipMate/snippets/html.snippets"
+# alias csssnippets="vim ~/.vim/bundle/snipMate/snippets/css.snippets"
 
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
