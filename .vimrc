@@ -29,7 +29,7 @@ Plugin 'wesgibbs/vim-irblack'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'mbbill/undotree'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
+" Plugin 'xolox/vim-session'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'drmingdrmer/xptemplate'
@@ -38,6 +38,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-obsession'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -176,4 +177,5 @@ map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
 
-" switch splits in vim and tmux
+map <leader>p <ESC>"+gp
+map <leader>P <ESC>"+gP
