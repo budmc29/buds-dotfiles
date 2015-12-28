@@ -1,7 +1,6 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'sjl/badwolf'
@@ -39,6 +38,7 @@ Plugin 'gioele/vim-autoswap'
 Plugin 'sickill/vim-pasta'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
+Plugin 'rking/ag.vim'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -82,7 +82,6 @@ set background=dark
 colorscheme darcula
 " colorscheme badwolf
 
-
 " don't show the gui
 set guioptions-=m
 set guioptions-=T
@@ -105,16 +104,18 @@ set foldnestmax=2
 set nofoldenable
 set foldlevel=1
 
+" save cache for ctrlp plugin, remember to create the dir on new systems
+let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp-cache'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 set incsearch " start search as soon as you type
 " highlight search results
 set hlsearch
 "better indenting with vim
 set cindent
-" set a horizontal 80w hard limit
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=7 guibg=tomato
-highlight ColorColumn ctermbg=7 guibg=grey
-call matchadd('ColorColumn', '\%81v', 100)
+
 " font and line-height
 set guifont=Source\ Code\ Pro
 set linespace=6
@@ -139,20 +140,7 @@ let g:hardtime_default_on = 1
 let g:session_autosave_periodic = 5
 " let g:session_autosave = 'yes'
 
-"neocomplete settings
-" Use neocomplete.
-" let g:neocomplete#enable_at_startup = 1
-" " Use smartcase.
-" let g:neocomplete#enable_smart_case = 1
-" " Set minimum syntax keyword length.
-" let g:neocomplete#sources#syntax#min_keyword_length = 3
-" let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" " keys remapping
-
-" activate tab-airline 
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#fnamemod = ':t'
-
+" key remapping
 map <F2> <ESC>;NERDTree ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle<RETURN>
 " for most recent used plugin
@@ -179,3 +167,8 @@ map "+Gp "+gp
 
 map <leader>p <ESC>"+gp
 map <leader>P <ESC>"+gP
+
+" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+" match OverLength /\%81v.\+/
+highlight ColorColumn ctermbg=1 guibg=red
+call matchadd('ColorColumn', '\%80v', 100)
