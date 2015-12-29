@@ -6,7 +6,8 @@ export ZSH=~/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
-bindkey -v
+# activate vim mode inside cli
+# bindkey -v
 export TERM=xterm-256color
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -172,7 +173,12 @@ alias svim="sudo vim"
 # alias jssnippets="vim ~/.vim/bundle/snipMate/snippets/javascript.snippets"
 # alias htmlsnippets="vim ~/.vim/bundle/snipMate/snippets/html.snippets"
 # alias csssnippets="vim ~/.vim/bundle/snipMate/snippets/css.snippets"
+# projects
+alias pr="cd ~/projects"
+alias projects="cd ~/projects"
+alias ex="cd ~/projects/exercism/ruby"
 
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
 
+export PATH=$HOME/bin:$PATH

@@ -39,6 +39,7 @@ Plugin 'sickill/vim-pasta'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
 Plugin 'rking/ag.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -139,6 +140,9 @@ let g:hardtime_default_on = 1
 " xolo vim session settings
 let g:session_autosave_periodic = 5
 " let g:session_autosave = 'yes'
+
+" markdown preview plugin map
+let vim_markdown_preview_hotkey='<C-m>'
 
 " key remapping
 map <F2> <ESC>;NERDTree ~/work<RETURN>
