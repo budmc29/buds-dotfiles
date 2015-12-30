@@ -155,7 +155,7 @@ alias restart="cap staging unicorn:restart"
 
 #Misc aliases
 alias zsh="vim ~/.zshrc"
-alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ && cp ~/.tmux.conf ~/ubuntu-dotfiles/ && cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit && git push"
+alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ && cp -r ~/vimwiki ~/ubuntu-dotfiles/vimwiki && cp ~/.tmux.conf ~/ubuntu-dotfiles/ && cp ~/.vimrc ~/ubuntu-dotfiles/ && cp ~/.zshrc ~/ubuntu-dotfiles/ && cd ~/ubuntu-dotfiles && git add -A && git commit && git push"
 alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf &&  cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
 
 #vim aliases
@@ -182,3 +182,4 @@ alias ex="cd ~/projects/exercism/ruby"
 alias x11="x11vnc -auth guess -forever -usepw"
 
 export PATH=$HOME/bin:$PATH
+set -o vi
