@@ -1,0 +1,40 @@
+UpostMe Expenses in RON
+
+- Javascript developer - 6000
+- Lead developer - 7000
+- Senior developer/Mid developer - 6000-8000
+- System administrator - 8000
+- Application ios developer 6000
+- Application android developer 6000
+
+
+Equipment (everything will belong to the company)
+
+- laptop + monitor - 4000 for each member
+    Lenovo i5 processor, 8gb ram, 2gb video card
+    Monitor 22" 
+    Graphic tablet for designer 500
+    
+    iphone 4,5,6
+    ipad, ipad mini
+      or  
+    android phone
+    android tablet
+      for the application developer (we should probably buy second hand devices, or buy just a new one and test the application ourselves and others for multiple devices)
+
+
+Software
+  - windows licence for the designer and apps developer - 200
+  - photoshop licence for designer - 30 dolars/month
+  - apple developer program 100 dolars/year
+
+
+Monthly payments in dollars
+
+- amazon hosting: 2 servers - 60
+- amazon mailing services 20 (for sending emails, depending on the user count, it will definetly grow)
+- github - 25
+- airbrake (to monitor application errors) - 40
+- remote working software - 25/user
+- Zendesk customer support software 30/agent (in the begining we will share an account, so just 1 agent)
+

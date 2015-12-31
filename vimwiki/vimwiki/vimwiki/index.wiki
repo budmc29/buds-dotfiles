@@ -1,0 +1,16 @@
+= TODO =
+* [X] Toggle list item on/off.
+  * [X] Simple toggling between [ ] and [X].
+  * [X] All list's subitems should be toggled on/off appropriately.
+  * [X] Toggle child subitems only if current line is list item
+  * [X] Parent list item should be toggled depending on it's child items.
+* [X] Make numbered list items toggleable too
+* [X] Add highlighting to list item boxes
+* [X] Add [ ] to the next list item created with o, O and <CR>.
+
+= [[Notes]] =
+
+
+= Upostme =
+ [[Upostme Salaries]] 
+

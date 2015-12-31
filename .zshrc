@@ -178,6 +178,11 @@ alias pr="cd ~/projects"
 alias projects="cd ~/projects"
 alias ex="cd ~/projects/exercism/ruby"
 
+#personal
+alias ps="cd ~/personal"
+alias personal="cd ~/personal"
+alias upm="cd /var/www/upostme"
+
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
 

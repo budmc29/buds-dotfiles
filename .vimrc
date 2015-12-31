@@ -40,6 +40,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
 Plugin 'rking/ag.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'szw/vim-g'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -165,6 +166,7 @@ map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
 map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
 map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
 map <leader>ss <ESC>;! grep -rnw './work/' -e "
+map <leader>sa <ESC>;! grep -rnw './' -e "
 map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
@@ -172,7 +174,13 @@ map "+Gp "+gp
 map <leader>p <ESC>"+gp
 map <leader>P <ESC>"+gP
 
-" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-" match OverLength /\%81v.\+/
+" google search with plugin
+map <leader>g <ESC>;Google 
+
+" vim wiki maping
+map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
+map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
+
+" i need to have this here because otherwise the color column won't work
 highlight ColorColumn ctermbg=1 guibg=red
 call matchadd('ColorColumn', '\%80v', 100)

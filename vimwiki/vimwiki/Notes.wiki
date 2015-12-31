@@ -1,0 +1,7 @@
+= Notepads =
+  * [[Linux]]
+  * [[Laravel]]
+  * [[Git]]
+  * [[Ruby]]
+  * [[Php]]
+  * [[Misc]]

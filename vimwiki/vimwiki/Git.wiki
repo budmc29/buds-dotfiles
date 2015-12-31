@@ -1,0 +1,5 @@
+= Git Notes =
+
+  [[remove sensitive information from the repo]]
+  [[add already existing git to github]]
+
