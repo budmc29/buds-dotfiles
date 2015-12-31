@@ -183,8 +183,13 @@ alias ps="cd ~/personal"
 alias personal="cd ~/personal"
 alias upm="cd /var/www/upostme"
 
+# search in console
+alias gr="grep -rnw './' -e \""
+
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
 
 export PATH=$HOME/bin:$PATH
 set -o vi
+
+
