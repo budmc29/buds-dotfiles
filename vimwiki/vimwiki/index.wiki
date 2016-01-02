@@ -1,7 +1,8 @@
 = 1.TODO =
-* [ ] update firefox34 to have the tarbal in git
+* [ ] set vimwiki backups
 * [ ] 
-* [ ] translate vim keys repo
+* [ ] create script to clone al projects to a machine form github
+* [ ] maybe backup git for each repo or single repo for all
 * [ ] set irc
 * [ ] fix wiki privacy in github
 * [ ] hello world gem

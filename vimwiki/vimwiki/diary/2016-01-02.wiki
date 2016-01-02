@@ -3,3 +3,5 @@ diary test
 Completed todos:
 * [X] show the name of the session in poweline
 * [X] setup zap bookmark manager
+* [X] update firefox34 to have the tarbal in git
+* [X] translate vim keys repo

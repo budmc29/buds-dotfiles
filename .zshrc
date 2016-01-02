@@ -121,6 +121,7 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
 && cp ~/.zshrc ~/ubuntu-dotfiles/ \
 && cp ~/zap.bash ~/ubuntu-dotfiles/ \
+&& cp -r ~/.bookmarks ~/ubuntu-dotfiles/ \
 && cd ~/ubuntu-dotfiles \
 && git add -A && git commit && git push"
 
@@ -130,11 +131,14 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
 && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
 && cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
+&& cp -r ~/ubuntu-dotfiles/.bookmarks ~/.bookmarks \
 && source ~/.zshrc"
 
 #vim aliases
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+
+alias wiki="vim ~/vimwiki/index.wiki"
 
 # tmux aliases
 alias tmuxrc="vim ~/.tmux.conf"
