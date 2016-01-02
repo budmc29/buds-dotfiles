@@ -1,5 +1,0 @@
-= Notes by category =
-  * [[Linux]]
-  * [[Ruby]]
-  * [[Php]]
-  * [[Misc]]
