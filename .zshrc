@@ -40,8 +40,8 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 
 # zap bookmark manager
-if [ -f ~/.zap.bash ]; then
-    source ~/zap.bash
+if [ -f ~/zap.bash ]; then
+  source ~/zap.bash
 fi
 
 # ALIASES
@@ -83,6 +83,8 @@ alias gs="git status"
 alias gp="git push"
 alias gc="git commit -m \""
 alias ga="git add -A"
+alias gd="git diff --cached"
+
 # Ssh and deployment
 alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
 alias bootstrapssh="ssh bootstrap@www.yoyogames.com"
