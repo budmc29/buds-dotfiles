@@ -1,4 +1,10 @@
 = TODO =
+* [ ] create snippets files for vim
+* [ ] create snippets for bash
+* [ ] [[create note sharing web app]]
+* [ ] new bookmark manager
+* [ ] read gnork vi
+* [ ] setup task manager or todos for mobile
 * [ ] chron job for vimwiki backup
 * [ ] use markdown in vim wiki
 * [ ] use markdonw when in insert mode then use preview in normal mode

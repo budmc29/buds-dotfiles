@@ -41,6 +41,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'rking/ag.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'szw/vim-g'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " colorschemes
 Plugin 'sickill/vim-monokai'
@@ -145,11 +146,15 @@ let g:session_autosave_periodic = 5
 " markdown preview plugin map
 let vim_markdown_preview_hotkey='<C-m>'
 
-" key remapping
+
+"""""""""" key remapping
 map <F2> <ESC>;NERDTree ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle<RETURN>
 " for most recent used plugin
 map <C-t> <ESC>;MRU <RETURN>
+
+" reload vimrc
+map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
 
 " window management
 map <leader>v <C-w>_
@@ -171,6 +176,9 @@ map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
 
+" yank to machine register
+map <leader>y "+y
+" paste from machine register
 map <leader>p <ESC>"+gp
 map <leader>P <ESC>"+gP
 
