@@ -1,4 +1,4 @@
-= TODO =
+= 1.TODO =
 * [ ] create snippets files for vim
 * [ ] create snippets for bash
 * [ ] [[create note sharing web app]]
@@ -11,5 +11,6 @@
 * [ ] bash install for laravel
 * [ ] make separate vimwiki todo with key cobination? 
 
-= [[Notes]] =
+= 2.[[Notes]] =
 
+= 3. Scratchpad =

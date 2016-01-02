@@ -1,5 +1,6 @@
 = Notepads =
   * [[Linux]]
+  * [[Shell]]
   * [[Laravel]]
   * [[Git]]
   * [[Ruby]]

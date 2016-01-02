@@ -183,11 +183,12 @@ map <leader>p <ESC>"+gp
 map <leader>P <ESC>"+gP
 
 " google search with plugin
-map <leader>g <ESC>;Google 
+map <leader>g <ESC>;Google
 
 " vim wiki maping
 map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
+map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
 
 " i need to have this here because otherwise the color column won't work
 highlight ColorColumn ctermbg=1 guibg=red
