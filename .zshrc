@@ -40,9 +40,9 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 
 # zap bookmark manager
-if [ -f ~/.zap.sh ]; then
-    source ~/zap.sh
-fi 
+if [ -f ~/.zap.bash ]; then
+    source ~/zap.bash
+fi
 
 # ALIASES
 #
@@ -118,10 +118,17 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
 && cp ~/.zshrc ~/ubuntu-dotfiles/ \
+&& cp ~/zap.bash ~/ubuntu-dotfiles/ \
 && cd ~/ubuntu-dotfiles \
 && git add -A && git commit && git push"
 
-alias dotupdate="cd ~/ubuntu-dotfiles && git pull && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc && cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf &&  cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
+alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
+&& cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
+&& cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf \
+&& cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
+&& cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
+&& cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
+&& source ~/.zshrc"
 
 #vim aliases
 alias vimrc="vim ~/.vimrc"
