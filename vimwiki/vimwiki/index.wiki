@@ -9,7 +9,8 @@
 * [ ] use markdown in vim wiki
 * [ ] use markdonw when in insert mode then use preview in normal mode
 * [ ] bash install for laravel
-* [ ] make separate vimwiki todo with key cobination? 
+* [ ] make separate vimwiki todo with key cobination?
+* [ ] show the name of the session in poweline
 
 = 2.[[Notes]] =
 
