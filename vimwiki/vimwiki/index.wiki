@@ -1,6 +1,12 @@
 = 1.TODO =
+* [ ] setup zap bookmark manager
+* [ ] 
+* [ ] translate vim keys repo
+* [ ] set irc
+* [ ] fix wiki privacy in github
+* [ ] update firefox34 to have the tarbal in git
+* [ ] hello world gen
 * [ ] create snippets files for vim
-
 * [ ] install vim calendar
 * [ ] create snippets for bash
 * [ ] [[create note sharing web app]]
