@@ -1,11 +1,12 @@
 = 1.TODO =
-* [ ] set vimwiki backups
+* [ ] hello world gem
 * [ ] 
+* [ ] finish laravel setup
+* [ ] set vimwiki backups
 * [ ] create script to clone al projects to a machine form github
 * [ ] maybe backup git for each repo or single repo for all
 * [ ] set irc
 * [ ] fix wiki privacy in github
-* [ ] hello world gem
 * [ ] create snippets files for vim
 * [ ] install vim calendar
 * [ ] create snippets for bash

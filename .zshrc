@@ -6,6 +6,9 @@ ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
 
+# start tmux on console load
+tmux attach -t console || tmux new -s console
+
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -81,6 +84,7 @@ alias hgd="hg diff"
 #git aliases
 alias gs="git status"
 alias gp="git push"
+alias gb="git branch"
 alias gc="git commit -m \""
 alias ga="git add -A"
 alias gd="git diff --cached"
@@ -149,14 +153,22 @@ alias szsh="source ~/.zshrc"
 alias svim="sudo vim"
 
 # projects
-alias pr="cd ~/projects"
-alias projects="cd ~/projects"
-alias ex="cd ~/projects/exercism/ruby"
+alias pr="cd ~/projects && ls"
+alias projects="cd ~/projects && ls"
+alias ex="cd ~/projects/exercism/ruby && ls"
+alias prbackup="cd ~/projects && git status && git add -A && git commit \
+&& git push"
+
+alias prupdate="cd ~/projects && git pull"
 
 #personal
-alias ps="cd ~/personal"
-alias personal="cd ~/personal"
-alias upm="cd /var/www/upostme"
+alias ps="cd ~/personal && ls"
+alias personal="cd ~/personal && ls"
+alias upm="cd /var/www/upostme && ls"
+
+# work
+alias wk="cd ~/work && ls"
+alias work="cd ~/work && ls"
 
 # search in console
 alias gr="grep -rnw './' -e \""
