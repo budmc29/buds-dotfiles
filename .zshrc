@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 export TERM=xterm-256color
 
 # start tmux on console load
-tmux attach -t console || tmux new -s console
+tmux attach -t console || tmux new
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
