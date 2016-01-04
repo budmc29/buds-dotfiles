@@ -3,46 +3,49 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/syntastic'
-Plugin 'Raimondi/delimitMate'
-Plugin 'yegappan/mru'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-commentary' " comment sytax aware
+Plugin 'scrooloose/syntastic' " sintax highlighting
+" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
+Plugin 'yegappan/mru' " most recent used files tree
+Plugin 'scrooloose/nerdtree' " show filetree
+Plugin 'bling/vim-airline' " inproved vim information line
+Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
-Plugin 'croaker/mustang-vim'
-" Plugin 'vim-scripts/snipMate'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'mhinz/vim-signify'
+" Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise' " auto add matching end keywords
+Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
+Plugin 'mhinz/vim-signify' " column diff for source control
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'wesgibbs/vim-irblack'
-Plugin 'dyng/ctrlsf.vim'
+Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 Plugin 'mbbill/undotree'
-Plugin 'xolox/vim-misc'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'drmingdrmer/xptemplate'
-Plugin 'gioele/vim-autoswap'
-Plugin 'sickill/vim-pasta'
+" Plugin 'xolox/vim-misc' " ?
+Plugin 'vim-scripts/matchit.zip' " improve % functionality
+Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
+" Plugin 'drmingdrmer/xptemplate' " snippet plugin
+Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
+Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-obsession' " vim session management
 Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'szw/vim-g'
+Plugin 'szw/vim-g' " search google from vim
 Plugin 'ntpeters/vim-better-whitespace'
+" Plugin 'vim-scripts/snipMate'
 " Plugin 'rking/ag.vim'
 " Plugin 'easymotion/vim-easymotion'
 " Plugin 'takac/vim-hardtime'
-" Plugin 'xolox/vim-session'
+" Plugin 'xolox/vim-session' " good session manager, using obsession for tmux
 
 " colorschemes
-" Plugin 'chriskempson/base16-vim'
 Plugin 'blueshirts/Darcula'
+Plugin 'cdmedia/itg_flat_vim'
+Plugin 'kreeger/benlight'
+Plugin 'budmc29/colour-schemes'
+Plugin 'croaker/mustang-vim'
+Plugin 'wesgibbs/vim-irblack'
+" Plugin 'chriskempson/base16-vim'
 " Plugin 'sjl/badwolf'
 " Plugin 'sickill/vim-monokai'
 " Plugin 'zeis/vim-kolor'
@@ -51,9 +54,6 @@ Plugin 'blueshirts/Darcula'
 " Plugin 'jpo/vim-railscasts-theme'
 " Plugin 'gregsexton/Muon'
 " Plugin 'carlson-erik/wolfpack'
-Plugin 'cdmedia/itg_flat_vim'
-Plugin 'kreeger/benlight'
-Plugin 'budmc29/colour-schemes'
 
 " Plugin 'andrwb/vim-lapis256'
 " Plugin 'wellsjo/wellsokai.vim'
@@ -190,6 +190,8 @@ map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
 map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
 
-" i need to have this here because otherwise the color column won't work
+map <leader>f <ESC>;CtrlSF 
+
+" this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red
 call matchadd('ColorColumn', '\%80v', 100)
