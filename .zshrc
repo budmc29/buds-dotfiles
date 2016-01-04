@@ -10,7 +10,7 @@ export TERM=xterm-256color
 tmux attach -t console || tmux new
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -135,7 +135,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
 && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
 && cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
-&& cp -r ~/ubuntu-dotfiles/.bookmarks ~/.bookmarks \
+&& cp -r ~/ubuntu-dotfiles/.bookmarks ~/ \
 && source ~/.zshrc"
 
 #vim aliases
