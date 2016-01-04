@@ -120,7 +120,7 @@ alias restart="cap staging unicorn:restart"
 alias zsh="vim ~/.zshrc"
 
 alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
-&& cp -r ~/vimwiki/ ~/ubuntu-dotfiles/vimwiki/ \
+&& cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
 && cp ~/.zshrc ~/ubuntu-dotfiles/ \

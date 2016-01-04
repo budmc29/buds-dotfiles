@@ -1,16 +1,25 @@
-= TODO =
-* [X] Toggle list item on/off.
-  * [X] Simple toggling between [ ] and [X].
-  * [X] All list's subitems should be toggled on/off appropriately.
-  * [X] Toggle child subitems only if current line is list item
-  * [X] Parent list item should be toggled depending on it's child items.
-* [X] Make numbered list items toggleable too
-* [X] Add highlighting to list item boxes
-* [X] Add [ ] to the next list item created with o, O and <CR>.
+= 1.TODO =
+* [ ] setup irc channel irrsi
+* [ ] 
+* [ ] finish laravel setup
+* [ ] set vimwiki backups
+* [ ] create script to clone al projects to a machine form github
+* [ ] maybe backup git for each repo or single repo for all
+* [ ] set irc
+* [ ] fix wiki privacy in github
+* [ ] create snippets files for vim
+* [ ] install vim calendar
+* [ ] create snippets for bash
+* [ ] [[create note sharing web app]]
+* [ ] new bookmark manager
+* [ ] read gnork vi
+* [ ] setup task manager or todos for mobile
+* [ ] chron job for vimwiki backup
+* [ ] use markdown in vim wiki
+* [ ] use markdonw when in insert mode then use preview in normal mode for vimwiki
+* [ ] bash install for laravel
+* [ ] make separate vimwiki todo with key cobination?
 
-= [[Notes]] =
+= 2.[[Notes]] =
 
-
-= Upostme =
- [[Upostme Salaries]] 
-
+= 3.[[Scratchpad]] =

@@ -1,0 +1,3 @@
+today's journal
+
+* [X] hello world gem
