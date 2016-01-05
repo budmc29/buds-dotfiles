@@ -5,7 +5,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'scrooloose/syntastic' " sintax highlighting
-" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 Plugin 'yegappan/mru' " most recent used files tree
 Plugin 'scrooloose/nerdtree' " show filetree
 Plugin 'bling/vim-airline' " inproved vim information line
@@ -13,7 +12,6 @@ Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-rails'
-" Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
 Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 Plugin 'mhinz/vim-signify' " column diff for source control
@@ -21,10 +19,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 Plugin 'mbbill/undotree'
-" Plugin 'xolox/vim-misc' " ?
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
-" Plugin 'drmingdrmer/xptemplate' " snippet plugin
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
@@ -32,6 +28,13 @@ Plugin 'tpope/vim-obsession' " vim session management
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'szw/vim-g' " search google from vim
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Plugin 'drmingdrmer/xptemplate' " snippet plugin
+" Plugin 'tpope/vim-bundler'
+" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
+" Plugin 'xolox/vim-misc' " ?
 " Plugin 'vim-scripts/snipMate'
 " Plugin 'rking/ag.vim'
 " Plugin 'easymotion/vim-easymotion'
@@ -54,7 +57,6 @@ Plugin 'wesgibbs/vim-irblack'
 " Plugin 'jpo/vim-railscasts-theme'
 " Plugin 'gregsexton/Muon'
 " Plugin 'carlson-erik/wolfpack'
-
 " Plugin 'andrwb/vim-lapis256'
 " Plugin 'wellsjo/wellsokai.vim'
 " Plugin 'atelierbram/vim-colors_atelier-schemes'
@@ -146,6 +148,13 @@ let g:session_autosave_periodic = 5
 " markdown preview plugin map
 let vim_markdown_preview_hotkey='<C-m>'
 
+" snippets
+let g:UltiSnipsExpandTrigger="<Ctrl>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
 
 """""""""" key remapping
 map <F2> <ESC>;NERDTree ~/work<RETURN>
