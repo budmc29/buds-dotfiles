@@ -1,4 +1,4 @@
-= Shell Notes =
+= Shell/Bash [[Notes]] =
 
 == check if program is installed ==
 {{{

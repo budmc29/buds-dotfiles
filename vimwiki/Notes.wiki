@@ -5,5 +5,4 @@
   * [[Git]]
   * [[Ruby]]
   * [[Php]]
-  * [[Firefox]]
   * [[Misc]]

@@ -30,6 +30,7 @@ Plugin 'szw/vim-g' " search google from vim
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'jebaum/vim-tmuxify'
 
 " Plugin 'drmingdrmer/xptemplate' " snippet plugin
 " Plugin 'tpope/vim-bundler'
@@ -140,7 +141,8 @@ filetype indent on
 syntax on
 
 " Hardtime plugin
-let g:hardtime_default_on = 1
+" let g:hardtime_default_on = 1
+
 " xolo vim session settings
 let g:session_autosave_periodic = 5
 " let g:session_autosave = 'yes'
@@ -150,17 +152,24 @@ let vim_markdown_preview_hotkey='<C-m>'
 
 " snippets
 let g:UltiSnipsExpandTrigger="<Ctrl>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
+"open tmux from vim
+let g:tmuxify_custom_command = 'tmux split-window -p 20'
+" let g:tmuxify_map_prefix = '<leader>m'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
-map <F2> <ESC>;NERDTree ~/work<RETURN>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle<RETURN>
 " for most recent used plugin
-map <C-t> <ESC>;MRU <RETURN>
+map <C-e> <ESC>;MRU <RETURN>
 
 " reload vimrc
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
@@ -174,7 +183,7 @@ map <leader>b <C-w>_ <C-w><bar>
 nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
-map <Alt-s> <ESC>;w<RETURN> 
+map <Alt-s> <ESC>;w<RETURN>
 map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
 map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
 map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
@@ -199,7 +208,7 @@ map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
 map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
 
-map <leader>f <ESC>;CtrlSF 
+map <leader>f <ESC>;CtrlSF
 
 " this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red

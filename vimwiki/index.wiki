@@ -1,8 +1,10 @@
 = 1.TODO =
-* [ ] remap left ctrl to alt on linux
-* [ ]
+* [ ] create aws for rails
+* [ ] send report to playtech
+* [ ] check if new licences were added by admin
+* [X] check server for unauthorized entries
+* [ ] 
 * [ ] setup irc channel irrsi
-* [ ]
 * [ ] finish laravel setup
 * [ ] set vimwiki backups
 * [ ] create script to clone al projects to a machine form github
