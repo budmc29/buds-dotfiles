@@ -1,9 +1,9 @@
 = 1.TODO =
-* [ ] create aws for rails
-* [ ] send report to playtech
-* [ ] check if new licences were added by admin
-* [X] check server for unauthorized entries
-* [ ] 
+* [ ] musical theory generator
+* [ ] update gem and add tests
+* [ ] git backup script for bitbucket
+* [ ]
+* [ ] remap left ctrl to alt on linux
 * [ ] setup irc channel irrsi
 * [ ] finish laravel setup
 * [ ] set vimwiki backups

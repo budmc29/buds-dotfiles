@@ -165,6 +165,7 @@ alias prupdate="cd ~/projects && git pull"
 alias ps="cd ~/personal && ls"
 alias personal="cd ~/personal && ls"
 alias upm="cd /var/www/upostme && ls"
+alias zt="zap to"
 
 # work
 alias wk="cd ~/work && ls"

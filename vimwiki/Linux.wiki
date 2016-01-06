@@ -8,19 +8,3 @@
 
   xinput reattach ID SLAVE_ID
   }}}
-
-  * check auth logs in ubuntu server
-    /var/log/auth.log
-
-  * search for text inside a file
-  {{{
-    grep 'test' filename
-
-    grep -v 'test' filename # only lines that don't containt test
-  }}}
-
-  * unzip a file
-  {{{
-      gzip -d filename.gz # -d means decompress
-  }}}
-
