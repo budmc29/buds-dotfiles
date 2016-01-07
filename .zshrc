@@ -146,6 +146,7 @@ alias wiki="vim ~/vimwiki/index.wiki"
 
 # tmux aliases
 alias tmuxrc="vim ~/.tmux.conf"
+alias tmuxc="tmux attach -t console || tmux"
 
 # ubuntu processes
 alias ps="ps -ef | grep"
