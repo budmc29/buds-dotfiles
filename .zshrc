@@ -182,3 +182,4 @@ export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
 set -o vi
+alias wiki-backup="cd && bash ./wiki-backup.bash"

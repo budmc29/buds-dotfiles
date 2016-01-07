@@ -1,6 +1,6 @@
 = 1.TODO =
 * [ ] git backup script for bitbucket
-* [ ] backup vimwiki in bitbucket
+* [ ] backup vimwiki in bitbucket (started)
 * [ ] musical theory generator
 * [ ] update gem and add tests
 * [ ]
