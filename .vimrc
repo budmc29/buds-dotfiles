@@ -17,7 +17,7 @@ Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 Plugin 'mhinz/vim-signify' " column diff for source control
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'dyng/ctrlsf.vim' " search inside files using ag
+" Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
@@ -208,7 +208,8 @@ map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
 map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
 
-map <leader>f <ESC>;CtrlSF
+" ctrl shift f searcher
+" map <leader>f <ESC>;CtrlSF
 
 " this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red
