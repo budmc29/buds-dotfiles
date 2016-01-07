@@ -8,3 +8,5 @@
   * [[Php]]
   * [[Firefox]]
   * [[Misc]]
+  * [[Vim]]
+  * [[Tmux]]

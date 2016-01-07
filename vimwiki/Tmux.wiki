@@ -1,0 +1,9 @@
+== Tmux Notepad ==
+
+  * switch between tmux sessions
+{{{
+  C-a (          previous session
+  C-a )          next session
+  C-a L          ‘last’ (previously used) session
+  C-a s          choose a session from a list
+}}}
