@@ -1,7 +1,7 @@
 = 1.TODO =
 * [ ] git backup script for bitbucket
 * [ ] backup vimwiki in bitbucket
-* [ ] musical theory generator (maybe?)
+* [ ] musical theory generator
 * [ ] update gem and add tests
 * [ ]
 * [ ] switch session with shortcuts in tmux

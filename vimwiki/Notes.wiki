@@ -4,6 +4,7 @@
   * [[Laravel]]
   * [[Git]]
   * [[Ruby]]
+  * [[Rails]]
   * [[Php]]
   * [[Firefox]]
   * [[Misc]]
