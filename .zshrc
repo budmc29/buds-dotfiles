@@ -132,7 +132,7 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp ~/zap.bash ~/ubuntu-dotfiles/ \
 && cp -r ~/.bookmarks ~/ubuntu-dotfiles/ \
 && cd ~/ubuntu-dotfiles \
-&& git add -A && git commit && git push"
+&& git pull && git add -A && git commit && git push"
 
 alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
