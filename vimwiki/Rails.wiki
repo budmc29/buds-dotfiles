@@ -3,5 +3,5 @@
   * convert BigDecimal to string in rails console
   {{{
     item = Item.last
-    item.value.to_s.to_f.round(2)
-  }}}
+      item.value.to_s.to_f.round(2)
+    }}}
