@@ -47,6 +47,11 @@ if [ -f ~/zap.bash ]; then
   source ~/zap.bash
 fi
 
+# wiki backup
+if [ -f ~/.wiki-backup.bash ]; then
+  source ~/.wiki-backup.bash
+fi
+
 # ALIASES
 #
 #
@@ -142,7 +147,8 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
-alias wiki="vim ~/vimwiki/index.wiki"
+alias viki="vim ~/vimwiki/index.wiki"
+alias vimwiki="vim ~/vimwiki/index.wiki"
 
 # tmux aliases
 alias tmuxrc="vim ~/.tmux.conf"
@@ -182,4 +188,3 @@ export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
 set -o vi
-alias wiki-backup="cd && bash ./wiki-backup.bash"
