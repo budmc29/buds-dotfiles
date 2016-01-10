@@ -7,7 +7,13 @@ ZSH_THEME="robbyrussell"
 export TERM=xterm-256color
 
 # start tmux on console load
-tmux attach -t console || tmux new
+
+if pgrep "tmux" > /dev/null
+then
+  tmux switch-client -t console
+else
+  tmux new
+fi
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -152,7 +158,6 @@ alias vimwiki="vim ~/vimwiki/index.wiki"
 
 # tmux aliases
 alias tmuxrc="vim ~/.tmux.conf"
-alias tmuxc="tmux attach -t console || tmux"
 
 # ubuntu processes
 alias ps="ps -ef | grep"
@@ -183,6 +188,9 @@ alias gr="grep -rnw './' -e \""
 
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
+
+# tmux aliases [TODO: make a script for those in tmuxconf]
+alias tmuxc="tmux attach -t console || tmux"
 
 DISABLE_AUTO_UPDATE="false"
 export PATH=$HOME/bin:$PATH
