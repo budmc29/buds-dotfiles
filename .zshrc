@@ -184,6 +184,7 @@ alias gr="grep -rnw './' -e \""
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
 
+DISABLE_AUTO_UPDATE="false"
 export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
