@@ -11,23 +11,15 @@
 * [ ] tmux commands log
 * [ ] zsh plugin to show uncommited changes even if not in folder?
 * [ ] daily todo list?
-* [ ] start console atstartup and maximize
-* [x] create tmux keys
+* [ ] start console at startup and maximize
 * [ ] send mail from linux server
 * [ ] markdown plugin
-* [ ] customize vim wiki ???
-* [ ] run update on startup and backup on shutdown
-* [ ] git backup script for bitbucket
+* [ ] run file update on startup and backup on shutdown
 * [ ] backup vimwiki in bitbucket
-* [ ] update gem and add tests
-* [ ] switch session with shortcuts in tmux
 * [ ] finish laravel setup
 * [ ] set vimwiki backups
-* [ ] create script to clone al projects to a machine form github
-* [ ] fix wiki privacy in github
 * [ ] create snippets files for vim
-* [ ] install vim calendar
-* [ ] create snippets for bash
+* [ ] create snippets for bash (to do what?)
 * [ ] new bookmark manager
 * [ ] read gnork vi
 * [ ] setup task manager or todos for mobile
@@ -37,7 +29,9 @@
 * [ ] bash install for laravel
 * [ ] make separate vimwiki todo with key cobination?
 * [ ] musical theory generator
+* [ ] update gem and add tests
 * [ ] [[create note sharing web app]]
+* [ ] customize vim wiki ???
 
 = 2.[[Notes]] =
 
