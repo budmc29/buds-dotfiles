@@ -195,10 +195,12 @@ map "+Gp "+gp
 " map ;q <ESC>;wq<RETURN>
 
 " yank to machine register
-map <leader>y "+y
+map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 " paste from machine register
-map <leader>p <ESC>"+gp
-map <leader>P <ESC>"+gP
+map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
+
+map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
+
 
 " google search with plugin
 map <leader>g <ESC>;Google
