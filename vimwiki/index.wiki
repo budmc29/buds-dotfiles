@@ -1,22 +1,13 @@
 = 1.TODO =
-* [ ] add leader command to open session in tmux
-* [ ] tmux commands log
-* [ ] zsh plugin to show uncommited changes even if not in folder?
-* [ ] daily todo list?
-* [ ] start console atstartup and maximize
-* [ ] remap left ctrl to alt on linux
-* [ ] create tmux keys
-* [ ] send mail from linux server
-* [ ] markdown plugin
-* [ ] customize vim wiki
-* [ ] run update on startup and backup on shutdown
 * [ ] git backup script for bitbucket
 * [ ] backup vimwiki in bitbucket
 * [ ] musical theory generator
 * [ ] update gem and add tests
+* [ ]
 * [ ] switch session with shortcuts in tmux
 * [ ] open tmux session with aliases
 * [ ] open terminal with keystrokes, ubuntu program
+* [ ] remap left ctrl to alt on linux
 * [ ] setup irc channel irrsi
 * [ ] finish laravel setup
 * [ ] set vimwiki backups

@@ -101,7 +101,8 @@ alias ga="git add -A"
 alias gd="git diff --cached"
 
 # Ssh and deployment
-alias bootstage="ssh bootstrap@bootstage.yoyogames.com"
+alias bootstagessh="ssh bootstrap@bootstage.yoyogames.com"
+alias bootstagesshroot="ssh mgmtusr@bootstage.yoyogames.com"
 alias bootstrapssh="ssh bootstrap@www.yoyogames.com"
 alias bootstrapsshroot="ssh -i ~/.ssh/marketplace_aws.pem mgmtusr@www.yoyogames.com"
 

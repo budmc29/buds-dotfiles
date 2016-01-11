@@ -1,0 +1,6 @@
+== Mercurial Notebook ==
+
+  * check today's hg commits
+{{{
+  hg log --date 2016-01-01
+}}}

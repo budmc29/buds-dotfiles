@@ -10,6 +10,6 @@
 
   * modify last commit message
     {{{
-      git commit --ammend -m "Updated commit message" 
+      git commit --amment -m "Updated commit message" 
     }}}
 
