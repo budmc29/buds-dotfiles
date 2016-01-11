@@ -1,4 +1,5 @@
 = 1.TODO =
+* [ ] add leader command to open session in tmux
 * [ ] tmux commands log
 * [ ] zsh plugin to show uncommited changes even if not in folder?
 * [ ] daily todo list?
