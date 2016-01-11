@@ -7,12 +7,13 @@ ZSH_THEME="robbyrussell"
 export TERM=xterm-256color
 
 # start tmux on console load
-
-if pgrep "tmux" > /dev/null
-then
-  tmux switch-client -t console
-else
-  tmux new
+if [[ -z "$TMUX" ]] ;then
+    ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then # if not available create a new one
+        tmux new-session
+    else
+        tmux attach-session -t "$ID" # if available attach to it
+    fi
 fi
 
 # Uncomment the following line to enable command auto-correction.
