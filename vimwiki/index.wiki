@@ -1,4 +1,6 @@
 = 1.TODO =
+* [ ] learn to use manpages
+* [ ] use space as leader for vim?
 * [ ] have a puppet like control sistem for all machines
 * [ ] learn to do vim comands, for ex 20 lines below while staying on the same line
 * [ ] remap left ctrl to alt on linux
