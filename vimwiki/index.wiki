@@ -1,5 +1,4 @@
 = 1.TODO =
-* [ ] git backup script for bitbucket
 * [ ] backup vimwiki in bitbucket
 * [ ] musical theory generator
 * [ ] update gem and add tests
@@ -27,6 +26,7 @@
 * [ ] use markdonw when in insert mode then use preview in normal mode for vimwiki
 * [ ] bash install for laravel
 * [ ] make separate vimwiki todo with key cobination?
+* [ ] git backup script for bitbucket
 
 = 2.[[Notes]] =
 

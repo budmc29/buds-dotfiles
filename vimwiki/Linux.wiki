@@ -8,3 +8,8 @@
 
   xinput reattach ID SLAVE_ID
   }}}
+
+  * copy text from tmux to clipboard
+{{{
+  xclip -sel clip < ~/.ssh/key.pub
+}}}
