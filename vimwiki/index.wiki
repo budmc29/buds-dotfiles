@@ -1,4 +1,8 @@
 = 1.TODO =
+* [ ] make wiki searchable from everywhere
+* [ ] create bash shortcuts for wiki
+* [ ] add todos more easy with commands to bash
+* [ ] rearrange wiki notepads
 * [ ] backup vimwiki in bitbucket
 * [ ] musical theory generator
 * [ ] update gem and add tests
