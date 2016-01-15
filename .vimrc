@@ -130,7 +130,7 @@ set linespace=6
 set undofile
 " set a directory to store the undo history
 set undodir=~/.vim/undo
-set undolevels=1000
+set undolevels=5000
 
 " change swap file directory
 set dir=$HOME/.vim/swap/
