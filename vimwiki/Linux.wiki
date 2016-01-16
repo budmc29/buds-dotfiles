@@ -8,15 +8,3 @@
 
   xinput reattach ID SLAVE_ID
   }}}
-
-  * copy text from tmux to clipboard
-{{{
-  xclip -sel clip < ~/.ssh/key.pub
-}}}
-
-  * how to get commands from history
-{{{
-  history | grep string
-
-  fc -e vim 12345 # it will run the command after exiting vim
-}}}

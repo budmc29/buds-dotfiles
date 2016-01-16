@@ -184,13 +184,13 @@ nnoremap ; :
 nnoremap : ;
 " inoremap <C-e> <C-o>A
 map <Alt-s> <ESC>;w<RETURN>
-map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
-map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
-map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
-map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
-map <leader>ss <ESC>;! grep -rnw './work/' -e "
-map <leader>sa <ESC>;! grep -rnw './' -e "
-map "+Gp "+gp
+" map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
+" map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
+" map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
+" map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
+" map <leader>ss <ESC>;! grep -rnw './work/' -e "
+" map <leader>sa <ESC>;! grep -rnw './' -e "
+" map "+Gp "+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
 
@@ -209,6 +209,10 @@ map <leader>g <ESC>;Google
 map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
 map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
+map <leader>wnl <ESC>;e ~/vimwiki/Linux.wiki <RETURN>
+map <leader>wns <ESC>;e ~/vimwiki/Shell.wiki <RETURN>
+
+
 
 " ctrl shift f searcher
 " map <leader>f <ESC>;CtrlSF
