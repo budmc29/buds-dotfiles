@@ -31,6 +31,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jebaum/vim-tmuxify'
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'godlygeek/tabular'
 
 " Plugin 'drmingdrmer/xptemplate' " snippet plugin
 " Plugin 'tpope/vim-bundler'
@@ -162,6 +164,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 let g:tmuxify_custom_command = 'tmux split-window -p 20'
 " let g:tmuxify_map_prefix = '<leader>m'
 
+" use markdown in vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
@@ -206,11 +210,11 @@ map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>g <ESC>;Google
 
 " vim wiki maping
-map <leader>wn <ESC>;e ~/vimwiki/Notes.wiki <RETURN>
-map <leader>wg <ESC>;e ~/vimwiki/Git.wiki <RETURN>
-map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.wiki <RETURN>
-map <leader>wnl <ESC>;e ~/vimwiki/Linux.wiki <RETURN>
-map <leader>wns <ESC>;e ~/vimwiki/Shell.wiki <RETURN>
+map <leader>wn <ESC>;e ~/vimwiki/Notes.md <RETURN>
+map <leader>wg <ESC>;e ~/vimwiki/Git.md <RETURN>
+map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.md <RETURN>
+map <leader>wnl <ESC>;e ~/vimwiki/Linux.md <RETURN>
+map <leader>wns <ESC>;e ~/vimwiki/Shell.md <RETURN>
 
 
 
