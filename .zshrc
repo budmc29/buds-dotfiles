@@ -155,8 +155,8 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
-alias viki="vim ~/vimwiki/index.wiki"
-alias vimwiki="vim ~/vimwiki/index.wiki"
+# alias viki="vim ~/vimwiki/index.md"
+alias vimwiki="vim ~/vimwiki/index.md"
 
 # tmux aliases
 alias tmuxrc="vim ~/.tmux.conf"
