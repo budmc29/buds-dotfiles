@@ -1,9 +1,9 @@
 # 1.TODO
-* [ ] separate dotfiles from vimwiki and workspcipts
+* [ ] separate dotfiles from vimwiki and workscripts
+* [ ]
 * [ ] increase bash and tmux history to a really big number
 * [ ] create a dotbackup bash script
 * [ ] commit the backup to git
-* [ ] 
 * [ ] have a puppet like control sistem for all machines
 * [ ] learn to do vim comands, for ex 20 lines below while staying on the same line
 * [ ] remap left ctrl to alt on linux
@@ -23,10 +23,8 @@
 * [ ] create snippets files for vim
 * [ ] create snippets for bash (to do what?)
 * [ ] new bookmark manager
-* [ ] read gnork vi
 * [ ] setup task manager or todos for mobile
 * [ ] chron job for vimwiki backup
-* [x] use markdown in vim wiki
 * [ ] use markdonw when in insert mode then use preview in normal mode for vimwiki
 * [ ] bash install for laravel
 * [ ] make separate vimwiki todo with key cobination?

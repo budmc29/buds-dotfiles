@@ -182,7 +182,7 @@ alias prbackup="cd ~/projects && git status && git add -A && git commit \
 alias prupdate="cd ~/projects && git pull"
 
 #personal
-alias ps="cd ~/personal && ls"
+alias prs="cd ~/personal && ls"
 alias personal="cd ~/personal && ls"
 alias upm="cd /var/www/upostme && ls"
 alias zt="zap to"
