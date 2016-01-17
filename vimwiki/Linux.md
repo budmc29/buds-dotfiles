@@ -1,6 +1,6 @@
-# How to do stuff
+# Linux notepad
 
- ### disable laptop keyboard
+- disable laptop keyboard
 ```
   xinput list
 

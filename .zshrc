@@ -16,6 +16,12 @@ if [[ -z "$TMUX" ]] ;then
     fi
 fi
 
+# add todo to vimwiki
+function todo() {
+  parameter=$@
+  sed -i "/# 1.TODO/a * [ ] ${parameter}" ~/vimwiki/index.md
+}
+
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 

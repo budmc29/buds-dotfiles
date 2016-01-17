@@ -97,6 +97,8 @@ set guioptions-=r
 
 set t_ut= "fix tmux transparent background problem
 
+set hidden "auto hide modified buffers when swithcing to another buffer
+
 set number
 set relativenumber
 set autoindent

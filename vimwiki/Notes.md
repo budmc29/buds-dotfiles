@@ -1,9 +1,10 @@
-= Notepads =
-  * [[Linux]]
-  * [[Shell]]
-  * [[Laravel]]
-  * [[Git]]
-  * [[Ruby]]
-  * [[Php]]
-  * [[Firefox]]
-  * [[Misc]]
+# Notepads
+
+[[Linux]]
+[[Shell]]
+[[Laravel]]
+[[Git]]
+[[Ruby]]
+[[Php]]
+[[Firefox]]
+[[Misc]]
