@@ -2,6 +2,7 @@
 
 [[Linux]]
 [[Shell]]
+[[Vim]]
 [[Laravel]]
 [[Git]]
 [[Ruby]]

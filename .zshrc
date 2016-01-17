@@ -168,7 +168,7 @@ alias vimwiki="vim ~/vimwiki/index.md"
 alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
-alias ps="ps -ef | grep"
+alias pss="ps -ef | grep"
 alias szsh="source ~/.zshrc"
 alias svim="sudo vim"
 
