@@ -1,4 +1,6 @@
 # 1.TODO
+* [ ] separate dotfiles from vimwiki and workspcipts
+* [ ] increase bash and tmux history to a really big number
 * [ ] create a dotbackup bash script
 * [ ] commit the backup to git
 * [ ] 

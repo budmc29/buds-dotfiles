@@ -98,15 +98,16 @@ set guioptions-=r
 set t_ut= "fix tmux transparent background problem
 
 set hidden "auto hide modified buffers when swithcing to another buffer
+set expandtab
+set tabstop=2
+set shiftwidth=2 "set tabwith to 2 spaces, for ruby
+set linebreak "don't split word when doing soft break
 
 set number
 set relativenumber
 set autoindent
 set copyindent
 set smarttab
-set expandtab
-set tabstop=2
-set shiftwidth=2
 set ignorecase
 set smartcase
 set foldmethod=syntax
@@ -134,7 +135,7 @@ set linespace=6
 set undofile
 " set a directory to store the undo history
 set undodir=~/.vim/undo
-set undolevels=5000
+set undolevels=10000
 
 " change swap file directory
 set dir=$HOME/.vim/swap/
@@ -204,7 +205,6 @@ map <Alt-s> <ESC>;w<RETURN>
 map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 " paste from machine register
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
-
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
 
@@ -226,3 +226,7 @@ map <leader>wns <ESC>;e ~/vimwiki/Shell.md <RETURN>
 " this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red
 call matchadd('ColorColumn', '\%80v', 100)
+
+if has("autocmd")
+  autocmd bufwritepost .vimrc source ~/.vimrc
+endif
