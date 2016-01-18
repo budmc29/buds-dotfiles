@@ -9,4 +9,8 @@
   xinput reattach ID SLAVE_ID
 ```
 
+- copy content of console to system clipboard with xclip
+```
+xclip -selection c filename.txt
 
+```
