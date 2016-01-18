@@ -200,7 +200,7 @@ alias x11="x11vnc -auth guess -forever -usepw"
 # tmux aliases [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
 
-DISABLE_AUTO_UPDATE="false"
+DISABLE_AUTO_UPDATE="true"
 export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
