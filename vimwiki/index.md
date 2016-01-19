@@ -1,16 +1,15 @@
 # 1.TODO
-* [ ] separate dotfiles from vimwiki and workscripts
+* [ ] learn vimwiki search options
 * [ ]
+* [ ] separate dotfiles from vimwiki and workscripts
 * [ ] increase bash and tmux history to a really big number
-* [ ] create a dotbackup bash script
-* [ ] commit the backup to git
+* [ ] create a dotbackup bash script (in progress)
+* [ ] commit the backup to git ?
 * [ ] have a puppet like control sistem for all machines
 * [ ] learn to do vim comands, for ex 20 lines below while staying on the same line
 * [ ] remap left ctrl to alt on linux
 * [ ] learn to use manpages
-* [ ] set irc
 * [ ] setup irc channel irrsi
-* [ ] maybe backup git for each repo or single repo for all
 * [ ] tmux commands log
 * [ ] zsh plugin to show uncommited changes even if not in folder?
 * [ ] daily todo list?

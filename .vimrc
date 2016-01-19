@@ -17,7 +17,6 @@ Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 Plugin 'mhinz/vim-signify' " column diff for source control
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
@@ -31,12 +30,13 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jebaum/vim-tmuxify'
+Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
+"
 " Plugin 'plasticboy/vim-markdown'
+" Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 " Plugin 'godlygeek/tabular'
-
 " Plugin 'drmingdrmer/xptemplate' " snippet plugin
 " Plugin 'tpope/vim-bundler'
-" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 " Plugin 'xolox/vim-misc' " ?
 " Plugin 'vim-scripts/snipMate'
 " Plugin 'rking/ag.vim'
@@ -46,11 +46,11 @@ Plugin 'jebaum/vim-tmuxify'
 
 " colorschemes
 Plugin 'blueshirts/Darcula'
-Plugin 'cdmedia/itg_flat_vim'
-Plugin 'kreeger/benlight'
-Plugin 'budmc29/colour-schemes'
-Plugin 'croaker/mustang-vim'
-Plugin 'wesgibbs/vim-irblack'
+" Plugin 'cdmedia/itg_flat_vim'
+" Plugin 'kreeger/benlight'
+" Plugin 'budmc29/colour-schemes'
+" Plugin 'croaker/mustang-vim'
+" Plugin 'wesgibbs/vim-irblack'
 " Plugin 'chriskempson/base16-vim'
 " Plugin 'sjl/badwolf'
 " Plugin 'sickill/vim-monokai'
@@ -102,13 +102,25 @@ set expandtab
 set tabstop=2
 set shiftwidth=2 "set tabwith to 2 spaces, for ruby
 set linebreak "don't split word when doing soft break
+set smarttab
+set history=1000 "history line to remember
+set autoread "refresh file when is modified somewhere else
+set ignorecase "ignore case when searching
+
+set incsearch " start search as soon as you type
+" highlight search results
+set hlsearch
+"better indenting with vim
+set cindent
+
+" font and line-height
+set guifont=Source\ Code\ Pro
+set linespace=6
 
 set number
 set relativenumber
 set autoindent
 set copyindent
-set smarttab
-set ignorecase
 set smartcase
 set foldmethod=syntax
 set foldnestmax=2
@@ -121,15 +133,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-set incsearch " start search as soon as you type
-" highlight search results
-set hlsearch
-"better indenting with vim
-set cindent
-
-" font and line-height
-set guifont=Source\ Code\ Pro
-set linespace=6
 
 " vim persisten undo
 set undofile

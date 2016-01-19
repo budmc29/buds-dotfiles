@@ -1,8 +1,10 @@
 # Notepads
 
-[[Linux]]
+[[Ubuntu]]
+[[Linux server]]
 [[Shell]]
 [[Vim]]
+[[Tmux]]
 [[Laravel]]
 [[Git]]
 [[Ruby]]
