@@ -177,7 +177,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
-map <F3> <ESC>;UndotreeToggle<RETURN>
+map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
+
 " for most recent used plugin
 map <C-e> <ESC>;MRU <RETURN>
 
