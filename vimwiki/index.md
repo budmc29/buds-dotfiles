@@ -1,10 +1,7 @@
 # 1.TODO
-* [ ] open a terminal in the right monitor from tmux (or from ubuntu)
-* [ ] separate aliases from main bashrc file
-* [ ] move aliases to vimwiki git
-* [ ] use mercurial everywhere?
+* [x] learn vimwiki search options
+* [ ] use i3 status bar to display working task displayed from a script
 * [ ]
-* [ ] learn vimwiki search options
 * [ ] separate dotfiles from vimwiki and workscripts
 * [ ] increase bash and tmux history to a really big number
 * [ ] create a dotbackup bash script (in progress)
