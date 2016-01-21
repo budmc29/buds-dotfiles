@@ -218,9 +218,13 @@ map <leader>g <ESC>;Google
 " vim wiki maping
 map <leader>wn <ESC>;e ~/vimwiki/Notes.md <RETURN>
 map <leader>wg <ESC>;e ~/vimwiki/Git.md <RETURN>
+
 map <leader>wsc <ESC>;e ~/vimwiki/Scratchpad.md <RETURN>
-map <leader>wnl <ESC>;e ~/vimwiki/Linux.md <RETURN>
+map <leader>wnl <ESC>;e ~/vimwiki/Linux\ server.md <RETURN>
 map <leader>wns <ESC>;e ~/vimwiki/Shell.md <RETURN>
+map <leader>wnv <ESC>;e ~/vimwiki/Vim.md <RETURN>
+map <leader>wnt <ESC>;e ~/vimwiki/Tmux.md <RETURN>
+map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
 
 
 
