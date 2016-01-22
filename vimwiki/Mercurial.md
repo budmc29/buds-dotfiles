@@ -11,3 +11,9 @@ hg log -r:
 hg commit --amend -m "update last commit"
 
 ```
+
+- see diff of a revision
+```
+hg log -v -p -r 1234
+
+```
