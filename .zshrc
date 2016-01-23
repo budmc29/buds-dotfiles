@@ -142,7 +142,7 @@ alias zsh="vim ~/.zshrc"
 alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
-&& cp ~/.Xmodmap ~/ubuntu-dotfiles/ \
+&& cp ~/.Xmodmap ~/ubuntu-dotfiles/.Xmodmap \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
 && cp ~/.zshrc ~/ubuntu-dotfiles/ \
 && cp ~/zap.bash ~/ubuntu-dotfiles/ \
@@ -154,7 +154,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
 && cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf \
 && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
-&& cp ~/ubuntu-dotfiles/.Xmodmap ~/ \
+&& cp ~/ubuntu-dotfiles/.Xmodmap ~/.Xmodmap \
 && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
 && cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
 && cp -r ~/ubuntu-dotfiles/.bookmarks ~/ \
