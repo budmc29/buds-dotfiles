@@ -6,14 +6,18 @@ ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
 
-# start tmux on console load
+# start tmux detached session on console load
+# if [[ -z "$TMUX" ]] ;then
+#     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
+#     if [[ -z "$ID" ]] ;then # if not available create a new one
+#         tmux new-session
+#     else
+#         tmux attach-session -t "$ID" # if available attach to it
+#     fi
+# fi
+
 if [[ -z "$TMUX" ]] ;then
-    ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
-    if [[ -z "$ID" ]] ;then # if not available create a new one
-        tmux new-session
-    else
-        tmux attach-session -t "$ID" # if available attach to it
-    fi
+  tmux new-session
 fi
 
 # add todo to vimwiki
@@ -201,6 +205,9 @@ alias gr="grep -rnw './' -e \""
 
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
+
+# start hansoft from cli, work machine
+alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
 # tmux aliases [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"

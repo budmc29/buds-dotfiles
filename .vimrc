@@ -114,7 +114,7 @@ set hlsearch
 set cindent
 
 " font and line-height
-set guifont=Source\ Code\ Pro
+set guifont=Source\ Code\ Pro\ 22
 set linespace=6
 
 set number
