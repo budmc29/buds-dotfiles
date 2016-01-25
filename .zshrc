@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
-
+# TODO: attack to a detached session that is unnamed
 # start tmux detached session on console load
 # if [[ -z "$TMUX" ]] ;then
 #     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
@@ -143,7 +143,9 @@ alias restart="cap staging unicorn:restart"
 #Misc aliases
 alias zsh="vim ~/.zshrc"
 
+# TODO: save i3 configs for different machines and version control that
 alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
+&& cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
 && cp ~/.Xmodmap ~/ubuntu-dotfiles/ \
@@ -164,6 +166,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
 && cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
 && cp -r ~/ubuntu-dotfiles/.bookmarks ~/ \
+&& cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
 #vim aliases

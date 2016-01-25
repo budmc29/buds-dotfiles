@@ -9,10 +9,4 @@
   xinput reattach ID SLAVE_ID
 ```
 
-- add ssh key to agent
-```
-ssh-add ~/.ssh/id_rsa
-
-```
-
 
