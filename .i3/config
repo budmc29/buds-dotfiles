@@ -245,7 +245,7 @@ exec_always xmodmap ~/.Xmodremap
 exec gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # setup monitors and resolution for work-laptop
-# exec_always xrandr --output HDMI1 --mode 1280x800 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output eDP1 --mode 1366x768 --pos 1280x0 --rotate normal --output VGA1 --off
+exec_always xrandr --output HDMI1 --mode 1920x1080 --pos 1280x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output VGA1 --mode 1280x1024 --pos 0x0 --rotate normal
 
 # start rofi instead of dmenu
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "SFNS Display 18"
