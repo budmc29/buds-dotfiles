@@ -35,3 +35,9 @@ ENDSSH
 xclip -selection c filename.txt
 
 ```
+
+- add ssh key to ssh-agent
+```
+ssh-add ~/.ssh/key
+
+```

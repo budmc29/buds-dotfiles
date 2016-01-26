@@ -8,5 +8,3 @@
 
   xinput reattach ID SLAVE_ID
 ```
-
-
