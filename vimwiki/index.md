@@ -1,5 +1,7 @@
 # 1.TODO
-* [x] learn vimwiki search options
+* [ ] i3 separat config files for all machines
+* [ ] find a way to clean tmux opened sessions
+* [ ] when opens a new console swith to tmux and clean unused sessions
 * [ ] use i3 status bar to display working task displayed from a script
 * [ ]
 * [ ] separate dotfiles from vimwiki and workscripts
