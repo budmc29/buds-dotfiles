@@ -35,3 +35,9 @@ sudo service elasticsearch start
 update-rc.d elasticsearch defaults 95 10
 
 ```
+
+- check if you  have access to mysql
+```
+telnet address 3306
+
+```
