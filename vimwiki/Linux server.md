@@ -1,3 +1,4 @@
+
 # Linux Notepad
 
 - fix timout problems (ntptime, ntpdate)
