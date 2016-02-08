@@ -41,3 +41,15 @@ xclip -selection c filename.txt
 ssh-add ~/.ssh/key
 
 ```
+
+- generate ssh create ssh key
+```
+ssh-keygen
+
+```
+
+- remove set alias
+```
+unalias alis_name
+
+```

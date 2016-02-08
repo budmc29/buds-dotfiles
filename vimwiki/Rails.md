@@ -37,3 +37,10 @@ rmv use ...
 bundle exec rake environment tire:import:all FORCE=true RAILS_ENV=staging
 
 ```
+
+- display mysql queries in rails console
+```
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.connection_pool.clear_reloadable_connections!
+
+```

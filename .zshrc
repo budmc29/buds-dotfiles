@@ -79,17 +79,6 @@ alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-sy
 plugins=(zsh-syntax-highlighting)
 alias rspec="spring rspec"
 
-alias account="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
-alias ac="rvm use 1.9.3@yoyo-account && rvm current && cd ~/work/yoyo-account"
-alias marketplace="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
-alias mp="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-marketplace"
-alias player="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-player"
-alias pl="rvm use 1.9.3@marketplace && rvm current && cd ~/work/gasbox-player"
-
-alias bs="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap"
-alias bss="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && rails s"
-alias bsg="rvm use 1.9.3@yoyo_bootstrap && rvm current && cd ~/work/yoyo_bootstrap && guard"
-
 # mercurial aliases
 alias hgc="hg commit -m \""
 alias hgs="hg status"
@@ -111,29 +100,6 @@ alias gb="git branch"
 alias gc="git commit -m \""
 alias ga="git add -A"
 alias gd="git diff --cached"
-
-# Ssh and deployment
-alias bootstagessh="ssh bootstrap@bootstage.yoyogames.com"
-alias bootstagesshroot="ssh mgmtusr@bootstage.yoyogames.com"
-alias bootstrapssh="ssh bootstrap@www.yoyogames.com"
-alias bootstrapsshroot="ssh -i ~/.ssh/marketplace_aws.pem mgmtusr@www.yoyogames.com"
-
-alias account1ssh="ssh -i ~/.ssh/marketplace yyaccount@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias account1sshroot="ssh -i ~/.ssh/marketplace_aws.pem root@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias playerssh="ssh -v  -i ~/.ssh/marketplace player@ec2-54-87-55-78.compute-1.amazonaws.com"
-alias playersshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
-alias playerstaging="ssh gasplayer@straylight.yoyogames.com"
-
-alias account1root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-167-43-148.compute-1.amazonaws.com"
-alias account2root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-227-63-160.compute-1.amazonaws.com"
-alias account3root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-82-116-237.compute-1.amazonaws.com"
-alias account4root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-146-217-224.compute-1.amazonaws.com"
-alias account5root="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-145-62-148.compute-1.amazonaws.com"
-alias accountstaging="ssh accounts_staging@straylight.yoyogames.com"
-
-alias marketplacessh="ssh -i ~/.ssh/marketplace gasmarket@ec2-54-87-205-187.compute-1.amazonaws.com"
-alias marketplacesshroot="ssh -i ~/.ssh/marketplace_aws.pem ubuntu@ec2-54-87-205-187.compute-1.amazonaws.com"
-alias marketplacestaging="ssh gasmarket@straylight.yoyogames.com"
 
 alias deploy="cap staging deploy"
 alias deployb="cap staging deploy -s branch="
@@ -214,6 +180,9 @@ alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
 # tmux aliases [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
+
+# WORK aliases, keep private
+. ~/.private_work_aliases
 
 DISABLE_AUTO_UPDATE="true"
 export PATH=$HOME/bin:$PATH

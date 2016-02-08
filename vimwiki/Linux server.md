@@ -1,4 +1,3 @@
-
 # Linux Notepad
 
 - fix timout problems (ntptime, ntpdate)
@@ -40,5 +39,17 @@ update-rc.d elasticsearch defaults 95 10
 - check if you  have access to mysql
 ```
 telnet address 3306
+
+```
+
+- mysql dump
+```
+mysqldump --verbose --host=url.com --user=user_name -p database_name table_name(optional) > dump_name.sql
+
+```
+
+- import mysql dump
+```
+mysql -u user_name -p database_name < dump_name.sql
 
 ```
