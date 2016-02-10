@@ -1,6 +1,5 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
@@ -21,16 +20,16 @@ Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
-Plugin 'sickill/vim-pasta' " content aware paste and indent
+" Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession' " vim session management
-Plugin 'JamshedVesuna/vim-markdown-preview'
+" Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'szw/vim-g' " search google from vim
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 Plugin 'jebaum/vim-tmuxify'
-Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
+" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 "
 " Plugin 'plasticboy/vim-markdown'
 " Plugin 'dyng/ctrlsf.vim' " search inside files using ag
@@ -45,7 +44,7 @@ Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 " Plugin 'xolox/vim-session' " good session manager, using obsession for tmux
 
 " colorschemes
-Plugin 'blueshirts/Darcula'
+Plugin 'blueshirts/Darcula' " preffered theme for console
 " Plugin 'cdmedia/itg_flat_vim'
 " Plugin 'kreeger/benlight'
 " Plugin 'budmc29/colour-schemes'
@@ -88,7 +87,7 @@ filetype plugin indent on    " required
 " colorscheme base16-tomorrow
 set background=dark
 " colorscheme benlight
-colorscheme darcula
+colorscheme darcula " default theme for console
 
 " don't show the gui
 set guioptions-=m
@@ -96,6 +95,7 @@ set guioptions-=T
 set guioptions-=r
 
 set t_ut= "fix tmux transparent background problem
+set timeoutlen=50 " reduce needed time to enter/exit insert mode
 
 set hidden "auto hide modified buffers when swithcing to another buffer
 set expandtab
@@ -103,7 +103,7 @@ set tabstop=2
 set shiftwidth=2 "set tabwith to 2 spaces, for ruby
 set linebreak "don't split word when doing soft break
 set smarttab
-set history=1000 "history line to remember
+set history=10000 "history line to remember
 set autoread "refresh file when is modified somewhere else
 set ignorecase "ignore case when searching
 
@@ -172,6 +172,13 @@ let g:tmuxify_custom_command = 'tmux split-window -p 20'
 
 " use markdown in vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
+
+" airline settings
+let g:airline_powerline_fonts = 1 " use better fonts
+set laststatus=2 " always show
+set noshowmode " don't show the default mode indicator
+let g:airline#extensions#eclim#enables = 0 " disable number of hard limit overflowed characters
+let g:airline#extensions#tabline#fnamemod = ':t' " show the file name in the line, not the full path
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping

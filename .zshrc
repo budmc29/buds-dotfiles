@@ -42,6 +42,8 @@ plugins=(git, vi-mode, mercurial)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
+# DISABLE_AUTO_UPDATE="true"
+DISABLE_UPDATE_PROMPT=true # alway check for updates
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -184,7 +186,6 @@ alias tmuxc="tmux attach -t console || tmux"
 # WORK aliases, keep private
 . ~/.private_work_aliases
 
-DISABLE_AUTO_UPDATE="true"
 export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
