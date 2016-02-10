@@ -2,6 +2,7 @@
 
 [[Ubuntu]]
 [[Linux server]]
+[[Mysql]]
 [[Shell]]
 [[Ruby]]
 [[Rails]]
