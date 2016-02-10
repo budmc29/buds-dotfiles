@@ -167,14 +167,14 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 " let g:UltiSnipsEditSplit="vertical"
 
 "open tmux from vim
-let g:tmuxify_custom_command = 'tmux split-window -p 20'
+let g:tmuxify_custom_command = 'tmux split-window -p 30'
 " let g:tmuxify_map_prefix = '<leader>m'
 
 " use markdown in vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
 
 " airline settings
-let g:airline_powerline_fonts = 1 " use better fonts
+" let g:airline_powerline_fonts = 1 " use better fonts
 set laststatus=2 " always show
 set noshowmode " don't show the default mode indicator
 let g:airline#extensions#eclim#enables = 0 " disable number of hard limit overflowed characters
