@@ -44,3 +44,9 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 ActiveRecord::Base.connection_pool.clear_reloadable_connections!
 
 ```
+
+- order active record results
+```
+Model.stuff.order("name ASC")
+
+```

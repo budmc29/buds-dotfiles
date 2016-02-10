@@ -48,8 +48,22 @@ mysqldump --verbose --host=url.com --user=user_name -p database_name table_name(
 
 ```
 
+- dump database except a table
+```
+mysql (...) -no-create-info --ignore table=table_name.column_name > file.sql
+
+```
+
 - import mysql dump
 ```
 mysql -u user_name -p database_name < dump_name.sql
 
 ```
+
+
+- import only database structure
+```
+mysqldump --verbose --no-data --host=url.com --user=user_name -p database_name table_name(optional) > dump_name.sql
+
+```
+

@@ -245,7 +245,7 @@ exec_always ibus exit
 exec_always setxkbmap us
 
 # swap caps lock to escape TODO: swap ctrl to alt
-exec_always xmodmap ~/.Xmodremap
+exec_always xmodmap ~/.Xmodmap
 
 # when opening nautilus, don't open desktop
 exec gsettings set org.gnome.desktop.background show-desktop-icons false
