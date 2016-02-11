@@ -95,7 +95,7 @@ set guioptions-=T
 set guioptions-=r
 
 set t_ut= "fix tmux transparent background problem
-set timeoutlen=50 " reduce needed time to enter/exit insert mode
+set ttimeoutlen=50 " reduce needed time to enter/exit insert mode
 
 set hidden "auto hide modified buffers when swithcing to another buffer
 set expandtab
