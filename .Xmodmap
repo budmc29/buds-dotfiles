@@ -5,8 +5,6 @@ keysym Escape = Caps_Lock
 add Lock = Caps_Lock
 
 !Swap right control and right alt
-clear Alts
 keysym Alt_R = Control_R
 keysym Control_R = Alt_R
-add Alts = Alt_R
 
