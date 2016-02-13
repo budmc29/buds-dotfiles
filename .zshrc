@@ -1,3 +1,4 @@
+#
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -182,6 +183,12 @@ alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
 # tmux aliases [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
+
+# keyboard layouts
+alias querty="setxkbmap us"
+alias aoeu="setxkbmap us"
+alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
+
 
 # WORK aliases, keep private
 . ~/.private_work_aliases
