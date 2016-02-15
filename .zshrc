@@ -186,7 +186,7 @@ alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts
 alias querty="setxkbmap us"
-alias aoeu="setxkbmap us"
+# alias aoeu="setxkbmap us"
 alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
 
 
