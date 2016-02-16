@@ -10,6 +10,7 @@
 [[Tmux]]
 [[Laravel]]
 [[Git]]
+[[Mercurial]]
 [[Php]]
 [[Firefox]]
 [[Misc]]
