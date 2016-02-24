@@ -17,3 +17,9 @@ hg commit --amend -m "update last commit"
 hg log -v -p -r 1234
 
 ```
+
+- limit the number of revisions you get from hglog
+```
+hg log --limit 10
+
+```
