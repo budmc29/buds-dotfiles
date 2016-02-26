@@ -36,3 +36,9 @@ show grants for 'user'@'host';
 grant permission on database.table to 'user'@'host';
 
 ```
+
+- how to do a mysqd dump without stressing the server
+```
+mysqldump --single-transaction --quick --lock-tables=false
+
+```

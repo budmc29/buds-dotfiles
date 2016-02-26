@@ -30,6 +30,11 @@ vim **/*.rb # load all .rb files from the folder in vim
 
 ```
 
+- delete a line matching the pattern
+```
+:g/pattern/d
+
+```
 
 
 

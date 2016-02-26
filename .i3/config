@@ -242,7 +242,8 @@ exec gnome-terminal
 # disable ibus to make tmux C+space prefix work
 exec_always ibus exit
 
-exec_always setxkbmap us
+# exec_always setxkbmap us
+setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift
 
 # swap caps lock to escape TODO: swap ctrl to alt
 exec_always xmodmap ~/.Xmodmap

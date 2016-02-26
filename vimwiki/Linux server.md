@@ -67,3 +67,8 @@ mysqldump --verbose --no-data --host=url.com --user=user_name -p database_name t
 
 ```
 
+- check progress of mysql import (or other pipes)
+```
+pv database.sql | mysql ...
+
+```
