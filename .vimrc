@@ -127,6 +127,8 @@ set foldnestmax=2
 set nofoldenable
 set foldlevel=1
 
+" change shortcut to ctrlt for ease
+let g:ctrlp_map = '<c-t>'
 " save cache for ctrlp plugin, remember to create the dir on new systems
 let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp-cache'
 if executable('ag')
