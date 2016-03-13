@@ -42,3 +42,9 @@ grant permission on database.table to 'user'@'host';
 mysqldump --single-transaction --quick --lock-tables=false
 
 ```
+
+- how to import mysql databas
+```
+mysql -u user -p database_name < file.sql
+
+```
