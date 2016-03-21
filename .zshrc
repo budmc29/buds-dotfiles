@@ -123,6 +123,7 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp ~/zap.bash ~/ubuntu-dotfiles/ \
 && cp -r ~/.bookmarks ~/ubuntu-dotfiles/ \
 && cp -r ~/.i3 ~/ubuntu-dotfiles/ \
+&& cp ~/.i3status.conf ~/ubuntu-dotfiles/ \
 && cd ~/ubuntu-dotfiles \
 && git pull && git add -A && git commit && git push"
 
@@ -132,6 +133,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
 && cp ~/ubuntu-dotfiles/.Xmodmap ~/.Xmodmap \
 && cp -r ~/ubuntu-dotfiles/.i3 ~/ \
+&& cp ~/ubuntu-dotfiles/.i3status.conf ~/ \
 && cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
 && cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
 && cp -r ~/ubuntu-dotfiles/.bookmarks ~/ \
@@ -188,6 +190,8 @@ alias tmuxc="tmux attach -t console || tmux"
 alias querty="setxkbmap us"
 # alias aoeu="setxkbmap us"
 alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
+alias touchpadOff="synclient TouchpadOff=1"
+alias touchpadOn="synclient TouchpadOff=0"
 
 
 # WORK aliases, keep private
