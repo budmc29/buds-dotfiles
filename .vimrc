@@ -20,7 +20,7 @@ Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
-" Plugin 'sickill/vim-pasta' " content aware paste and indent
+Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession' " vim session management
 " Plugin 'JamshedVesuna/vim-markdown-preview'
