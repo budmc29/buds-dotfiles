@@ -1,4 +1,3 @@
-#
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -117,6 +116,8 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
+&& cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
+&& cp ~/.xinitrc ~/ubuntu-dotfiles/ \
 && cp ~/.Xmodmap ~/ubuntu-dotfiles/ \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
 && cp ~/.gvimrc ~/ubuntu-dotfiles/ \
@@ -130,6 +131,7 @@ alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 
 alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
+&& cp ~/ubuntu-dotfiles/.xinitrc ~/.vimrc \
 && cp ~/ubuntu-dotfiles/.gvimrc ~/.gvimrc \
 && cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf \
 && cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
