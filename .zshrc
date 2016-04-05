@@ -197,6 +197,8 @@ alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option nump
 alias touchpadOff="synclient TouchpadOff=1"
 alias touchpadOn="synclient TouchpadOff=0"
 
+alias steam="cd ~/.wine/drive_c/Program Files (x86)/Steam/ && wine Steam.exe"
+
 
 # WORK aliases, keep private
 . ~/.private_work_aliases
