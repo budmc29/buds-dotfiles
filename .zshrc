@@ -75,13 +75,18 @@ fi
 #
 #
 #
-# Ruby aliases
+# Ruby
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
-alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"	
+alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
 plugins=(zsh-syntax-highlighting)
 alias rspec="spring rspec"
 
-# mercurial aliases
+# Rails
+alias rsp="bundle exec rspec spec"
+alias spec="bundle exec rspec spec"
+alias features="bundle exec rspec spec/features"
+
+# mercurial
 alias hgc="hg commit -m \""
 alias hgs="hg status"
 alias hgb="hg branch"
@@ -94,8 +99,9 @@ alias hgpb="hg push --new-branch"
 alias hgsh="hg shelve"
 alias hgus="hg unshelve"
 alias hgd="hg diff"
+alias hgar="hg addremove"
 
-#git aliases
+#git
 alias gs="git status"
 alias gp="git push"
 alias gb="git branch"
@@ -108,7 +114,7 @@ alias deployb="cap staging deploy -s branch="
 alias rollback="cap staging deploy:rollback"
 alias restart="cap staging unicorn:restart"
 
-#Misc aliases
+#Misc
 alias zsh="vim ~/.zshrc"
 
 # TODO: save i3 configs for different machines and version control that
@@ -144,14 +150,14 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
-#vim aliases
+#vim 
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # alias viki="vim ~/vimwiki/index.md"
 alias vimwiki="vim ~/vimwiki/index.md"
 
-# tmux aliases
+# tmux 
 alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
@@ -187,7 +193,7 @@ alias x11="x11vnc -auth guess -forever -usepw"
 # start hansoft from cli, work machine
 alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
-# tmux aliases [TODO: make a script for those in tmuxconf]
+# tmux  [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts
@@ -199,8 +205,12 @@ alias touchpadOn="synclient TouchpadOff=0"
 
 alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wine Steam.exe"
 
+# project 
+alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
+
 
 # WORK aliases, keep private
+. ~/.startup_commands_$(hostname)
 . ~/.private_work_aliases
 
 export PATH=$HOME/bin:$PATH

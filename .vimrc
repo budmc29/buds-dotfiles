@@ -18,11 +18,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
-Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
+" Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
-Plugin 'sickill/vim-pasta' " content aware paste and indent
+" Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-obsession' " vim session management
+" Plugin 'tpope/vim-obsession' " vim session management
 " Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'szw/vim-g' " search google from vim
 Plugin 'ntpeters/vim-better-whitespace'
@@ -233,6 +233,11 @@ map <leader>wns <ESC>;e ~/vimwiki/Shell.md <RETURN>
 map <leader>wnv <ESC>;e ~/vimwiki/Vim.md <RETURN>
 map <leader>wnt <ESC>;e ~/vimwiki/Tmux.md <RETURN>
 map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
+
+" vim tmuxify commands
+let g:tmuxify_run = {
+    \ 'rb': 'bundle exec rspec spec %',
+    \}
 
 
 
