@@ -42,3 +42,11 @@ grant permission on database.table to 'user'@'host';
 mysqldump --single-transaction --quick --lock-tables=false
 
 ```
+
+- import mysql database with pregress
+```
+pv database.sql | mysql -u name -p db_name < database.sql
+
+```
+
+
