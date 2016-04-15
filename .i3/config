@@ -258,7 +258,7 @@ exec_always ibus exit
 exec gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # setup monitors and resolution for work-laptop
-exec --no-startup-id xrandr --output HDMI1 --mode 1440x900 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output VGA1 --mode 1920x1080 --pos 1440x0 --rotate normal
+# exec --no-startup-id xrandr --output HDMI1 --mode 1440x900 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output VGA1 --mode 1920x1080 --pos 1440x0 --rotate normal
 
 # start rofi instead of dmenu
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "SFNS Display 18"
