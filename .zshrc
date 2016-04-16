@@ -83,8 +83,11 @@ alias rspec="spring rspec"
 
 # Rails
 alias rsp="bundle exec rspec spec"
-alias spec="bundle exec rspec spec"
+alias spec="bundle exec rspec"
 alias features="bundle exec rspec spec/features"
+
+alias be="bundle exec"
+alias ber="bundle exec rake"
 
 # mercurial
 alias hgc="hg commit -m \""
@@ -120,8 +123,6 @@ alias zsh="vim ~/.zshrc"
 # TODO: save i3 configs for different machines and version control that
 alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
-&& cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
-&& cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
 && cp ~/.Xmodmap ~/ubuntu-dotfiles/ \
 && cp ~/.vimrc ~/ubuntu-dotfiles/ \
