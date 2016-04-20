@@ -207,7 +207,6 @@ alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wi
 # project 
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 
-
 # WORK aliases, keep private
 . ~/.private_work_aliases
 
