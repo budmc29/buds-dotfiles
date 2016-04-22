@@ -76,15 +76,17 @@ fi
 #
 #
 # Ruby
+plugins=(zsh-syntax-highlighting)
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
-plugins=(zsh-syntax-highlighting)
-alias rspec="spring rspec"
 
 # Rails
-alias rsp="bundle exec rspec spec"
 alias spec="bundle exec rspec"
+alias spec2="bundle exec rspec spec"
 alias features="bundle exec rspec spec/features"
+
+alias rgc="rails g controller"
+alias rgm="rails g model"
 
 alias be="bundle exec"
 alias ber="bundle exec rake"
@@ -206,6 +208,7 @@ alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wi
 
 # project 
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
+
 
 # WORK aliases, keep private
 . ~/.private_work_aliases

@@ -12,23 +12,23 @@ Plugin 'mattn/emmet-vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
+" Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 Plugin 'mhinz/vim-signify' " column diff for source control
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mbbill/undotree'
 Plugin 'vim-scripts/matchit.zip' " improve % functionality
-Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'szw/vim-g' " search google from vim
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'jebaum/vim-tmuxify'
-" Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 " Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
-" Plugin 'sickill/vim-pasta' " content aware paste and indent
+Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
+Plugin 'sickill/vim-pasta' " content aware paste and indent
+Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'tpope/vim-obsession' " vim session management
 " Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'szw/vim-g' " search google from vim
+Plugin 'ntpeters/vim-better-whitespace'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
+Plugin 'jebaum/vim-tmuxify'
 " Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 "
 " Plugin 'plasticboy/vim-markdown'
@@ -239,8 +239,8 @@ let g:tmuxify_run = {
     \ 'rb': 'bundle exec rspec spec %',
     \}
 
-
-
+" vim emmet
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " ctrl shift f searcher
 " map <leader>f <ESC>;CtrlSF
 
