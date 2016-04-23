@@ -29,6 +29,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
 Plugin 'jebaum/vim-tmuxify'
+Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 "
 " Plugin 'plasticboy/vim-markdown'
