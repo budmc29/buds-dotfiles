@@ -220,6 +220,8 @@ map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
+nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
+
 
 " google search with plugin
 map <leader>g <ESC>;Google

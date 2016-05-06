@@ -81,6 +81,9 @@ alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
 
 # Rails
+alias et="RAILS_ENV=test"
+alias ed="RAILS_ENV=development"
+
 alias spec="bundle exec rspec"
 alias spec2="bundle exec rspec spec"
 alias features="bundle exec rspec spec/features"
@@ -105,6 +108,7 @@ alias hgsh="hg shelve"
 alias hgus="hg unshelve"
 alias hgd="hg diff"
 alias hgar="hg addremove"
+alias hgclose="hg commit --close-branch -m \""
 
 #git
 alias gs="git status"
@@ -208,7 +212,6 @@ alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wi
 
 # project 
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
-
 
 # WORK aliases, keep private
 . ~/.private_work_aliases
