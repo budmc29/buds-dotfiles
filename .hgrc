@@ -16,6 +16,8 @@ shelve=
 strip=
 color=
 extdiff=
+graphlog=
+
 [paths]
 default = ssh://hg@bitbucket.org/mugur-chirica/yoyo_bootstrap
 
