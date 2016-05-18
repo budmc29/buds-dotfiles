@@ -94,6 +94,11 @@ alias rgm="rails g model"
 alias be="bundle exec"
 alias ber="bundle exec rake"
 
+alias sr='bin/spring rspec'
+alias src='bin/spring rspec spec/controllers'
+alias srf='bin/spring rspec spec/features'
+alias srm='bin/spring rspec spec/models'
+
 # mercurial
 alias hgc="hg commit -m \""
 alias hgs="hg status"
@@ -102,7 +107,9 @@ alias hgbr="hg branches"
 alias hgu="hg update"
 alias hgp="hg push"
 alias hgl="hg log -l 5"
+alias hgg="hg glog -l 5"
 alias hgll="hg log -l"
+alias hggl="hg glog -l"
 alias hgpp="hg pull && hg push"
 alias hgpu="hg pull"
 alias hgpb="hg push --new-branch"
