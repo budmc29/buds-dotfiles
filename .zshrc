@@ -102,8 +102,8 @@ alias srm='bin/spring rspec spec/models'
 # mercurial
 alias hgc="hg commit -m \""
 alias hgs="hg status"
-alias hgb="hg branch"
-alias hgbr="hg branches"
+alias hgbr="hg branch"
+alias hgb="hg branches"
 alias hgu="hg update"
 alias hgp="hg push"
 alias hgl="hg log -l 5"

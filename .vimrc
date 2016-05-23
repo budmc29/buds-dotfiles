@@ -183,6 +183,9 @@ set noshowmode " don't show the default mode indicator
 let g:airline#extensions#eclim#enables = 0 " disable number of hard limit overflowed characters
 let g:airline#extensions#tabline#fnamemod = ':t' " show the file name in the line, not the full path
 
+" allow mouse scroll in console vim
+set mouse=a
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
