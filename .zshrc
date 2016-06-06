@@ -127,11 +127,6 @@ alias gc="git commit -m \""
 alias ga="git add -A"
 alias gd="git diff --cached"
 
-alias deploy="cap staging deploy"
-alias deployb="cap staging deploy -s branch="
-alias rollback="cap staging deploy:rollback"
-alias restart="cap staging unicorn:restart"
-
 #Misc
 alias zsh="vim ~/.zshrc"
 
