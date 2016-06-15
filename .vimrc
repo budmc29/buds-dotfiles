@@ -20,8 +20,10 @@ Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'szw/vim-g' " search google from vim
-Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'jebaum/vim-tmuxify'
+Plugin 'vim-scripts/php.vim-html-enhanced'
+" Plugin 'ntpeters/vim-better-whitespace'
+" Plugin 'szw/vim-g' " search google from vim
 " Plugin 'gabebw/vim-spec-runner'
 " Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
 " Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
@@ -29,8 +31,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 " Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
-Plugin 'jebaum/vim-tmuxify'
-Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
 "
 " Plugin 'plasticboy/vim-markdown'
@@ -186,12 +186,22 @@ let g:airline#extensions#tabline#fnamemod = ':t' " show the file name in the lin
 " allow mouse scroll in console vim
 set mouse=a
 
+" highlight whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
-
+    
+   
+   
 " for most recent used plugin
 map <C-e> <ESC>;MRU <RETURN>
 
@@ -225,8 +235,8 @@ map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
-
-
+       
+   
 " google search with plugin
 map <leader>g <ESC>;Google
 
@@ -242,7 +252,7 @@ map <leader>wnt <ESC>;e ~/vimwiki/Tmux.md <RETURN>
 map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
 
 " vim tmuxify commands
-let g:tmuxify_run = {
+le g:tmuxify_run = {
     \ 'rb': 'bundle exec rspec spec %',
     \}
 

@@ -197,6 +197,7 @@ alias work="cd ~/work && ls"
 
 # search in console
 alias gr="grep -rnw './' -e \""
+alias clip="xclip -selection cliboard"
 
 # vpn
 alias x11="x11vnc -auth guess -forever -usepw"
