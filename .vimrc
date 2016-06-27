@@ -4,7 +4,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'scrooloose/syntastic' " sintax highlighting
-Plugin 'yegappan/mru' " most recent used files tree
 Plugin 'scrooloose/nerdtree' " show filetree
 Plugin 'bling/vim-airline' " inproved vim information line
 Plugin 'kien/ctrlp.vim' "fuzzy searching
@@ -16,12 +15,13 @@ Plugin 'mhinz/vim-signify' " column diff for source control
 Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mbbill/undotree'
-Plugin 'vim-scripts/matchit.zip' " improve % functionality
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jebaum/vim-tmuxify'
 Plugin 'vim-scripts/php.vim-html-enhanced'
+" Plugin 'vim-scripts/matchit.zip' " improve % functionality
+" Plugin 'yegappan/mru' " most recent used files tree
 " Plugin 'ntpeters/vim-better-whitespace'
 " Plugin 'szw/vim-g' " search google from vim
 " Plugin 'gabebw/vim-spec-runner'
@@ -99,6 +99,7 @@ set guioptions-=r
 set t_ut= "fix tmux transparent background problem
 set ttimeoutlen=50 " reduce needed time to enter/exit insert mode
 
+set nocompatible
 set hidden "auto hide modified buffers when swithcing to another buffer
 set expandtab
 set tabstop=2
@@ -108,15 +109,10 @@ set smarttab
 set history=10000 "history line to remember
 set autoread "refresh file when is modified somewhere else
 set ignorecase "ignore case when searching
-
 set incsearch " start search as soon as you type
-" highlight search results
-set hlsearch
-"better indenting with vim
-set cindent
-
-" font and line-height
-set guifont=Source\ Code\ Pro\ 22
+set hlsearch "highlight search results
+set cindent "better indenting with vim
+set guifont=Source\ Code\ Pro\ 22 " font and line-height
 set linespace=6
 
 set number
@@ -128,6 +124,13 @@ set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=1
+
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+runtime macros/matchit.vim
 
 " change shortcut to ctrlt for ease
 let g:ctrlp_map = '<c-t>'
@@ -147,10 +150,6 @@ set undolevels=10000
 " change swap file directory
 set dir=$HOME/.vim/swap/
 
-filetype on
-filetype plugin on
-filetype indent on
-syntax on
 
 " Hardtime plugin
 " let g:hardtime_default_on = 1
@@ -199,11 +198,8 @@ autocmd BufWinLeave * call clearmatches()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
-    
-   
-   
 " for most recent used plugin
-map <C-e> <ESC>;MRU <RETURN>
+" map <C-e> <ESC>;MRU <RETURN>
 
 " reload vimrc
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
@@ -235,8 +231,7 @@ map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
-       
-   
+
 " google search with plugin
 map <leader>g <ESC>;Google
 
