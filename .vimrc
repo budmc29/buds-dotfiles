@@ -194,9 +194,9 @@ autocmd BufWinLeave * call clearmatches()
 
 " show mode in status bar
 if version >= 700
-  hi StatusLine term=reverse ctermfg=7 ctermbg=8 gui=undercurl
-  au InsertEnter * hi StatusLine term=reverse ctermfg=7 ctermbg=4 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=7 ctermbg=8
+hi StatusLine term=reverse ctermfg=7 ctermbg=237 gui=undercurl
+au InsertEnter * hi StatusLine term=reverse ctermfg=7 ctermbg=24 gui=undercurl guisp=Magenta
+au InsertLeave * hi StatusLine term=reverse ctermfg=7 ctermbg=237
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
