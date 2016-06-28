@@ -5,7 +5,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'scrooloose/syntastic' " sintax highlighting
 Plugin 'scrooloose/nerdtree' " show filetree
-Plugin 'bling/vim-airline' " inproved vim information line
+" Plugin 'bling/vim-airline' " inproved vim information line
 Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
 Plugin 'vimwiki/vimwiki'
@@ -192,6 +192,13 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" show mode in status bar
+if version >= 700
+  hi StatusLine term=reverse ctermfg=7 ctermbg=8 gui=undercurl
+  au InsertEnter * hi StatusLine term=reverse ctermfg=7 ctermbg=4 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=7 ctermbg=8
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,8 +255,8 @@ map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
 
 " vim tmuxify commands
 le g:tmuxify_run = {
-    \ 'rb': 'bundle exec rspec spec %',
-    \}
+      \ 'rb': 'bundle exec rspec spec %',
+      \}
 
 " vim emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
