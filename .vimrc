@@ -171,7 +171,6 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 "open tmux from vim
 let g:tmuxify_custom_command = 'tmux split-window -p 30'
-" let g:tmuxify_map_prefix = '<leader>m'
 
 " use markdown in vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
@@ -196,6 +195,7 @@ autocmd BufWinLeave * call clearmatches()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 " for most recent used plugin
@@ -260,6 +260,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 highlight ColorColumn ctermbg=1 guibg=red
 call matchadd('ColorColumn', '\%80v', 100)
 
-if has("autocmd")
-  autocmd bufwritepost .vimrc source ~/.vimrc
-endif
+augroup VIMRC
+  autocmd!
+  autocmd bufwritepost .vimrc source $MYVIMRC
+augroup end
