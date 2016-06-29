@@ -5,16 +5,6 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
-# TODO: attack to a detached session that is unnamed
-# start tmux detached session on console load
-# if [[ -z "$TMUX" ]] ;then
-#     ID="`tmux ls | grep -vm1 blank | cut -d: -f1`" # get the id of blank
-#     if [[ -z "$ID" ]] ;then # if not available create a new one
-#         tmux new-session -s blank
-#     else
-#         tmux new-session -s "blank$ID" # attach-session -t "$ID" if available attach to it
-#     fi
-# fi
 
 if [[ -z "$TMUX" ]] ;then
   tmux new-session

@@ -227,7 +227,7 @@ map <Alt-s> <ESC>;w<RETURN>
 " map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
 " map <leader>ss <ESC>;! grep -rnw './work/' -e "
 " map <leader>sa <ESC>;! grep -rnw './' -e "
-" map "+Gp "+gp
+" map \"+Gp \"+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
 
