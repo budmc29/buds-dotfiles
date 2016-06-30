@@ -205,8 +205,11 @@ endif
 let mapleader = ","
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
-" for most recent used plugin
-" map <C-e> <ESC>;MRU <RETURN>
+map <silent> <leader>/ ;nohlsearch<CR>
+" open file that needed root with root
+cmap w!! w !sudo tee % >/dev/null
+map <leader>t ;CtrlPTag<cr>
+
 
 " reload vimrc
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>

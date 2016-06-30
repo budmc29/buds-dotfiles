@@ -26,3 +26,6 @@ default = ssh://hg@bitbucket.org/mugur-chirica/yoyo_bootstrap
 ui.language = en_GB
 [extdiff]
 cmd.extdiff = meld
+
+[hooks]
+commit = ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)
