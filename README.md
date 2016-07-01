@@ -12,6 +12,7 @@ cd ~/ubuntu-dotfiles && sudo bash ./fresh-ubuntu-programs.sh
 ## Remaining steps:
 
 ```
+vudle (to install the vundle plugin manager)
 :PluginInstall - vim
 C-b I - tmux
 
