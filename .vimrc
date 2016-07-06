@@ -5,7 +5,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'scrooloose/syntastic' " sintax highlighting
 Plugin 'scrooloose/nerdtree' " show filetree
-" Plugin 'bling/vim-airline' " inproved vim information line
 Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
 Plugin 'vimwiki/vimwiki'
@@ -20,26 +19,15 @@ Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jebaum/vim-tmuxify'
 Plugin 'vim-scripts/php.vim-html-enhanced'
-" Plugin 'vim-scripts/matchit.zip' " improve % functionality
-" Plugin 'yegappan/mru' " most recent used files tree
 " Plugin 'ntpeters/vim-better-whitespace'
-" Plugin 'szw/vim-g' " search google from vim
 " Plugin 'gabebw/vim-spec-runner'
-" Plugin 'nathanaelkane/vim-indent-guides' " show indentation guides with \ig
-" Plugin 'Valloric/YouCompleteMe' " autocomplete (needs python compiled)
 " Plugin 'tpope/vim-obsession' " vim session management
-" Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
-" Plugin 'Raimondi/delimitMate' " add matching quotes, brackets etc
-"
-" Plugin 'plasticboy/vim-markdown'
+" Plugin 'vim-scripts/snipMate'
 " Plugin 'dyng/ctrlsf.vim' " search inside files using ag
 " Plugin 'godlygeek/tabular'
 " Plugin 'drmingdrmer/xptemplate' " snippet plugin
-" Plugin 'tpope/vim-bundler'
-" Plugin 'xolox/vim-misc' " ?
-" Plugin 'vim-scripts/snipMate'
 " Plugin 'rking/ag.vim'
 " Plugin 'easymotion/vim-easymotion'
 " Plugin 'takac/vim-hardtime'
@@ -151,35 +139,9 @@ set undolevels=10000
 set dir=$HOME/.vim/swap/
 
 
-" Hardtime plugin
-" let g:hardtime_default_on = 1
-
 " xolo vim session settings
 let g:session_autosave_periodic = 5
 " let g:session_autosave = 'yes'
-
-" markdown preview plugin map
-let vim_markdown_preview_hotkey='<C-m>'
-
-" snippets
-let g:UltiSnipsExpandTrigger="<Ctrl>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-
-"open tmux from vim
-let g:tmuxify_custom_command = 'tmux split-window -p 30'
-
-" use markdown in vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
-
-" airline settings
-set laststatus=2 " always show
-set noshowmode " don't show the default mode indicator
-let g:airline#extensions#eclim#enables = 0 " disable number of hard limit overflowed characters
-let g:airline#extensions#tabline#fnamemod = ':t' " show the file name in the line, not the full path
 
 " allow mouse scroll in console vim
 set mouse=a
@@ -198,6 +160,37 @@ hi StatusLine term=reverse ctermfg=7 ctermbg=237 gui=undercurl
 au InsertEnter * hi StatusLine term=reverse ctermfg=7 ctermbg=24 gui=undercurl guisp=Magenta
 au InsertLeave * hi StatusLine term=reverse ctermfg=7 ctermbg=237
 endif
+
+" jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""" plugins setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" airline settings
+set laststatus=2 " always show
+set noshowmode " don't show the default mode indicator
+let g:airline#extensions#eclim#enables = 0 " disable number of hard limit overflowed characters
+let g:airline#extensions#tabline#fnamemod = ':t' " show the file name in the line, not the full path
+
+" snippets
+let g:UltiSnipsExpandTrigger="<Ctrl>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+"open tmux from vim
+let g:tmuxify_custom_command = 'tmux split-window -p 30'
+
+" use markdown in vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
+
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
+" Hardtime plugin
+" let g:hardtime_default_on = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
@@ -230,7 +223,6 @@ map <Alt-s> <ESC>;w<RETURN>
 " map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
 " map <leader>ss <ESC>;! grep -rnw './work/' -e "
 " map <leader>sa <ESC>;! grep -rnw './' -e "
-" map \"+Gp \"+gp
 " map ;w <ESC>;w<RETURN>
 " map ;q <ESC>;wq<RETURN>
 
@@ -274,3 +266,6 @@ augroup VIMRC
   autocmd!
   autocmd bufwritepost .vimrc source $MYVIMRC
 augroup end
+
+" vim tricks
+" :mv /long/path/to/{file_name,new_name}.txt
