@@ -119,7 +119,8 @@ syntax on
 runtime macros/matchit.vim
 
 " change shortcut to ctrlt for ease
-let g:ctrlp_map = '<c-t>'
+let g:ctrlp_map = ',t'
+
 " save cache for ctrlp plugin, remember to create the dir on new systems
 let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp-cache'
 if executable('ag')
@@ -199,8 +200,6 @@ map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 map <silent> <leader>/ ;nohlsearch<CR>
 " open file that needed root with root
 cmap w!! w !sudo tee % >/dev/null
-map <leader>t ;CtrlPTag<cr>
-
 
 " reload vimrc
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
