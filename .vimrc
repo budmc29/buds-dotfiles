@@ -4,22 +4,21 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'scrooloose/syntastic' " sintax highlighting
-Plugin 'scrooloose/nerdtree' " show filetree
 Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
-Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise' " auto add matching end keywords
 Plugin 'mhinz/vim-signify' " column diff for source control
-Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mbbill/undotree'
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
-Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jebaum/vim-tmuxify'
-Plugin 'vim-scripts/php.vim-html-enhanced'
-" Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'vimwiki/vimwiki'
+" Plugin 'tpope/vim-surround'
+" Plugin 'vim-scripts/php.vim-html-enhanced'
+" Plugin 'sickill/vim-pasta' " content aware paste and indent
+" Plugin 'tpope/vim-endwise' " auto add matching end keywords
+" Plugin 'scrooloose/nerdtree' " show filetree
 " Plugin 'gabebw/vim-spec-runner'
 " Plugin 'tpope/vim-obsession' " vim session management
 " Plugin 'SirVer/ultisnips'
@@ -76,7 +75,6 @@ filetype plugin indent on    " required
 
 " colorscheme base16-tomorrow
 set background=dark
-" colorscheme benlight
 colorscheme darcula " default theme for console
 
 " don't show the gui
@@ -233,9 +231,6 @@ map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
-
-" google search with plugin
-map <leader>g <ESC>;Google
 
 " vim wiki maping
 map <leader>wn <ESC>;e ~/vimwiki/Notes.md <RETURN>
