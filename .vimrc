@@ -14,9 +14,9 @@ Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jebaum/vim-tmuxify'
 Plugin 'vimwiki/vimwiki'
+Plugin 'sickill/vim-pasta' " content aware paste and indent
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
-" Plugin 'sickill/vim-pasta' " content aware paste and indent
 " Plugin 'tpope/vim-endwise' " auto add matching end keywords
 " Plugin 'scrooloose/nerdtree' " show filetree
 " Plugin 'gabebw/vim-spec-runner'
