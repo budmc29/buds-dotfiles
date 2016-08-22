@@ -40,7 +40,7 @@ Plugin 'blueshirts/Darcula' " preffered theme for console
 " Plugin 'croaker/mustang-vim'
 " Plugin 'wesgibbs/vim-irblack'
 " Plugin 'chriskempson/base16-vim'
-" Plugin 'sjl/badwolf'
+" Plugin 'sjl/badwolf' " good
 " Plugin 'sickill/vim-monokai'
 " Plugin 'zeis/vim-kolor'
 " Plugin 'morhetz/gruvbox'
@@ -118,14 +118,15 @@ syntax on
 
 runtime macros/matchit.vim
 
-" change shortcut to ctrlt for ease
-let g:ctrlp_map = ',t'
-
-" save cache for ctrlp plugin, remember to create the dir on new systems
 let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp-cache'
+" save cache for ctrlp plugin, remember to create the dir on new systems
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" change shortcut to ctrlt for ease
+let g:ctrlp_map = ',t'
+let g:ctrlp_map = ',t'
 
 
 " vim persisten undo
@@ -205,10 +206,10 @@ cmap w!! w !sudo tee % >/dev/null
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
 
 " window management
-map <leader>v <C-w>_
-map <leader>h <C-w><bar>
-map <leader>r <C-w>=
-map <leader>b <C-w>_ <C-w><bar>
+" map <leader>v <C-w>_
+" map <leader>h <C-w><bar>
+" map <leader>r <C-w>=
+" map <leader>b <C-w>_ <C-w><bar>
 
 nnoremap ; :
 nnoremap : ;
@@ -228,6 +229,8 @@ map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 " paste from machine register
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
+
+map <leader>r <ESC>;CtrlPMRUFiles<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
 

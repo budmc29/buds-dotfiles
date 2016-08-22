@@ -7,12 +7,12 @@
 [[Ruby]]
 [[Rails]]
 [[Vim]]
-[[Tmux]]
+[[TMux]]
 [[Laravel]]
 [[Git]]
 [[Mercurial]]
 [[Php]]
-[[Firefox]]
-[[Misc]]
+[test](./Firefox.md)
+[[Misck]]
 
 [[Work Notepad]]

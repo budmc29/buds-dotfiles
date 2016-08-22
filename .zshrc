@@ -205,6 +205,7 @@ alias touchpadOff="synclient TouchpadOff=1"
 alias touchpadOn="synclient TouchpadOff=0"
 
 alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wine Steam.exe"
+alias tor="cd /usr/local/tor && ./tor"
 
 # project 
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"

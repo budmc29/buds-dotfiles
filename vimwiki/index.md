@@ -35,6 +35,6 @@
 * [ ] [[create note sharing web app]]
 * [ ] customize vim wiki (how?)
 
-# 2.[[Notes]]
+# 2. [[Notes]]
 
 # 3.[[Scratchpad]]
