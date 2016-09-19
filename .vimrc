@@ -15,6 +15,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jebaum/vim-tmuxify'
 Plugin 'vimwiki/vimwiki'
 Plugin 'sickill/vim-pasta' " content aware paste and indent
+Plugin 'ngmy/vim-rubocop'
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'tpope/vim-endwise' " auto add matching end keywords
@@ -82,6 +83,12 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 
+"old regexp syntax to increase ruby files speed
+set re=1
+
+"don't look for autocomplete suggestions everywhere
+set complete-=i
+
 set t_ut= "fix tmux transparent background problem
 set ttimeoutlen=50 " reduce needed time to enter/exit insert mode
 
@@ -106,10 +113,7 @@ set relativenumber
 set autoindent
 set copyindent
 set smartcase
-set foldmethod=syntax
-set foldnestmax=2
 set nofoldenable
-set foldlevel=1
 
 filetype on
 filetype plugin on
@@ -258,6 +262,9 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red
 call matchadd('ColorColumn', '\%80v', 100)
+
+" rubocop config
+let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
 
 augroup VIMRC
   autocmd!
