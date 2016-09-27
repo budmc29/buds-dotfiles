@@ -200,6 +200,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
+nnoremap ; :
+nnoremap : ;
+
+
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 map <silent> <leader>/ ;nohlsearch<CR>
@@ -213,10 +217,8 @@ map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETUR
 " map <leader>v <C-w>_
 " map <leader>h <C-w><bar>
 " map <leader>r <C-w>=
-" map <leader>b <C-w>_ <C-w><bar>
+map <leader>b <ESC>;e#<RETURN>
 
-nnoremap ; :
-nnoremap : ;
 " inoremap <C-e> <C-o>A
 map <Alt-s> <ESC>;w<RETURN>
 " map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
