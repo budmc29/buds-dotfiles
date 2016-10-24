@@ -16,6 +16,7 @@ Plugin 'jebaum/vim-tmuxify'
 Plugin 'vimwiki/vimwiki'
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
+Plugin 'benmills/vimux'
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'tpope/vim-endwise' " auto add matching end keywords
@@ -250,6 +251,12 @@ map <leader>wns <ESC>;e ~/vimwiki/Shell.md <RETURN>
 map <leader>wnv <ESC>;e ~/vimwiki/Vim.md <RETURN>
 map <leader>wnt <ESC>;e ~/vimwiki/Tmux.md <RETURN>
 map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
+
+" vimux test commands
+map <Leader>vb <ESC>;call VimuxRunCommand("clear; bin/spring rspec " . bufname("%"))<CR>
+map <Leader>s <ESC>;VimuxRunLastCommand<CR>
+map <Leader>c <ESC>;VimuxPromptCommand("clear; bin/spring rspec " .bufname("%") . ":" . line("."))<CR>
+map <Leader>z <ESC>;VimuxZoomRunner<CR>
 
 " vim tmuxify commands
 le g:tmuxify_run = {
