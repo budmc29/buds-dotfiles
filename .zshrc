@@ -28,13 +28,22 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git, vi-mode, mercurial)
+plugins=(git, vi-mode, mercurial, hg-prompt)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 # DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT=true # alway check for updates
 source $ZSH/oh-my-zsh.sh
+
+function hg_prompt_info {
+    hg prompt --angle-brackets "\
+<%{$fg_bold[blue]%}hg:(%{$fg_bold[red]%}<branch>>%{$fg_bold[blue]%})\
+%{$fg[yellow]%}<status|modified|unknown><update>\
+<patches: <patches|join( → )>>%{$reset_color%}" 2>/dev/null
+}
+
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -105,7 +114,7 @@ alias hggl="hg glog -l"
 alias hgpp="hg pull && hg push"
 alias hgpu="hg pull"
 alias hgpb="hg push --new-branch"
-alias hgsh="hg shelve"
+alias hgsh="hg shelve --config hooks.commit="
 alias hgus="hg unshelve"
 alias hgd="hg diff"
 alias hgar="hg addremove"

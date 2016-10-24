@@ -17,6 +17,8 @@ strip=
 color=
 extdiff=
 graphlog=
+prompt = /usr/local/hg-plugins/prompt/prompt.py
+
 
 [paths]
 default = ssh://hg@bitbucket.org/mugur-chirica/yoyo_bootstrap
