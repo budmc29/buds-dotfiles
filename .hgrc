@@ -31,5 +31,4 @@ cmd.extdiff = meld
 
 [hooks]
 commit = ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)
-commit = bin/spring rspec
-outgoing = bin/spring rspec
+#commit = bin/spring rspec
