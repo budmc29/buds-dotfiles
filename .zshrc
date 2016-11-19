@@ -36,15 +36,16 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 DISABLE_UPDATE_PROMPT=true # alway check for updates
 source $ZSH/oh-my-zsh.sh
 
+if [ -e /usr/local/hg-plugins/prompt/prompt.py ]; then
 function hg_prompt_info {
-    hg prompt --angle-brackets "\
-<%{$fg_bold[blue]%}hg:(%{$fg_bold[red]%}<branch>>%{$fg_bold[blue]%})\
-%{$fg[yellow]%}<status|modified|unknown><update>\
-<patches: <patches|join( → )>>%{$reset_color%}" 2>/dev/null
-}
+  hg prompt --angle-brackets "\
+  <%{$fg_bold[blue]%}hg:(%{$fg_bold[red]%}<branch>>%{$fg_bold[blue]%})\
+  %{$fg[yellow]%}<status|modified|unknown><update>\
+  <patches: <patches|join( → )>>%{$reset_color%}" 2>/dev/null
+  }
 
-PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-
+  PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+fi
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
