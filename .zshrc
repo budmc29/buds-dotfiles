@@ -217,6 +217,8 @@ alias touchpadOn="synclient TouchpadOff=0"
 alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wine Steam.exe"
 alias tor="cd /usr/local/tor && ./tor"
 
+alias ctags-rails="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
+
 # project 
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 

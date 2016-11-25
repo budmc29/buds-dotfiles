@@ -205,7 +205,7 @@ nnoremap ; :
 nnoremap : ;
 
 
-map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
+map <F2> <ESC>;Explore<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 map <silent> <leader>/ ;nohlsearch<CR>
 " open file that needed root with root
@@ -274,6 +274,16 @@ call matchadd('ColorColumn', '\%80v', 100)
 
 " rubocop config
 let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
+
+" remove trailing whitespace on save
+fun! <SID>StripTrailingWhitespaces()
+let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 augroup VIMRC
   autocmd!
