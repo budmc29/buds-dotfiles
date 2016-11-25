@@ -215,21 +215,10 @@ cmap w!! w !sudo tee % >/dev/null
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
 
 " window management
-" map <leader>v <C-w>_
-" map <leader>h <C-w><bar>
-" map <leader>r <C-w>=
 map <leader>b <ESC>;e#<RETURN>
 
 " inoremap <C-e> <C-o>A
-map <Alt-s> <ESC>;w<RETURN>
-" map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
-" map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
-" map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
-" map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
-" map <leader>ss <ESC>;! grep -rnw './work/' -e "
-" map <leader>sa <ESC>;! grep -rnw './' -e "
-" map ;w <ESC>;w<RETURN>
-" map ;q <ESC>;wq<RETURN>
+map <leader>w <ESC>;w<RETURN>
 
 " yank to machine register
 map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
@@ -237,7 +226,8 @@ map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
-map <leader>r <ESC>;CtrlPMRUFiles<RETURN>
+map <leader>rt <ESC>;CtrlPMRUFiles<RETURN>
+map <leader>re <ESC>;! reek %<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
 
