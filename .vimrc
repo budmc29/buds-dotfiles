@@ -36,41 +36,6 @@ Plugin 'benmills/vimux'
 
 " colorschemes
 Plugin 'blueshirts/Darcula' " preffered theme for console
-" Plugin 'cdmedia/itg_flat_vim'
-" Plugin 'kreeger/benlight'
-" Plugin 'budmc29/colour-schemes'
-" Plugin 'croaker/mustang-vim'
-" Plugin 'wesgibbs/vim-irblack'
-" Plugin 'chriskempson/base16-vim'
-" Plugin 'sjl/badwolf' " good
-" Plugin 'sickill/vim-monokai'
-" Plugin 'zeis/vim-kolor'
-" Plugin 'morhetz/gruvbox'
-" Plugin 'romainl/Apprentice'
-" Plugin 'jpo/vim-railscasts-theme'
-" Plugin 'gregsexton/Muon'
-" Plugin 'carlson-erik/wolfpack'
-" Plugin 'andrwb/vim-lapis256'
-" Plugin 'wellsjo/wellsokai.vim'
-" Plugin 'atelierbram/vim-colors_atelier-schemes'
-" Plugin 'glortho/feral-vim'
-" Plugin 'queyenth/oxeded.vim'
-" Plugin 'fabi1cazenave/kalahari.vim'
-" Plugin 'Wutzara/vim-materialtheme'
-" Plugin 'jlesquembre/peaksea'
-" Plugin 'scheakur/vim-scheakur'
-" Plugin 'orthecreedence/void.vim'
-" Plugin 'jlund3/colorschemer'
-" Plugin 'blackgate/tropikos-vim-theme'
-" Plugin 'MPiccinato/wombat256'
-" Plugin 'thomd/vim-wasabi-colorscheme'
-" Plugin 'zsoltf/vim-maui'
-" Plugin 'xero/sourcerer.vim'
-" Plugin 'gilgigilgil/anderson.vim'
-" Plugin 'DrSpatula/vim-buddy'
-" Plugin 'vim-scripts/moria'
-" Plugin 'Donearm/Ubaryd'
-" Plugin 'mkarmona/colorsbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -188,7 +153,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 let g:tmuxify_custom_command = 'tmux split-window -p 30'
 
 " use markdown in vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}] 
+let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 
 
 " If you want :UltiSnipsEdit to split your window.
@@ -207,7 +172,7 @@ map <leader>m ;echo 'test'<RETURN>
 nnoremap ; :
 nnoremap : ;
 
-map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
+map <F2> <ESC>;Explore<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 map <silent> <leader>/ ;nohlsearch<CR>
 " open file that needed root with root
@@ -217,27 +182,19 @@ cmap w!! w !sudo tee % >/dev/null
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
 
 " window management
-" map <leader>v <C-w>_
-" map <leader>h <C-w><bar>
-" map <leader>r <C-w>=
 map <leader>b <ESC>;e#<RETURN>
 
 " inoremap <C-e> <C-o>A
 map <Alt-s> <ESC>;w<RETURN>
-" map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
-" map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
-" map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
-" map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
-" map <leader>ss <ESC>;! grep -rnw './work/' -e "
-" map <leader>sa <ESC>;! grep -rnw './' -e "
-" map ;w <ESC>;w<RETURN>
-" map ;q <ESC>;wq<RETURN>
 
 " yank to machine register
 map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 " paste from machine register
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
+
+map <leader>rt <ESC>;CtrlPMRUFiles<RETURN>
+map <leader>re <ESC>;! reek %<RETURN>
 
 map <leader>r <ESC>;CtrlPMRUFiles<RETURN>
 
@@ -276,6 +233,16 @@ call matchadd('ColorColumn', '\%80v', 100)
 
 " rubocop config
 let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
+
+" remove trailing whitespace on save
+fun! <SID>StripTrailingWhitespaces()
+let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 augroup VIMRC
   autocmd!
