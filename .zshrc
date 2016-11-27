@@ -22,15 +22,17 @@ function todo() {
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# History
 HIST_STAMPS="dd/mm/yyyy"
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git, vi-mode, mercurial, hg-prompt)
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
 # DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT=true # alway check for updates
@@ -128,6 +130,10 @@ alias gb="git branch"
 alias gc="git commit -m \""
 alias ga="git add -A"
 alias gd="git diff --cached"
+alias gco="git checkout"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
+
 
 #Misc
 alias zsh="vim ~/.zshrc"
@@ -208,8 +214,7 @@ alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 # tmux  [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
 
-# keyboard layouts
-alias querty="setxkbmap us"
+# keyboard layouts alias querty="setxkbmap us"
 alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
 alias touchpadOff="synclient TouchpadOff=1"
 alias touchpadOn="synclient TouchpadOff=0"

@@ -201,9 +201,11 @@ let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 """""""""" key remapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
+map <leader>w ;w<RETURN>
+map <leader>m ;echo 'test'<RETURN>
+
 nnoremap ; :
 nnoremap : ;
-
 
 map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
