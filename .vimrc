@@ -17,9 +17,10 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
 Plugin 'benmills/vimux'
-Plugin 'blueshirts/Darcula' " preffered theme for console
 " Plugin 'tpope/vim-surround'
+" Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'tpope/vim-endwise' " auto add matching end keywords
+" Plugin 'scrooloose/nerdtree' " show filetree
 " Plugin 'gabebw/vim-spec-runner'
 " Plugin 'tpope/vim-obsession' " vim session management
 " Plugin 'SirVer/ultisnips'
@@ -33,6 +34,43 @@ Plugin 'blueshirts/Darcula' " preffered theme for console
 " Plugin 'takac/vim-hardtime'
 " Plugin 'xolox/vim-session' " good session manager, using obsession for tmux
 
+" colorschemes
+Plugin 'blueshirts/Darcula' " preffered theme for console
+" Plugin 'cdmedia/itg_flat_vim'
+" Plugin 'kreeger/benlight'
+" Plugin 'budmc29/colour-schemes'
+" Plugin 'croaker/mustang-vim'
+" Plugin 'wesgibbs/vim-irblack'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'sjl/badwolf' " good
+" Plugin 'sickill/vim-monokai'
+" Plugin 'zeis/vim-kolor'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'romainl/Apprentice'
+" Plugin 'jpo/vim-railscasts-theme'
+" Plugin 'gregsexton/Muon'
+" Plugin 'carlson-erik/wolfpack'
+" Plugin 'andrwb/vim-lapis256'
+" Plugin 'wellsjo/wellsokai.vim'
+" Plugin 'atelierbram/vim-colors_atelier-schemes'
+" Plugin 'glortho/feral-vim'
+" Plugin 'queyenth/oxeded.vim'
+" Plugin 'fabi1cazenave/kalahari.vim'
+" Plugin 'Wutzara/vim-materialtheme'
+" Plugin 'jlesquembre/peaksea'
+" Plugin 'scheakur/vim-scheakur'
+" Plugin 'orthecreedence/void.vim'
+" Plugin 'jlund3/colorschemer'
+" Plugin 'blackgate/tropikos-vim-theme'
+" Plugin 'MPiccinato/wombat256'
+" Plugin 'thomd/vim-wasabi-colorscheme'
+" Plugin 'zsoltf/vim-maui'
+" Plugin 'xero/sourcerer.vim'
+" Plugin 'gilgigilgil/anderson.vim'
+" Plugin 'DrSpatula/vim-buddy'
+" Plugin 'vim-scripts/moria'
+" Plugin 'Donearm/Ubaryd'
+" Plugin 'mkarmona/colorsbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,10 +84,10 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 
-" old regexp syntax to increase ruby files speed
+"old regexp syntax to increase ruby files speed
 set re=1
 
-" don't look for autocomplete suggestions everywhere
+"don't look for autocomplete suggestions everywhere
 set complete-=i
 
 set t_ut= "fix tmux transparent background problem
@@ -169,7 +207,7 @@ map <leader>m ;echo 'test'<RETURN>
 nnoremap ; :
 nnoremap : ;
 
-map <F2> <ESC>;Explore<RETURN>
+map <F2> <ESC>;NERDTreeToggle ~/work<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
 map <silent> <leader>/ ;nohlsearch<CR>
 " open file that needed root with root
@@ -179,10 +217,21 @@ cmap w!! w !sudo tee % >/dev/null
 map <leader>sr <ESC>;source $MYVIMRC<RETURN><ESC>;echoerr 'vimrc reloaded'<RETURN>
 
 " window management
+" map <leader>v <C-w>_
+" map <leader>h <C-w><bar>
+" map <leader>r <C-w>=
 map <leader>b <ESC>;e#<RETURN>
 
 " inoremap <C-e> <C-o>A
-map <leader>w <ESC>;w<RETURN>
+map <Alt-s> <ESC>;w<RETURN>
+" map <leader>sb <ESC>;! grep -rnw './work/yoyo_bootstrap' -e "
+" map <leader>sm <ESC>;! grep -rnw './work/gasbox-marketplace' -e "
+" map <leader>sp <ESC>;! grep -rnw './work/gasbox-player' -e "
+" map <leader>sa <ESC>;! grep -rnw './work/yoyo-account' -e "
+" map <leader>ss <ESC>;! grep -rnw './work/' -e "
+" map <leader>sa <ESC>;! grep -rnw './' -e "
+" map ;w <ESC>;w<RETURN>
+" map ;q <ESC>;wq<RETURN>
 
 " yank to machine register
 map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
@@ -190,8 +239,7 @@ map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
-map <leader>rt <ESC>;CtrlPMRUFiles<RETURN>
-map <leader>re <ESC>;! reek %<RETURN>
+map <leader>r <ESC>;CtrlPMRUFiles<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
 
@@ -228,16 +276,6 @@ call matchadd('ColorColumn', '\%80v', 100)
 
 " rubocop config
 let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
-
-" remove trailing whitespace on save
-fun! <SID>StripTrailingWhitespaces()
-let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-call cursor(l, c)
-endfun
-
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 augroup VIMRC
   autocmd!
