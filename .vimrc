@@ -17,9 +17,9 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
 Plugin 'benmills/vimux'
+Plugin 'tpope/vim-endwise' " auto add matching end keywords
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
-" Plugin 'tpope/vim-endwise' " auto add matching end keywords
 " Plugin 'scrooloose/nerdtree' " show filetree
 " Plugin 'gabebw/vim-spec-runner'
 " Plugin 'tpope/vim-obsession' " vim session management
