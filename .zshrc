@@ -167,7 +167,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
-#vim 
+# vim 
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
@@ -222,7 +222,7 @@ alias touchpadOn="synclient TouchpadOff=0"
 alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wine Steam.exe"
 alias tor="cd /usr/local/tor && ./tor"
 
-# project 
+# project
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 
 # WORK aliases, keep private
