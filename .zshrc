@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+plugins=(git, vi-mode, mercurial, hg-prompt)
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+
 # Set name of the theme to load.
 ZSH_THEME="robbyrussell"
 
@@ -16,10 +20,6 @@ function todo() {
   sed -i "/# 1.TODO/a * [ ] ${parameter}" ~/vimwiki/index.md
 }
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
 # History
@@ -28,11 +28,6 @@ export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git, vi-mode, mercurial, hg-prompt)
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
 # DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT=true # alway check for updates
@@ -167,14 +162,14 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
-# vim 
+# vim
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # alias viki="vim ~/vimwiki/index.md"
 alias vimwiki="vim ~/vimwiki/index.md"
 
-# tmux 
+# tmux
 alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
