@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
-plugins=(git, vi-mode, mercurial, hg-prompt, zsh-syntax-highlighting)
-ZSH_THEME="robbyrussell"
 export TERM=xterm-256color
+ZSH_THEME="robbyrussell"
+plugins=(git, vi-mode, mercurial, hg-prompt, zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
 
 COMPLETION_WAITING_DOTS="true"
 
