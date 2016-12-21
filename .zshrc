@@ -182,6 +182,7 @@ alias prupdate="cd ~/projects && git pull"
 alias scr="cd ~/work/scripts"
 alias ezsh="vim ~/.zshrc"
 alias sandbox="cd ~/projects/sandbox"
+alias kakta="cd ~/projects/sandbox/ruby/kata"
 
 # work
 alias work="cd ~/work && ls"
@@ -210,7 +211,7 @@ alias tor="cd /usr/local/tor && ./tor"
 # project
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 
-alias upm="cd ~/wayyd/upm"
+alias upm="cd ~/work/upm"
 
 # work aliases, keep private
 . ~/.private_work_aliases
