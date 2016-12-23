@@ -1,26 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+
+# Set name of the theme to load.
+ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
-ZSH_THEME="robbyrussell"
-plugins=(git, vi-mode, mercurial, hg-prompt, zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
-
-COMPLETION_WAITING_DOTS="true"
-
-# DISABLE_AUTO_UPDATE="true"
-DISABLE_UPDATE_PROMPT=true # alway check for updates
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# History
-HIST_STAMPS="dd/mm/yyyy"
-export HISTSIZE=2000
-export HISTFILE="$HOME/.history"
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
 
 if [[ -z "$TMUX" ]] ;then
   tmux new-session
@@ -32,7 +16,28 @@ function todo() {
   sed -i "/# 1.TODO/a * [ ] ${parameter}" ~/vimwiki/index.md
 }
 
-# mercurial repository info plugin
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# History
+HIST_STAMPS="dd/mm/yyyy"
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+plugins=(git, vi-mode, mercurial, hg-prompt)
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+
+# DISABLE_AUTO_UPDATE="true"
+DISABLE_UPDATE_PROMPT=true # alway check for updates
+source $ZSH/oh-my-zsh.sh
+
 if [ -e /usr/local/hg-plugins/prompt/prompt.py ]; then
 function hg_prompt_info {
   hg prompt --angle-brackets "\
@@ -43,6 +48,8 @@ function hg_prompt_info {
 
   PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 fi
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -51,7 +58,7 @@ else #   export EDITOR='mvim'
 fi
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
@@ -70,6 +77,10 @@ fi
 #
 #
 #
+# Ruby
+plugins=(zsh-syntax-highlighting)
+alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
+alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
 
 # Rails
 alias et="RAILS_ENV=test"
@@ -112,7 +123,7 @@ alias hgd="hg diff"
 alias hgar="hg addremove"
 alias hgclose="hg commit --close-branch -m \""
 
-# git
+#git
 alias gs="git status"
 alias gp="git push"
 alias gb="git branch"
@@ -122,13 +133,12 @@ alias gd="git diff --cached"
 alias gco="git checkout"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
-alias gaa="git add -A"
+
 
 #Misc
 alias zsh="vim ~/.zshrc"
 
 # TODO: save i3 configs for different machines and version control that
-# TODO: create a backup script instead of aliases
 alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
 && cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
 && cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
@@ -157,14 +167,14 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
-# vim
+# vim 
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # alias viki="vim ~/vimwiki/index.md"
 alias vimwiki="vim ~/vimwiki/index.md"
 
-# tmux
+# tmux 
 alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
@@ -176,15 +186,19 @@ alias svim="sudo vim"
 alias pr="cd ~/projects && ls"
 alias projects="cd ~/projects && ls"
 alias ex="cd ~/projects/exercism/ruby && ls"
-alias prbackup="cd ~/projects && git status && git add -A && git commit && git push"
+alias prbackup="cd ~/projects && git status && git add -A && git commit \
+&& git push"
+
 alias prupdate="cd ~/projects && git pull"
 
-alias scr="cd ~/work/scripts"
-alias ezsh="vim ~/.zshrc"
-alias sandbox="cd ~/projects/sandbox"
-alias kata="cd ~/projects/sandbox/ruby/katas"
+#personal
+alias prs="cd ~/personal && ls"
+alias personal="cd ~/personal && ls"
+alias upm="cd /var/www/upostme && ls"
+alias zt="zap to"
 
 # work
+alias wk="cd ~/work && ls"
 alias work="cd ~/work && ls"
 
 # search in console
@@ -197,7 +211,7 @@ alias x11="x11vnc -auth guess -forever -usepw"
 # start hansoft from cli, work machine
 alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
-# tmux
+# tmux  [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts alias querty="setxkbmap us"
@@ -211,9 +225,7 @@ alias tor="cd /usr/local/tor && ./tor"
 # project
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 
-alias upm="cd ~/work/upm"
-
-# work aliases, keep private
+# WORK aliases, keep private
 . ~/.private_work_aliases
 
 export PATH=$HOME/bin:$PATH
