@@ -182,6 +182,7 @@ alias prupdate="cd ~/projects && git pull"
 alias scr="cd ~/work/scripts"
 alias ezsh="vim ~/.zshrc"
 alias sandbox="cd ~/projects/sandbox"
+alias sand="cd ~/projects/sandbox"
 alias kata="cd ~/projects/sandbox/ruby/katas"
 
 # work

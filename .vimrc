@@ -219,8 +219,8 @@ map <Leader>z <ESC>;VimuxZoomRunner<CR>
 
 " vim tmuxify commands
 le g:tmuxify_run = {
-      \ 'rb': 'bundle exec rspec spec %',
-      \}
+\ 'rb': 'bundle exec rspec spec %',
+\}
 
 " vim emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
