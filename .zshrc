@@ -151,10 +151,9 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && source ~/.zshrc"
 
 # vim
+alias svim="sudo vim"
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
-
-# alias viki="vim ~/vimwiki/index.md"
 alias vimwiki="vim ~/vimwiki/index.md"
 
 # tmux
@@ -162,8 +161,6 @@ alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
 alias pss="ps -ef | grep"
-alias szsh="source ~/.zshrc"
-alias svim="sudo vim"
 
 # projects
 alias pr="cd ~/projects && ls"
@@ -174,12 +171,11 @@ alias prupdate="cd ~/projects && git pull"
 
 alias scr="cd ~/work/scripts"
 alias ezsh="vim ~/.zshrc"
+alias szsh="source ~/.zshrc"
+
 alias sandbox="cd ~/projects/sandbox"
 alias sand="cd ~/projects/sandbox"
 alias kata="cd ~/projects/sandbox/ruby/katas"
-
-# work
-alias work="cd ~/work && ls"
 
 # search in console
 alias gr="grep -rnw './' -e \""
@@ -201,6 +197,9 @@ alias touchpadOn="synclient TouchpadOff=0"
 
 alias steam="cd /home/mugurel/.wine/drive_c/Program\ Files\ \(x86\)/Steam/ && wine Steam.exe"
 alias tor="cd /usr/local/tor && ./tor"
+
+# work
+alias work="cd ~/work && ls"
 
 # project
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
