@@ -1,4 +1,3 @@
-# Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
@@ -12,7 +11,6 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT=true # alway check for updates
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # History
@@ -22,17 +20,27 @@ export HISTFILE="$HOME/.history"
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
+# Start new tmux session when opening a new console
 if [[ -z "$TMUX" ]] ;then
   tmux new-session
 fi
+# Functions
+#
+#
+# Add todo to vimwiki
+function add_todo() {
+  if [ $1 ]; then
 
-# add todo to vimwiki
-function todo() {
-  parameter=$@
-  sed -i "/# 1.TODO/a * [ ] ${parameter}" ~/vimwiki/index.md
+    parameter=$@
+    sed -i "/# 1.TODO/a * [ ] ${parameter}" ~/vimwiki/index.md
+
+    echo 'TODO added'
+  else
+    echo 'Usage: todo things to do'
+  fi
 }
 
-# mercurial repository info plugin
+# Mercurial repository info plugin
 if [ -e /usr/local/hg-plugins/prompt/prompt.py ]; then
 function hg_prompt_info {
   hg prompt --angle-brackets "\
@@ -55,16 +63,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
-
-# zap bookmark manager
-if [ -f ~/zap.bash ]; then
-  source ~/zap.bash
-fi
-
-# wiki backup
-if [ -f ~/.wiki-backup.bash ]; then
-  source ~/.wiki-backup.bash
-fi
 
 # ALIASES
 #
@@ -213,6 +211,7 @@ alias tor="cd /usr/local/tor && ./tor"
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
 
 alias upm="cd ~/work/upm"
+alias todo="add_todo $@"
 
 # work aliases, keep private
 . ~/.private_work_aliases
