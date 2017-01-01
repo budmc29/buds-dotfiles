@@ -1,4 +1,10 @@
 # 1.TODO
+
+* [ ] 
+* [ ] have general scripts and work scripts and add them to the path
+* [ ] run file update on startup and backup on shutdown (only if any of the watched files changes
+
+%% very old todo list
 * [ ] i3 separat config files for all machines
 * [ ] find a way to clean tmux opened sessions
 * [ ] when opens a new console swith to tmux and clean unused sessions
@@ -18,7 +24,6 @@
 * [ ] daily todo list?
 * [ ] start console at startup and maximize
 * [ ] send mail from linux server
-* [ ] run file update on startup and backup on shutdown
 * [ ] backup vimwiki in bitbucket
 * [ ] finish laravel setup
 * [ ] set vimwiki backups

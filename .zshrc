@@ -40,6 +40,14 @@ function add_todo() {
   fi
 }
 
+function catless() {
+  if [ $1 ]; then
+    cat $1 | less
+  else
+    echo 'Usage: catless filename'
+  fi
+}
+
 # Mercurial repository info plugin
 if [ -e /usr/local/hg-plugins/prompt/prompt.py ]; then
 function hg_prompt_info {
@@ -126,21 +134,8 @@ alias gaa="git add -A"
 alias zsh="vim ~/.zshrc"
 
 # TODO: save i3 configs for different machines and version control that
-# TODO: create a backup script instead of aliases
-alias dotbackup="cp ~/.hgrc ~/ubuntu-dotfiles/ \
-&& cp -r ~/vimwiki/ ~/ubuntu-dotfiles/ \
-&& cp ~/.tmux.conf ~/ubuntu-dotfiles/ \
-&& cp ~/.Xmodmap ~/ubuntu-dotfiles/ \
-&& cp ~/.vimrc ~/ubuntu-dotfiles/ \
-&& cp ~/.gvimrc ~/ubuntu-dotfiles/ \
-&& cp ~/.zshrc ~/ubuntu-dotfiles/ \
-&& cp ~/zap.bash ~/ubuntu-dotfiles/ \
-&& cp -r ~/.bookmarks ~/ubuntu-dotfiles/ \
-&& cp -r ~/.i3 ~/ubuntu-dotfiles/ \
-&& cp ~/.i3status.conf ~/ubuntu-dotfiles/ \
-&& cd ~/ubuntu-dotfiles \
-&& git pull && git add -A && git commit && git push"
 
+# TODO: finish dotter update
 alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
 && cp ~/ubuntu-dotfiles/.gvimrc ~/.gvimrc \
@@ -209,9 +204,11 @@ alias tor="cd /usr/local/tor && ./tor"
 
 # project
 alias ticketee="cd ~/projects/ticketee && rvm use 2.0@ticketee"
-
 alias upm="cd ~/work/upm"
+
 alias todo="add_todo $@"
+alias catless="catless $@"
+alias dotbackup="~/projects/dotter/dotter.bash -b"
 
 # work aliases, keep private
 . ~/.private_work_aliases
