@@ -1,6 +1,5 @@
 # 1.TODO
-
-* [ ] 
+* [ ] theoua
 * [ ] have general scripts and work scripts and add them to the path
 * [ ] run file update on startup and backup on shutdown (only if any of the watched files changes
 

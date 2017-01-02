@@ -1,9 +1,12 @@
 export ZSH=~/.oh-my-zsh
-
-# Set name of the theme to load.
-ZSH_THEME="robbyrussell"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 
 export TERM=xterm-256color
+ZSH_THEME="robbyrussell"
+
+plugins=(zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
 
 if [[ -z "$TMUX" ]] ;then
   tmux new-session
@@ -17,6 +20,7 @@ export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+
 
 # Start new tmux session when opening a new console
 if [[ -z "$TMUX" ]] ;then
@@ -77,7 +81,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 #
 #
 # Ruby
-plugins=(zsh-syntax-highlighting)
 alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
 alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
 
@@ -132,7 +135,7 @@ alias gd="git diff --cached"
 alias gco="git checkout"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
-
+alias gaa="git add -A"
 
 #Misc
 alias zsh="vim ~/.zshrc"
@@ -157,6 +160,7 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias vimwiki="vim ~/vimwiki/index.md"
+alias viki="vim ~/vimwiki/index.md"
 
 # tmux 
 alias tmuxrc="vim ~/.tmux.conf"
