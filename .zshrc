@@ -1,15 +1,13 @@
 export ZSH=~/.oh-my-zsh
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH"
+
+# Set name of the theme to load.
+ZSH_THEME="robbyrussell"
 
 export TERM=xterm-256color
-ZSH_THEME="robbyrussell"
-plugins=(git, vi-mode, mercurial, hg-prompt, zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
 
-COMPLETION_WAITING_DOTS="true"
-
-# DISABLE_AUTO_UPDATE="true"
-DISABLE_UPDATE_PROMPT=true # alway check for updates
+if [[ -z "$TMUX" ]] ;then
+  tmux new-session
+fi
 
 export LANG=en_US.UTF-8
 
@@ -59,6 +57,8 @@ function hg_prompt_info {
 
   PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 fi
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -67,7 +67,7 @@ else #   export EDITOR='mvim'
 fi
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
@@ -76,6 +76,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 #
 #
 #
+# Ruby
+plugins=(zsh-syntax-highlighting)
+alias first="rvm use 1.9.3@first && rvm current && cd ~/leaderboard"
+alias startup="source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && xmodmap ~/vimkeys"
 
 # Rails
 alias et="RAILS_ENV=test"
@@ -118,7 +122,7 @@ alias hgd="hg diff"
 alias hgar="hg addremove"
 alias hgclose="hg commit --close-branch -m \""
 
-# git
+#git
 alias gs="git status"
 alias gp="git push"
 alias gb="git branch"
@@ -128,7 +132,7 @@ alias gd="git diff --cached"
 alias gco="git checkout"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
-alias gaa="git add -A"
+
 
 #Misc
 alias zsh="vim ~/.zshrc"
@@ -150,13 +154,11 @@ alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
 && cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
 && source ~/.zshrc"
 
-# vim
-alias svim="sudo vim"
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias vimwiki="vim ~/vimwiki/index.md"
 
-# tmux
+# tmux 
 alias tmuxrc="vim ~/.tmux.conf"
 
 # ubuntu processes
@@ -166,7 +168,9 @@ alias pss="ps -ef | grep"
 alias pr="cd ~/projects && ls"
 alias projects="cd ~/projects && ls"
 alias ex="cd ~/projects/exercism/ruby && ls"
-alias prbackup="cd ~/projects && git status && git add -A && git commit && git push"
+alias prbackup="cd ~/projects && git status && git add -A && git commit \
+&& git push"
+
 alias prupdate="cd ~/projects && git pull"
 
 alias scr="cd ~/work/scripts"
@@ -187,7 +191,7 @@ alias x11="x11vnc -auth guess -forever -usepw"
 # start hansoft from cli, work machine
 alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 
-# tmux
+# tmux  [TODO: make a script for those in tmuxconf]
 alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts alias querty="setxkbmap us"
