@@ -1,7 +1,7 @@
 # 1.TODO
-* [ ] test
+* [ ] make scratchpad work
+* [ ] complete algorithms in ruby
 * [ ] open a scratchpad or a standalone console (floating)
-* [ ] open
 * [ ] viki script
 * [ ] have general scripts and work scripts and add them to the path
 * [ ] run file update on startup and backup on shutdown (only if any of the watched files changes
