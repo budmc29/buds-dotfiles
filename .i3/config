@@ -75,7 +75,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -260,3 +260,8 @@ exec_always ibus exit
 exec gsettings set org.gnome.desktop.background show-desktop-icons false
 
 exec xset -dpms
+
+# Scratchpad
+bindsym $mod+s [instance="^scratchpad$"] scratchpad show
+exec_always flock -w1 ~/.config/i3/scratchpad/lockfile ~/.config/i3/scratchpad/perpetual_terminal.sh
+for_window [instance="^scratchpad$"] move scratchpad

@@ -1,4 +1,5 @@
 # 1.TODO
+* [ ] read good rspec unit tests
 * [ ] make scratchpad work
 * [ ] complete algorithms in ruby
 * [ ] open a scratchpad or a standalone console (floating)
