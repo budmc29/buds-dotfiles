@@ -262,6 +262,13 @@ exec gsettings set org.gnome.desktop.background show-desktop-icons false
 exec xset -dpms
 
 # Scratchpad
+# bindsym $mod+Shift+s move scratchpad # move item under focus in scratchpad
 bindsym $mod+s [instance="^scratchpad$"] scratchpad show
-exec_always flock -w1 ~/.config/i3/scratchpad/lockfile ~/.config/i3/scratchpad/perpetual_terminal.sh
+bindsym $mod+t [instance="^todo$"] scratchpad show
+
+# flock is used to allow only one instance
+exec_always flock -w1 ~/.i3/scratchpad/lockfile_te ~/.i3/scratchpad/perpetual_terminal.sh
+exec_always flock -w1 ~/.i3/scratchpad/lockfile_to ~/.i3/scratchpad/perpetual_todo.sh
+
 for_window [instance="^scratchpad$"] move scratchpad
+for_window [instance="^todo$"] move scratchpad

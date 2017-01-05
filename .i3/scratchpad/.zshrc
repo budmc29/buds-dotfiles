@@ -3,12 +3,12 @@ source ~/.zshrc
 # reset again what was set outside
 export ZDOTDIR=${HOME}
 
-echo 'test'
-
 PS1="(scratchpad)$PS1"
+PS2="(todo)$PS2"
 
 preexec() {
     i3-msg '[instance="^scratchpad$"]' move scratchpad
+    i3-msg '[instance="^todo$"]' move scratchpad
     tmux new-window
 
     precmd() {
@@ -22,6 +22,7 @@ zshexit() {
     # user pressed ^D or window got killed, will not be executed when the
     # shell gets "killed" by the final exec in the regular workflow
     i3-msg '[instance="^scratchpad$"]' move scratchpad
+    i3-msg '[instance="^todo$"]' move scratchpad
     tmux new-window
 }
 

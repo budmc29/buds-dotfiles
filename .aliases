@@ -60,8 +60,6 @@ alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d
 alias gaa="git add -A"
 
 #Misc
-alias zsh="vim ~/.zshrc"
-
 # TODO: save i3 configs for different machines and version control that
 
 # TODO: finish dotter update
