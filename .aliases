@@ -81,7 +81,8 @@ alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias vimwiki="vim ~/vimwiki/index.md"
 alias viki="vim ~/vimwiki/index.md"
-alias wayt="vim ~/wayyd.md"
+alias wayt="vim ~/wayyd_todo.md"
+alias home="vim ~/home_todo.md"
 
 # tmux
 alias tmuxrc="vim ~/.tmux.conf"

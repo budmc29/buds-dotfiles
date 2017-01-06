@@ -1,4 +1,7 @@
 # 1.TODO
+* [ ] learning, wayd, yoyo, misc
+* [ ] setup a bitbucket private backup
+* [ ] create todos for big areas in my life
 * [ ] read good rspec unit tests
 * [ ] make scratchpad work
 * [ ] complete algorithms in ruby
