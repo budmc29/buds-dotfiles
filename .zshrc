@@ -79,7 +79,7 @@ source ~/.private_work_aliases
 
 # Load computer specific settings
 HOSTNAME=`hostname`
-source .${HOSTNAME}_pc.config
+source ~/.${HOSTNAME}_pc.config
 
 export PATH=$HOME/bin:$PATH
 
