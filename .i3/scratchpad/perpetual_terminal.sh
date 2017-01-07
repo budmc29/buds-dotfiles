@@ -7,7 +7,6 @@ while true; do
     # until either
     #
     # * it gets detached (eg by ^Ad)
-
     # * it terminates (because someone killed all windows)
     #
     # in any case, we try to reattach to the session, or, if that fails,
