@@ -70,15 +70,16 @@ if [[ -n $SSH_CONNECTION ]]; then
 else #   export EDITOR='mvim'
 fi
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 
 # work aliases, keep private
-. ~/.aliases
-. ~/.private_work_aliases
+source ~/.aliases
+source ~/.private_work_aliases
+
+# Load computer specific settings
+HOSTNAME=`hostname`
+source .${HOSTNAME}_pc.config
 
 export PATH=$HOME/bin:$PATH
 
