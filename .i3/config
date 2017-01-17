@@ -5,7 +5,7 @@ set $mod Mod4
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # FreeType font, such as:
-font pango:SFNS Display 11
+font pango:SFNS Display 15px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -227,6 +227,7 @@ exec skype
 exec gnome-terminal --hide-menubar
 exec nm-applet
 exec update-notifier
+exec unity-settings-daemon
 
 # use xprop, class name
 # assign [class="Firefox"] $workspace2
@@ -266,8 +267,11 @@ exec_always flock ~/.i3/scratchpad/lockfile_to ~/.i3/scratchpad/perpetual_todo.s
 
 for_window [instance="^scratchpad$"] move scratchpad
 for_window [instance="^todo$"] move scratchpad
-workspace $workspace2 output VGA1
+workspace $workspace2 output HDMI1
+workspace $workspace3 output HDMI1
+workspace $workspace10 output HDMI1
+workspace $workspace1 output VGA1
 workspace $workspace4 output VGA1
-workspace $workspace6 output VGA1
-workspace $workspace3 output LVDS1
-# test
+
+exec_always xrandr --output VIRTUAL1 --off --output DP1 --off --output HDMI1 --mode 1440x900 --pos 1440x0 --rotate normal --output DVI-I-2 --mode 832x624 --pos 2880x0 --rotate left --output DVI-I-1 --mode 1440x900 --pos 0x0 --rotate normal --output VGA1 --off
+
