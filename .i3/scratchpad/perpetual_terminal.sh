@@ -11,5 +11,9 @@ while true; do
     #
     # in any case, we try to reattach to the session, or, if that fails,
     # create a new one.
-    urxvt -name scratchpad -e sh -c "tmux attach -t scratchpad || tmux new-session -s scratchpad $run_inside ';' set-option -t scratchpad default-command $run_inside"
+    if hash urxvt 2>/dev/null; then
+      urxvt -name scratchpad -e sh -c "tmux attach -t scratchpad || tmux new-session -s scratchpad $run_inside ';' set-option -t scratchpad default-command $run_inside"
+    else
+      sudo apt-get install rxvt-unicode
+    fi
 done
