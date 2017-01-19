@@ -18,7 +18,7 @@ strip=
 color=
 extdiff=
 graphlog=
-#prompt = /usr/local/hg-plugins/prompt/prompt.py
+prompt = /usr/local/hg-plugins/prompt/prompt.py
 
 
 [paths]
