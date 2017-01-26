@@ -36,5 +36,10 @@ vim **/*.rb # load all .rb files from the folder in vim
 
 ```
 
-
-
+- vim splits
+```
+C-w,+ enlagre the current spilt panel
+C-w,- shrinks the current spilt panel
+C-w,C-w - moves the focus to the next split panel
+C-w,= - resets the layout (evens it)
+```

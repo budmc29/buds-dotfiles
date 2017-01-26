@@ -193,10 +193,8 @@ map <leader>y "+y<ESC>;echoerr 'copy to clipboard'<RETURN>
 map <leader>p <ESC>"+gp<ESC>;echoerr 'pasted from clipboard'<RETURN>
 map <leader>P <ESC>"+gP<ESC>;echoerr 'pasted from clipboard'<RETURN>
 
-map <leader>rt <ESC>;CtrlPMRUFiles<RETURN>
-map <leader>re <ESC>;! reek %<RETURN>
-
-map <leader>r <ESC>;CtrlPMRUFiles<RETURN>
+map <leader>e <ESC>;CtrlPMRUFiles<RETURN>
+" map <leader>re <ESC>;! reek %<RETURN>
 
 nnoremap \cd :lcd %:p:h<CR>:pwd<CR>
 
@@ -211,10 +209,10 @@ map <leader>wnv <ESC>;e ~/vimwiki/Vim.md <RETURN>
 map <leader>wnt <ESC>;e ~/vimwiki/Tmux.md <RETURN>
 map <leader>wnm <ESC>;e ~/vimwiki/Mercurial.md <RETURN>
 
-" vimux test commands
-map <Leader>vb <ESC>;call VimuxRunCommand("clear; bin/spring rspec " . bufname("%"))<CR>
-map <Leader>s <ESC>;VimuxRunLastCommand<CR>
-map <Leader>c <ESC>;VimuxPromptCommand("clear; bin/spring rspec " .bufname("%") . ":" . line("."))<CR>
+" Run tests commands
+map <Leader>vb ;call RunTestFile()<cr>
+map <Leader>c ;call RunTestLine()<cr>
+" map <Leader>s ;call RunTestLast()<cr>
 map <Leader>z <ESC>;VimuxZoomRunner<CR>
 
 " vim tmuxify commands
@@ -229,7 +227,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " this needs to be there for the color column  to work
 highlight ColorColumn ctermbg=1 guibg=red
-call matchadd('ColorColumn', '\%80v', 100)
+autocmd BufReadPost * call matchadd('ColorColumn', '\%80v', 100)
 
 " rubocop config
 let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
@@ -248,6 +246,27 @@ augroup VIMRC
   autocmd!
   autocmd bufwritepost .vimrc source $MYVIMRC
 augroup end
+
+" Functions
+function! RunTestFile()
+  silent !clear
+  execute "!bin/spring rspec " .  bufname("%")
+endfunction
+
+function! RunTestLine()
+  silent !clear
+  let data = "!bin/spring rspec " .  bufname("%") . ":" . line(".")
+  execute data
+endfunction
+
+" TODO: implement run last test
+function! RunTestLast()
+  " execute \"!echo \" . data . \" > tmp/last_test_line_command"
+  " silent !clear
+  " let data = system('!cat tmp/last_test_line_command')
+" execute data
+  " echom data
+endfunction
 
 " vim tricks
 " :mv /long/path/to/{file_name,new_name}.txt

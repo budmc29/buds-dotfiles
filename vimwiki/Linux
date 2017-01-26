@@ -42,7 +42,7 @@ telnet address 3306
 
 ```
 
-- Show folder usage
+- Disk usage
 ```
-du -sh * | sort -hr
+$ df
 ```
