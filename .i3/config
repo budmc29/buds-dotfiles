@@ -273,5 +273,4 @@ workspace $workspace10 output DVI-I-1
 workspace $workspace1 output HDMI1
 workspace $workspace4 output HDMI1
 
-exec_always xrandr --output VIRTUAL1 --off --output DP1 --off --output HDMI1 --mode 1440x900 --pos 1440x0 --rotate normal --output DVI-I-2 --mode 832x624 --pos 2880x0 --rotate left --output DVI-I-1 --mode 1440x900 --pos 0x0 --rotate normal --output VGA1 --off
-
+exec_always xrandr --output VIRTUAL1 --off --output DP1 --off --output HDMI1 --mode 1680x1050 --pos 1680x0 --rotate normal --output DVI-I-2 --mode 1024x768 --pos 3360x0 --rotate right --output DVI-I-1 --mode 1680x1050 --pos 0x0 --rotate normal --output VGA1 --off

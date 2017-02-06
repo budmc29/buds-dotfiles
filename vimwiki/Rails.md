@@ -50,3 +50,9 @@ ActiveRecord::Base.connection_pool.clear_reloadable_connections!
 Model.stuff.order("name ASC")
 
 ```
+
+- Regenerate a Tire (elasticsearch) search data
+```
+bin/rake RAILS_ENV=development tire:import CLASS="YoyoProduct" FORCE=true
+
+```

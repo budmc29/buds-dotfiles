@@ -248,19 +248,19 @@ augroup VIMRC
 augroup end
 
 " Functions
-function! RunTestFile()
+function RunTestFile()
   silent !clear
   execute "!bin/spring rspec " .  bufname("%")
 endfunction
 
-function! RunTestLine()
+function RunTestLine()
   silent !clear
   let data = "!bin/spring rspec " .  bufname("%") . ":" . line(".")
   execute data
 endfunction
 
 " TODO: implement run last test
-function! RunTestLast()
+function RunTestLast()
   " execute \"!echo \" . data . \" > tmp/last_test_line_command"
   " silent !clear
   " let data = system('!cat tmp/last_test_line_command')
