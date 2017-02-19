@@ -1,7 +1,7 @@
-#files: 693	version: 5.0.2
+#files: 694	version: 5.0.2
 
 _comps=(
-'-' '_precommand'
+'-' '_torsocks'
 '.' '_source'
 '5g' '_go'
 '5l' '_go'
@@ -963,6 +963,7 @@ _comps=(
 'todo' '_devtodo'
 'todo.sh' '_todo.sh'
 'toilet' '_toilet'
+'torsocks' '_torsocks'
 'totdconfig' '_totd'
 'tpb' '_tpb'
 'tpconfig' '_tpconfig'
@@ -1410,33 +1411,33 @@ autoload -Uz _a2ps _a2utils _aap _acpi _acpitool \
             _tcptraceroute _telnet _terminals _tex _texi \
             _texinfo _tidy _tiff _tilde _tilde_files \
             _time_zone _tin _tla _tmux _todo.sh \
-            _toilet _toolchain-source _topgit _totd _tpb \
-            _tpconfig _tracepath _trap _tree _ttyctl \
-            _tune2fs _twidge _twisted _typeset _ulimit \
-            _uml _unace _uname _unexpand _unhash \
-            _uniq _unison _units _unsetopt _update-alternatives \
-            _update-rc.d _urls _urpmi _urxvt _uscan \
-            _user_admin _user_at_host _user_expand _users _users_on \
-            _uzbl _valgrind _value _values _vared \
-            _vars _vcsh _vim _vim-addons _vnc \
-            _volume_groups _vorbis _vorbiscomment _vserver _vux \
-            _w3m _wait _wajig _wakeup_capable_devices _wanna-build \
-            _wanted _webbrowser _wget _whereis _which \
-            _whois _wiggle _wpa_cli _xargs _x_arguments \
-            _xauth _x_borderwidth _xclip _x_color _x_colormapid \
-            _x_cursor _x_display _xdvi _x_extension _xfig \
-            _x_font _xft_fonts _x_geometry _x_keysym _xloadimage \
-            _x_locale _xmlsoft _xmms2 _x_modifier _xmodmap \
-            _x_name _xournal _xpdf _xrandr _x_resource \
-            _xscreensaver _x_selection_timeout _xset _xt_arguments _xterm \
-            _x_title _xt_session_id _x_utils _xv _x_visual \
-            _x_window _xwit _xz _yast _yast2 \
-            _yodl _yp _yum _zargs _zattr \
-            _zcalc_line _zcat _zcompile _zdump _zed \
-            _zfs _zfs_dataset _zfs_keysource_props _zfs_pool _zftp \
-            _zip _zle _zlogin _zmodload _zmv \
-            _zoneadm _zones _zpool _zpty _zsh-mime-handler \
-            _zstyle _ztodo _zypper
+            _toilet _toolchain-source _topgit _torsocks _totd \
+            _tpb _tpconfig _tracepath _trap _tree \
+            _ttyctl _tune2fs _twidge _twisted _typeset \
+            _ulimit _uml _unace _uname _unexpand \
+            _unhash _uniq _unison _units _unsetopt \
+            _update-alternatives _update-rc.d _urls _urpmi _urxvt \
+            _uscan _user_admin _user_at_host _user_expand _users \
+            _users_on _uzbl _valgrind _value _values \
+            _vared _vars _vcsh _vim _vim-addons \
+            _vnc _volume_groups _vorbis _vorbiscomment _vserver \
+            _vux _w3m _wait _wajig _wakeup_capable_devices \
+            _wanna-build _wanted _webbrowser _wget _whereis \
+            _which _whois _wiggle _wpa_cli _xargs \
+            _x_arguments _xauth _x_borderwidth _xclip _x_color \
+            _x_colormapid _x_cursor _x_display _xdvi _x_extension \
+            _xfig _x_font _xft_fonts _x_geometry _x_keysym \
+            _xloadimage _x_locale _xmlsoft _xmms2 _x_modifier \
+            _xmodmap _x_name _xournal _xpdf _xrandr \
+            _x_resource _xscreensaver _x_selection_timeout _xset _xt_arguments \
+            _xterm _x_title _xt_session_id _x_utils _xv \
+            _x_visual _x_window _xwit _xz _yast \
+            _yast2 _yodl _yp _yum _zargs \
+            _zattr _zcalc_line _zcat _zcompile _zdump \
+            _zed _zfs _zfs_dataset _zfs_keysource_props _zfs_pool \
+            _zftp _zip _zle _zlogin _zmodload \
+            _zmv _zoneadm _zones _zpool _zpty \
+            _zsh-mime-handler _zstyle _ztodo _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

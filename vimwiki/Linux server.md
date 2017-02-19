@@ -41,8 +41,3 @@ update-rc.d elasticsearch defaults 95 10
 telnet address 3306
 
 ```
-
-- Show folder usage
-```
-du -sh * | sort -hr
-```

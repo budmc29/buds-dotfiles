@@ -4,6 +4,7 @@
 
 function main() {
   cat base.config `hostname`.config > config
+  echo 'i3 config prepared'
 }
 
 main

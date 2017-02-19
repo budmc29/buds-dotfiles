@@ -77,10 +77,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 source ~/.aliases
 source ~/.private_work_aliases
 
-# Load computer specific settings
-HOSTNAME=`hostname`
-source ~/.${HOSTNAME}_pc.config
-
 export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
