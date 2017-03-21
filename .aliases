@@ -107,6 +107,7 @@ alias szsh="source ~/.zshrc"
 alias sandbox="cd ~/projects/sandbox"
 alias sand="cd ~/projects/sandbox"
 alias kata="cd ~/projects/sandbox/ruby/katas"
+alias scripts="cd ~/work/scripts"
 
 # search in console
 alias gr="grep -rnw './' -e \""
