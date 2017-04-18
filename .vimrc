@@ -18,6 +18,8 @@ Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
+Plugin 'majutsushi/tagbar' " auto add matching end keywords
+
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'scrooloose/nerdtree' " show filetree
@@ -174,6 +176,7 @@ nnoremap : ;
 
 map <F2> <ESC>;Explore<RETURN>
 map <F3> <ESC>;UndotreeToggle <bar> UndotreeFocus<RETURN>
+nmap <F4> ;TagbarToggle<CR>
 map <silent> <leader>/ ;nohlsearch<CR>
 " open file that needed root with root
 cmap w!! w !sudo tee % >/dev/null
