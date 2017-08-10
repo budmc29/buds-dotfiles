@@ -78,8 +78,14 @@ source ~/.aliases
 source ~/.private_work_aliases
 
 # Load computer specific settings
-HOSTNAME=`hostname`
-source ~/.${HOSTNAME}_pc.config
+TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
+CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config
+
+if [ ! -f $CONFIG_FILE_NAME ]; then
+  cat $TEMPLATE_FILE_NAME >> $CONFIG_FILE_NAME
+fi
+
+source $CONFIG_FILE_NAME
 
 export PATH=$HOME/bin:$PATH
 
