@@ -82,7 +82,7 @@ TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
 CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config
 
 if [ ! -f $CONFIG_FILE_NAME ]; then
-  cat $TEMPLATE_FILE_NAME >> $CONFIG_FILE_NAME
+  cat $TEMPLATE_FILE_NAME > $CONFIG_FILE_NAME
 fi
 
 source $CONFIG_FILE_NAME
