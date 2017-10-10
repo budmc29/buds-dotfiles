@@ -78,6 +78,9 @@ source ~/.aliases
 source ~/.private_work_aliases
 
 # Load computer specific settings
+HOSTNAME=`hostname`
+
+# Load computer specific settings
 TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
 CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config
 
@@ -91,3 +94,7 @@ export PATH=$HOME/bin:$PATH
 
 # set vi mode in terminal
 set -o vi
+
+export NVM_DIR="/home/`whoami`/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
