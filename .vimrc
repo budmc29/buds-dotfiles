@@ -20,6 +20,10 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
 Plugin 'majutsushi/tagbar' " auto add matching end keywords
 
+" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'leshill/vim-json'
+
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'scrooloose/nerdtree' " show filetree
@@ -89,6 +93,11 @@ filetype indent on
 syntax on
 
 runtime macros/matchit.vim
+
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 
 let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp-cache'
 " save cache for ctrlp plugin, remember to create the dir on new systems
@@ -161,8 +170,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
-" Hardtime plugin
-" let g:hardtime_default_on = 1
+" if executable('ag')
+"   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" key remapping
