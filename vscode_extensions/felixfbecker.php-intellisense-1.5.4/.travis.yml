@@ -1,0 +1,34 @@
+language: php
+
+php:
+  - '7.0'
+
+env:
+  global:
+    - BUILD_LEADER_ID=1
+
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.composer/cache
+
+before_install:
+  - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --tags
+  - nvm install 8
+  - nvm use 8
+
+install:
+  - npm install
+  - composer install --prefer-dist
+
+script:
+  - npm run lint
+  - npm run build
+
+after_success:
+  - npm run semantic-release
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
