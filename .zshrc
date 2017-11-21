@@ -80,6 +80,7 @@ source ~/.private_work_aliases
 # Load computer specific settings
 HOSTNAME=`hostname`
 
+source ~/.${HOSTNAME}_pc.config
 # Load computer specific settings
 TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
 CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config

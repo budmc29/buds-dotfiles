@@ -25,6 +25,8 @@ alias src='bin/spring rspec spec/controllers'
 alias srf='bin/spring rspec spec/features'
 alias srm='bin/spring rspec spec/models'
 
+alias tire='bin/rake environment tire:import:all FORCE=true'
+
 # mercurial
 alias hgc="hg commit -m \""
 alias hgs="hg status"
@@ -124,6 +126,7 @@ alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts alias querty="setxkbmap us"
 alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
+alias querty="setxkbmap -layout us"
 alias touchpadOff="synclient TouchpadOff=1"
 alias touchpadOn="synclient TouchpadOff=0"
 
