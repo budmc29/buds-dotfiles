@@ -20,10 +20,12 @@ alias rgm="rails g model"
 alias be="bundle exec"
 alias ber="bundle exec rake"
 
-alias sr='bin/spring rspec'
+alias sr='bin/rake db:migrate RAILS_ENV=test & bin/spring rspec'
 alias src='bin/spring rspec spec/controllers'
 alias srf='bin/spring rspec spec/features'
 alias srm='bin/spring rspec spec/models'
+alias focus='bin/spring rspec --tag focus'
+alias bundle='bin/spring stop & bundle install'
 
 alias tire='bin/rake environment tire:import:all FORCE=true'
 
