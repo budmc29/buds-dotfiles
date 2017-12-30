@@ -145,3 +145,6 @@ alias upm="cd ~/work/upm"
 alias todo="add_todo $@"
 alias catless="catless $@"
 alias dotbackup="~/projects/dotter/dotter.bash -b"
+
+alias fix_corrupt_history="mv .history .history_bad && strings .history_bad > .history && fc -R .history"
+
