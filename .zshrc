@@ -18,8 +18,8 @@ export LANG=en_US.UTF-8
 HIST_STAMPS="dd/mm/yyyy"
 export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
 
 
 # Start new tmux session when opening a new console
@@ -67,17 +67,16 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
-else #   export EDITOR='mvim'
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 
-# work aliases, keep private
+# Work aliases, keep private
 source ~/.aliases
 source ~/.private_work_aliases
 
-# Load computer specific settings
+# Create computer specific config file if it's missing
 HOSTNAME=`hostname`
 
 source ~/.${HOSTNAME}_pc.config
@@ -89,11 +88,8 @@ if [ ! -f $CONFIG_FILE_NAME ]; then
   cat $TEMPLATE_FILE_NAME > $CONFIG_FILE_NAME
 fi
 
-source $CONFIG_FILE_NAME
-
 export PATH=$HOME/bin:$PATH
 
-# set vi mode in terminal
 set -o vi
 
 export NVM_DIR="/home/`whoami`/.nvm"
