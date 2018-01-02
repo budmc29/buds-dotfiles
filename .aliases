@@ -25,7 +25,7 @@ alias src='bin/spring rspec spec/controllers'
 alias srf='bin/spring rspec spec/features'
 alias srm='bin/spring rspec spec/models'
 alias focus='bin/spring rspec --tag focus'
-alias bundle='bin/spring stop & bundle install'
+alias bunddle='bin/spring stop & bundle install'
 
 alias tire='bin/rake environment tire:import:all FORCE=true'
 
@@ -145,6 +145,3 @@ alias upm="cd ~/work/upm"
 alias todo="add_todo $@"
 alias catless="catless $@"
 alias dotbackup="~/projects/dotter/dotter.bash -b"
-
-alias fix_corrupt_history="mv .history .history_bad && strings .history_bad > .history && fc -R .history"
-
