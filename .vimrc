@@ -256,6 +256,10 @@ endfun
 
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
+" Set connect colourn for git diffs
+hi diffRemoved ctermfg=red
+hi diffAdded   ctermfg=darkgreen
+
 augroup VIMRC
   autocmd!
   autocmd bufwritepost .vimrc source $MYVIMRC
@@ -281,6 +285,7 @@ function RunTestLast()
 " execute data
   " echom data
 endfunction
+
 
 " vim tricks
 " :mv /long/path/to/{file_name,new_name}.txt
