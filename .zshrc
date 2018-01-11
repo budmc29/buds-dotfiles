@@ -76,10 +76,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
 source ~/.aliases
 source ~/.private_work_aliases
 
-# Create computer specific config file if it's missing
+# Load computer specific settings
 HOSTNAME=`hostname`
 
-source ~/.${HOSTNAME}_pc.config
 # Load computer specific settings
 TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
 CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config
@@ -88,6 +87,8 @@ if [ ! -f $CONFIG_FILE_NAME ]; then
   cat $TEMPLATE_FILE_NAME > $CONFIG_FILE_NAME
 fi
 
+# source $CONFIG_FILE_NAME
+
 export PATH=$HOME/bin:$PATH
 
 set -o vi
@@ -95,3 +96,5 @@ set -o vi
 export NVM_DIR="/home/`whoami`/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export XDG_CURRENT_DESKTOP=GNOME
