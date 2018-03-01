@@ -20,10 +20,13 @@ alias rgm="rails g model"
 alias be="bundle exec"
 alias ber="bundle exec rake"
 
-alias sr='bin/spring rspec'
+alias sr='bin/rake db:migrate RAILS_ENV=test & bin/spring rspec'
 alias src='bin/spring rspec spec/controllers'
 alias srf='bin/spring rspec spec/features'
 alias srm='bin/spring rspec spec/models'
+alias focus='bin/spring rspec --tag focus'
+alias bunddle='bin/spring stop & bundle install'
+alias tire='bin/rake environment tire:import:all FORCE=true'
 
 # PHP
 alias phpa='php -dcli.prompt="\nphp> " -a'
@@ -55,7 +58,7 @@ alias hgclose="hg commit --close-branch -m \""
 alias gs="git status"
 alias gp="git push"
 alias gb="git branch"
-alias gc="git commit -m \""
+alias gc="git commit -v"
 alias ga="git add -A"
 alias gd="git diff --cached"
 alias gco="git checkout"
@@ -126,6 +129,7 @@ alias hansoft="cd /home/mugurel/.Hansoft/Versions/00084*/ && ./Hansoft -Url"
 alias tmuxc="tmux attach -t console || tmux"
 
 # keyboard layouts alias querty="setxkbmap us"
+alias querty="setxkbmap -layout us"
 alias dvorak="setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
 alias touchpadOff="synclient TouchpadOff=1"
 alias touchpadOn="synclient TouchpadOff=0"
