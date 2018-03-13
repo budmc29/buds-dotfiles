@@ -3,7 +3,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
-Plugin 'scrooloose/syntastic' " sintax highlighting
 Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-rails'
@@ -18,12 +17,14 @@ Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
-Plugin 'majutsushi/tagbar' " auto add matching end keywords
+Plugin 'majutsushi/tagbar'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
 Plugin 'leshill/vim-json'
+Plugin 'tpope/vim-fugitive'
 
+" Plugin 'scrooloose/syntastic' " sintax highlighting for hg and git
 " Plugin 'tpope/vim-surround'
 " Plugin 'vim-scripts/php.vim-html-enhanced'
 " Plugin 'scrooloose/nerdtree' " show filetree
