@@ -65,7 +65,7 @@ alias gco="git checkout"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10"
 alias gaa="git add -A"
-alias git_checkout_all="for remote in `git branch -r`; do git branch --track ${remote#origin/} $remote; done"
+alias checkout_branches="git branch -r | grep -v '\->' | while read remote; do git branch --track \"${remote#origin/}\" \"$remote\"; done && git fetch --all && git pull --all"
 
 #Misc
 # TODO: save i3 configs for different machines and version control that
