@@ -50,17 +50,6 @@ function catless() {
   fi
 }
 
-# Mercurial repository info plugin
-if [ -e /usr/local/hg-plugins/prompt/prompt.py ]; then
-function hg_prompt_info {
-  hg prompt --angle-brackets "\
-  <%{$fg_bold[blue]%}hg:(%{$fg_bold[red]%}<branch>>%{$fg_bold[blue]%})\
-  %{$fg[yellow]%}<status|modified|unknown><update>\
-  <patches: <patches|join( → )>>%{$reset_color%}" 2>/dev/null
-  }
-
-  PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-fi
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -69,32 +58,21 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptig
-
 # Work aliases, keep private
 source ~/.aliases
-source ~/.private_work_aliases
+
+source ~/.work_config
 
 # Load computer specific settings
 HOSTNAME=`hostname`
 
-# Load computer specific settings
-TEMPLATE_FILE_NAME=/home/`whoami`/.bud-template_pc.config
-CONFIG_FILE_NAME=/home/`whoami`/.`hostname`_pc.config
+export PROJECTS_HOME=${HOME}/work
 
-if [ ! -f $CONFIG_FILE_NAME ]; then
-  cat $TEMPLATE_FILE_NAME > $CONFIG_FILE_NAME
-fi
-
-# source $CONFIG_FILE_NAME
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 export PATH=$HOME/bin:$PATH
 
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+
 set -o vi
-
-export NVM_DIR="/home/`whoami`/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export XDG_CURRENT_DESKTOP=GNOME

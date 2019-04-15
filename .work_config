@@ -1,0 +1,11 @@
+alias chopin="cd ~/work/chopin"
+alias seedy="cd ~/work/seedy"
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin/:$PATH"
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
+
+# ! pgrep "gpg-agent" >/dev/null && eval $(gpg-agent --daemon)
+export ENABLE_SPRING_WORKAROUND=true

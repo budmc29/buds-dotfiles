@@ -1,12 +1,13 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-commentary' " comment sytax aware
 Plugin 'kien/ctrlp.vim' "fuzzy searching
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-rails'
-Plugin 'mhinz/vim-signify' " column diff for source control
+Plugin 'airblade/vim-gitgutter' " column diff for git
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mbbill/undotree'
 Plugin 'gioele/vim-autoswap' " buffer and swapfile manager
@@ -17,12 +18,27 @@ Plugin 'sickill/vim-pasta' " content aware paste and indent
 Plugin 'ngmy/vim-rubocop'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-endwise' " auto add matching end keywords
+Plugin 'townk/vim-autoclose' " Auto close matching bracers
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'takac/vim-hardtime'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
-Plugin 'leshill/vim-json'
-Plugin 'tpope/vim-fugitive'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+" Plugin 'leshill/vim-json'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'w0rp/ale'
+Plugin 'ianks/vim-tsx'
+
+" React
+Plugin 'mxw/vim-jsx'
 
 " Plugin 'scrooloose/syntastic' " sintax highlighting for hg and git
 " Plugin 'tpope/vim-surround'
@@ -38,7 +54,6 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'drmingdrmer/xptemplate' " snippet plugin
 " Plugin 'rking/ag.vim'
 " Plugin 'easymotion/vim-easymotion'
-" Plugin 'takac/vim-hardtime'
 " Plugin 'xolox/vim-session' " good session manager, using obsession for tmux
 
 " colorschemes
@@ -64,6 +79,7 @@ set complete-=i
 
 set t_ut= "fix tmux transparent background problem
 set ttimeoutlen=50 " reduce needed time to enter/exit insert mode
+set updatetime=100
 
 set nocompatible
 set hidden "auto hide modified buffers when swithcing to another buffer
@@ -88,10 +104,13 @@ set copyindent
 set smartcase
 set nofoldenable
 
+set backspace=2 " make backspace work like most other programs
+
+syntax on
+syntax enable
 filetype on
 filetype plugin on
 filetype indent on
-syntax on
 
 runtime macros/matchit.vim
 
@@ -128,6 +147,10 @@ let g:session_autosave_periodic = 5
 " allow mouse scroll in console vim
 set mouse=a
 
+set ruler
+
+set spell spelllang=en_gb
+
 " highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -147,6 +170,8 @@ endif
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+set encoding=utf-8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" plugins setup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,6 +192,17 @@ let g:tmuxify_custom_command = 'tmux split-window -p 30'
 " use markdown in vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 
+let g:javascript_plugin_jsdoc = 1
+
+" Start autocompletion after 3 chars
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 3
+let g:ycm_enable_diagnostic_highlighting = 0
+
+" Don't show YCM's preview window [ I find it really annoying ]
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
@@ -174,6 +210,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
 " if executable('ag')
 "   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 " endif
+
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+
+let g:hardtime_default_on = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -235,8 +275,18 @@ le g:tmuxify_run = {
 \ 'rb': 'bundle exec rspec spec %',
 \}
 
+" TODO fix emmet
 " vim emmet
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" autocmd FileType html,css  EmmetInstall
+" autocmd FileType html,css imap <TAB> <plug>(emmet-expand-abbr)
+" let g:user_emmet_install_global = 1
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 " ctrl shift f searcher
 " map <leader>f <ESC>;CtrlSF
 
@@ -246,6 +296,11 @@ autocmd BufReadPost * call matchadd('ColorColumn', '\%80v', 100)
 
 " rubocop config
 let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
+
+" Javascript Standardjs
+let g:ale_linters = {
+\   'javascript': ['semistandard'],
+\}
 
 " remove trailing whitespace on save
 fun! <SID>StripTrailingWhitespaces()
@@ -260,11 +315,6 @@ autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <
 " Set connect colourn for git diffs
 hi diffRemoved ctermfg=red
 hi diffAdded   ctermfg=darkgreen
-
-augroup VIMRC
-  autocmd!
-  autocmd bufwritepost .vimrc source $MYVIMRC
-augroup end
 
 " Functions
 function RunTestFile()
@@ -287,6 +337,7 @@ function RunTestLast()
   " echom data
 endfunction
 
+autocmd BufNewFile,BufRead *.hamlbars set syntax=haml
 
 " vim tricks
 " :mv /long/path/to/{file_name,new_name}.txt
