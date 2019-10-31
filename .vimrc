@@ -28,17 +28,19 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'takac/vim-hardtime'
+" Plugin '907th/vim-auto-save'
 
 " Javascript
-Plugin 'pangloss/vim-javascript'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'MaxMEllon/vim-jsx-pretty'
 " Plugin 'leshill/vim-json'
 " Plugin 'kchmck/vim-coffee-script'
-" Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'
 Plugin 'ianks/vim-tsx'
 
-" React
-Plugin 'mxw/vim-jsx'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'neoclide/coc.nvim'
+
 
 " Plugin 'scrooloose/syntastic' " sintax highlighting for hg and git
 " Plugin 'tpope/vim-surround'
@@ -58,6 +60,7 @@ Plugin 'mxw/vim-jsx'
 
 " colorschemes
 Plugin 'blueshirts/Darcula' " preffered theme for console
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -175,6 +178,7 @@ set encoding=utf-8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""" plugins setup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " airline settings
 set laststatus=2 " always show
 set noshowmode " don't show the default mode indicator
@@ -301,6 +305,15 @@ let g:vimrubocop_rubocop_cmd = '/home/bud/.rvm/gem-'
 let g:ale_linters = {
 \   'javascript': ['semistandard'],
 \}
+
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
+" Fix files automatically on save
+let g:ale_fix_on_save = 1
+
+let g:coc_force_debug = 1
 
 " remove trailing whitespace on save
 fun! <SID>StripTrailingWhitespaces()
