@@ -24,7 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'takac/vim-hardtime'
@@ -38,8 +38,8 @@ Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'w0rp/ale'
 Plugin 'ianks/vim-tsx'
 
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'neoclide/coc.nvim'
+" Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'neoclide/coc.nvim'
 
 
 " Plugin 'scrooloose/syntastic' " sintax highlighting for hg and git
@@ -313,7 +313,7 @@ let g:ale_fixers = {
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
 
-let g:coc_force_debug = 1
+" let g:coc_force_debug = 1
 
 " remove trailing whitespace on save
 fun! <SID>StripTrailingWhitespaces()
@@ -349,6 +349,20 @@ function RunTestLast()
 " execute data
   " echom data
 endfunction
+
+" Create directory if it doesn't exist when saving a file
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
 
 autocmd BufNewFile,BufRead *.hamlbars set syntax=haml
 
