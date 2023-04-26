@@ -1,3 +1,3 @@
 # Ubuntu Dotfiles
 
-To use them on a new system, run budmc29/ubuntu-fresh-install first.
+To use them on a new system, run [budmc29/machine-fresh-install](https://github.com/budmc29/machine-fresh-install) first.
