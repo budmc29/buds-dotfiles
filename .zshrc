@@ -8,6 +8,23 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+
++export PATH=/opt/homebrew/bin:$PATH
++export PATH="/opt/homebrew/sbin:$PATH"
++
++eval "$(rbenv init -)"
++export HOMEBREW_NO_AUTO_UPDATE=1
++export PROJECTS_HOME=${HOME}/projects
++export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin/:$PATH"
++export PATH=/opt/homebrew/bin:$PATH
++
++export NVM_DIR="$HOME/.nvm"
++[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
++[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
++
++export PATH="$HOME/.rbenv/bin:$PATH"
++eval "$(rbenv init -)"
+
 if [[ -z "$TMUX" ]] ;then
   tmux new-session
 fi
