@@ -31,29 +31,6 @@ alias tire='bin/rake environment tire:import:all FORCE=true'
 # PHP
 alias phpa='php -dcli.prompt="\nphp> " -a'
 
-# mercurial
-alias hgc="hg commit -m \""
-alias hgs="hg status"
-alias hgbr="hg branch"
-alias hgb="hg branches"
-alias hgbm="hg bookmark"
-alias hgbms="hg bookmarks"
-alias hgu="hg update"
-alias hgp="hg push"
-alias hgl="hg log -l 5"
-alias hgg="hg glog -l 5"
-alias hggb"hg glog -l 10 --only-branch"
-alias hgll="hg log -l"
-alias hggl="hg glog -l"
-alias hgpp="hg pull && hg push"
-alias hgpu="hg pull"
-alias hgpb="hg push --new-branch"
-alias hgsh="hg shelve --config hooks.commit="
-alias hgus="hg unshelve"
-alias hgd="hg diff"
-alias hgar="hg addremove"
-alias hgclose="hg commit --close-branch -m \""
-
 #git
 alias gs="git status"
 alias gp="git push"
@@ -68,23 +45,6 @@ alias gaa="git add -A"
 alias checkout_branches="git branch -r | grep -v '\->' | while read remote; do git branch --track \"${remote#origin/}\" \"$remote\"; done && git fetch --all && git pull --all"
 
 #Misc
-# TODO: save i3 configs for different machines and version control that
-
-# TODO: finish dotter update
-alias dotupdate="cd ~/ubuntu-dotfiles && git pull \
-&& cp ~/ubuntu-dotfiles/.vimrc ~/.vimrc \
-&& cp ~/ubuntu-dotfiles/.gvimrc ~/.gvimrc \
-&& cp ~/ubuntu-dotfiles/.tmux.conf ~/.tmux.conf \
-&& cp ~/ubuntu-dotfiles/.hgrc ~/.hgrc \
-&& cp ~/ubuntu-dotfiles/.Xmodmap ~/.Xmodmap \
-&& cp -r ~/ubuntu-dotfiles/.i3 ~/ \
-&& cp ~/ubuntu-dotfiles/.i3status.conf ~/ \
-&& cp ~/ubuntu-dotfiles/.zshrc ~/.zshrc \
-&& cp ~/ubuntu-dotfiles/zap.bash ~/zap.bash \
-&& cp -r ~/ubuntu-dotfiles/.bookmarks ~/ \
-&& cp -r ~/ubuntu-dotfiles/vimwiki ~/ \
-&& source ~/.zshrc"
-
 alias vimrc="vim ~/.vimrc"
 alias vundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias vimwiki="vim ~/vimwiki/index.md"
@@ -148,3 +108,5 @@ alias upm="cd ~/work/upm"
 alias todo="add_todo $@"
 alias catless="catless $@"
 alias dotbackup="~/projects/dotter/dotter.bash -b"
+
+alias hag="history | grep"
