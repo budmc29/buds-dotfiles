@@ -1,2 +1,0 @@
-find vimwiki -type f -name '*.wiki' -print0 | xargs -0 rename 's/.wiki$/.md/'
-find vimwiki -type f -name '*.wiki' -print0 | xargs -0 rename 's/.wiki$/.md/'
